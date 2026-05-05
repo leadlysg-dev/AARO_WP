@@ -11,28 +11,19 @@
 <meta property="og:site_name" content="AARO — Asian Alliance Radiation & Oncology">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <!-- @wp:wp_head() -->
 </head>
 <body class="archive-stories">
 <!-- @wp:body_open() -->
 
-<!-- ============================================================
-     SITE HEADER
-     On WP conversion: extract everything between the markers below
-     into header.php
-     ============================================================ -->
 <!-- @wp:get_header() -->
-
-<!-- Utility bar (top thin strip) -->
 <!-- @wp:dynamic_sidebar(header-utility) -->
 <div class="utility-bar">
   <div class="container">
     <div class="utility-bar-inner">
-      <div class="utility-bar-left">
-        <span>Novena Medical Centre · Singapore</span>
-      </div>
+      <div class="utility-bar-left"><span>Novena Medical Centre · Singapore</span></div>
       <div class="utility-bar-right">
         <a href="tel:+6581023838">+65 8102 3838</a>
         <a href="https://wa.me/6581023838" target="_blank" rel="noopener">WhatsApp</a>
@@ -45,15 +36,13 @@
 <header class="site-header" role="banner">
   <div class="container">
     <div class="site-header-inner">
-
       <a class="site-logo" href="../" aria-label="AARO home">
         AARO
         <small>Asian Alliance Radiation &amp; Oncology</small>
       </a>
-
       <!-- @wp:wp_nav_menu(primary) -->
       <nav class="primary-nav" role="navigation" aria-label="Primary">
-        <ul style="display:flex; gap:28px; align-items:center;">
+        <ul>
         <li><a href="../our-specialists/index.html" data-nav-link="our-specialists/index.html">Our Specialists</a></li>
         <li><a href="../cancers-we-treat/index.html" data-nav-link="cancers-we-treat/index.html">Cancers We Treat</a></li>
         <li><a href="../our-treatments/index.html" data-nav-link="our-treatments/index.html">Our Treatments</a></li>
@@ -63,18 +52,14 @@
         <li><a href="../about.html" data-nav-link="about.html">About</a></li>
         </ul>
       </nav>
-
       <a class="header-cta" href="../contact.html">Book Consultation</a>
-
       <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-
     </div>
   </div>
 </header>
 
-<!-- Mobile nav drawer -->
 <div class="mobile-nav" data-mobile-nav role="dialog" aria-label="Mobile navigation">
   <div class="mobile-nav-head">
     <span class="site-logo" style="font-size:1.25rem;">AARO</span>
@@ -93,7 +78,6 @@
   </ul>
   <a class="header-cta" href="../contact.html">Book Consultation</a>
 </div>
-
 <!-- @wp:get_header_end -->
 
 <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -109,28 +93,27 @@
 <!-- @wp:the_content() -->
 
 <section class="hero">
-  <div class="container container--narrow">
-    <span class="eyebrow eyebrow--teal hero-eyebrow">Patient Stories</span>
-    <h1>Stories of <em>hope.</em></h1>
-    <p>These are the people we have walked alongside — through diagnosis, treatment, recovery, and life beyond cancer. Each story is shared with the patient's permission. None of these are exceptional cases — they are the kinds of outcomes that come with the right specialist, the right technology, and the right team.</p>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow hero-eyebrow">Patient Stories</span>
+      <h1>Stories of <em>hope.</em></h1>
+      <p class="lead">These are the people we have walked alongside — through diagnosis, treatment, recovery, and life beyond cancer. Each story is shared with the patient's permission. None of these are exceptional cases — they are the kinds of outcomes that come with the right specialist, the right technology, and the right team.</p>
+    </div>
+    <div class="hero-media">
+      <div class="img-wrap aspect-16/9"><img src="assets/images/patients/patient-wheelchair-garden-sunlight.jpg" alt="A patient and care coordinator looking out into a sunlit tropical garden — a moment of quiet between treatment sessions." loading="lazy"></div>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow eyebrow--teal">Featured stories</span>
+      <span class="eyebrow">Featured stories</span>
       <h2>Real patients. <em>Real outcomes.</em></h2>
     </div>
     <div class="grid grid-cols-3">
       <article class="card story-card">
-        <div class="img-placeholder aspect-4/3" data-category="patient" data-filename="story-helen-saada-ching-card.jpg" data-dimensions="1200×900 (4:3)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--patient">Patient</span>
-    <span class="img-placeholder-desc">Helen Saada-Ching — patient story portrait card</span>
-    <span class="img-placeholder-meta">/assets/images/patients/story-helen-saada-ching-card.jpg · 1200×900 (4:3)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-4/3"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Patient</span><span class="img-placeholder-desc">Helen Saada-Ching portrait</span></div></div>
         <div class="card-body">
           <span class="card-tag">Stage 4 Breast → Brain Metastases</span>
           <h3 class="card-title">Helen Saada-Ching</h3>
@@ -139,13 +122,7 @@
         </div>
       </article>
       <article class="card story-card">
-        <div class="img-placeholder aspect-4/3" data-category="patient" data-filename="story-pak-tjugito-card.jpg" data-dimensions="1200×900 (4:3)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--patient">Patient</span>
-    <span class="img-placeholder-desc">Pak Tjugito — patient story portrait card</span>
-    <span class="img-placeholder-meta">/assets/images/patients/story-pak-tjugito-card.jpg · 1200×900 (4:3)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-4/3"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Patient</span><span class="img-placeholder-desc">Pak Tjugito portrait</span></div></div>
         <div class="card-body">
           <span class="card-tag">Stage 2 Prostate Cancer</span>
           <h3 class="card-title">Pak Tjugito</h3>
@@ -154,17 +131,11 @@
         </div>
       </article>
       <article class="card story-card">
-        <div class="img-placeholder aspect-4/3" data-category="patient" data-filename="story-haziq-card.jpg" data-dimensions="1200×900 (4:3)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--patient">Patient</span>
-    <span class="img-placeholder-desc">Haziq — patient story portrait card</span>
-    <span class="img-placeholder-meta">/assets/images/patients/story-haziq-card.jpg · 1200×900 (4:3)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-4/3"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Patient</span><span class="img-placeholder-desc">Haziq lifestyle portrait</span></div></div>
         <div class="card-body">
-          <span class="card-tag">Colorectal Cancer (with liver and lung metastases)</span>
+          <span class="card-tag">Colorectal — metastatic</span>
           <h3 class="card-title">Haziq</h3>
-          <p class="card-meta">Treated by AARO multidisciplinary team · Multimodality: chemotherapy + SBRT to oligometastatic sites</p>
+          <p class="card-meta">AARO multidisciplinary team · Combination therapy</p>
           <a class="card-link" href="haziq.html">Read story</a>
         </div>
       </article>
@@ -175,7 +146,7 @@
 <section class="section section--warm">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow eyebrow--teal">More stories</span>
+      <span class="eyebrow">More stories</span>
       <h2>Browse by cancer type or doctor</h2>
     </div>
     <span class="tbc">Once 10+ patient stories are written, add filters: by cancer type (Breast / Prostate / Brain / etc.), by doctor (Dr Tan / Dr Teh / Dr Tseng / etc.), and by treatment modality. Each filter expands the grid above.</span>
@@ -196,17 +167,10 @@
 
 </main>
 
-<!-- ============================================================
-     SITE FOOTER
-     On WP conversion: extract everything between the markers below
-     into footer.php
-     ============================================================ -->
 <!-- @wp:get_footer() -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-
     <div class="footer-grid">
-
       <div class="footer-brand-col">
         <div class="footer-logo">AARO</div>
         <div class="footer-tagline">Precision Oncology · Personalised Care</div>
@@ -222,7 +186,6 @@
           <a href="#" aria-label="YouTube">Yt</a>
         </div>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-1) -->
       <div>
         <h5>Cancers We Treat</h5>
@@ -235,7 +198,6 @@
         <li><a href="../cancers-we-treat/index.html">View all 12 →</a></li>
         </ul>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-2) -->
       <div>
         <h5>Our Specialists</h5>
@@ -247,7 +209,6 @@
         <li><a href="../our-specialists/index.html">Meet the team →</a></li>
         </ul>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-3) -->
       <div>
         <h5>Quick Links</h5>
@@ -262,9 +223,7 @@
         <li><a href="../careers.html">Careers</a></li>
         </ul>
       </div>
-
-    </div><!-- /.footer-grid -->
-
+    </div>
     <div class="footer-bottom">
       <span>© <span id="yr">2026</span> Asian Alliance Radiation &amp; Oncology Pte Ltd. All rights reserved.</span>
       <span class="footer-bottom-links">
@@ -274,7 +233,6 @@
         <a href="#">Sitemap</a>
       </span>
     </div>
-
   </div>
 </footer>
 <!-- @wp:wp_footer() -->

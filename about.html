@@ -11,28 +11,19 @@
 <meta property="og:site_name" content="AARO — Asian Alliance Radiation & Oncology">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <!-- @wp:wp_head() -->
 </head>
 <body class="page-about">
 <!-- @wp:body_open() -->
 
-<!-- ============================================================
-     SITE HEADER
-     On WP conversion: extract everything between the markers below
-     into header.php
-     ============================================================ -->
 <!-- @wp:get_header() -->
-
-<!-- Utility bar (top thin strip) -->
 <!-- @wp:dynamic_sidebar(header-utility) -->
 <div class="utility-bar">
   <div class="container">
     <div class="utility-bar-inner">
-      <div class="utility-bar-left">
-        <span>Novena Medical Centre · Singapore</span>
-      </div>
+      <div class="utility-bar-left"><span>Novena Medical Centre · Singapore</span></div>
       <div class="utility-bar-right">
         <a href="tel:+6581023838">+65 8102 3838</a>
         <a href="https://wa.me/6581023838" target="_blank" rel="noopener">WhatsApp</a>
@@ -45,15 +36,13 @@
 <header class="site-header" role="banner">
   <div class="container">
     <div class="site-header-inner">
-
       <a class="site-logo" href="index.html" aria-label="AARO home">
         AARO
         <small>Asian Alliance Radiation &amp; Oncology</small>
       </a>
-
       <!-- @wp:wp_nav_menu(primary) -->
       <nav class="primary-nav" role="navigation" aria-label="Primary">
-        <ul style="display:flex; gap:28px; align-items:center;">
+        <ul>
         <li><a href="our-specialists/index.html" data-nav-link="our-specialists/index.html">Our Specialists</a></li>
         <li><a href="cancers-we-treat/index.html" data-nav-link="cancers-we-treat/index.html">Cancers We Treat</a></li>
         <li><a href="our-treatments/index.html" data-nav-link="our-treatments/index.html">Our Treatments</a></li>
@@ -63,18 +52,14 @@
         <li><a href="about.html" data-nav-link="about.html">About</a></li>
         </ul>
       </nav>
-
       <a class="header-cta" href="contact.html">Book Consultation</a>
-
       <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-
     </div>
   </div>
 </header>
 
-<!-- Mobile nav drawer -->
 <div class="mobile-nav" data-mobile-nav role="dialog" aria-label="Mobile navigation">
   <div class="mobile-nav-head">
     <span class="site-logo" style="font-size:1.25rem;">AARO</span>
@@ -93,7 +78,6 @@
   </ul>
   <a class="header-cta" href="contact.html">Book Consultation</a>
 </div>
-
 <!-- @wp:get_header_end -->
 
 <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -108,23 +92,15 @@
 <main id="main" role="main">
 <!-- @wp:the_content() -->
 
-<section class="hero hero--navy">
+<section class="hero">
   <div class="container">
-    <div class="hero-grid hero-grid--split">
-      <div>
-        <span class="eyebrow eyebrow--light hero-eyebrow">Our Story</span>
-        <h1>Singapore's first<br><em>independent</em><br>radiation oncology group.</h1>
-        <p>Founded in 2015 by oncologists from the National Cancer Centre Singapore, AARO brought the academic-centre model — one specialist per cancer type — into the private sector.</p>
-      </div>
-      <div>
-        <div class="img-placeholder aspect-4/3" data-category="doctor" data-filename="about-founders-group-portrait.jpg" data-dimensions="1400×1050 (4:3)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--doctor">Doctor</span>
-    <span class="img-placeholder-desc">AARO founding doctors group portrait — environmental, in the CSR facility</span>
-    <span class="img-placeholder-meta">/assets/images/doctors/about-founders-group-portrait.jpg · 1400×1050 (4:3)</span>
-  </div>
-</div>
-      </div>
+    <div class="hero-content">
+      <span class="eyebrow hero-eyebrow">Our Story</span>
+      <h1>Singapore's first<br><em>independent</em> radiation oncology group.</h1>
+      <p class="lead">Founded in 2015 by oncologists from the National Cancer Centre Singapore, AARO brought the academic-centre model — one specialist per cancer type — into the private sector.</p>
+    </div>
+    <div class="hero-media">
+      <div class="img-wrap aspect-16/9"><img src="assets/images/staff/team-full-group-portrait.jpg" alt="AARO clinical team group portrait — 11 specialists, therapists and nurses in batik-trim scrubs." loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -133,13 +109,13 @@
   <div class="container container--narrow">
     <div class="grid grid-cols-2" style="gap:48px;">
       <div>
-        <span class="eyebrow eyebrow--teal">Our Mission</span>
-        <h3 class="mt-2 mb-2" style="font-size:1.5rem;">Personalised, technology-led cancer care.</h3>
+        <span class="eyebrow">Our Mission</span>
+        <h3 class="mt-2 mb-2">Personalised, technology-led cancer care.</h3>
         <p>We deliver personalised, high-quality cancer care, made possible by technology.</p>
       </div>
       <div>
-        <span class="eyebrow eyebrow--teal">Our Vision</span>
-        <h3 class="mt-2 mb-2" style="font-size:1.5rem;">Asia's leading advanced-technology cancer centre.</h3>
+        <span class="eyebrow">Our Vision</span>
+        <h3 class="mt-2 mb-2">Asia's leading advanced-technology cancer centre.</h3>
         <p>To be Singapore and Asia's leading advanced-technology cancer centre — offering every patient the full range of treatment options, matched to their condition and preferences.</p>
       </div>
     </div>
@@ -149,7 +125,7 @@
 <section class="section section--warm">
   <div class="container container--narrow">
     <div class="prose">
-      <span class="eyebrow eyebrow--teal">Who we are</span>
+      <span class="eyebrow">Who we are</span>
       <h2 class="mt-2">A specialist group, anchored by our own facility.</h2>
       <p>Founded in 2015, AARO was Singapore's first independent radiation oncology clinic. We've since grown into a full oncology group anchored by our own Centre for Stereotactic Radiosurgery on Adam Road — one team, one place, every modality.</p>
 
@@ -161,8 +137,30 @@
 
 <section class="section">
   <div class="container">
+    <div class="grid" style="grid-template-columns: 1fr; gap: 48px; align-items: center;">
+      <div>
+        <div class="img-wrap aspect-4/3"><img src="assets/images/staff/planning-console-imaging-review.jpg" alt="Two AARO clinicians reviewing diagnostic imaging on a multi-monitor planning console." loading="lazy"></div>
+      </div>
+      <div>
+        <span class="eyebrow">How we work</span>
+        <h2 class="mt-2 mb-3">Multidisciplinary by default.</h2>
+        <p>Every case is reviewed by the relevant sub-specialty team — radiation oncologist, medical physicist, radiation therapist, nurse — before the treatment plan is finalised. Complex cases are taken to a wider tumour board.</p>
+        <p>This is the academic-centre standard: how cases were handled at NCCS, and how we have continued to handle them since founding AARO.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@media (min-width: 1024px) {
+  .section .grid[style*="grid-template-columns: 1fr"] { grid-template-columns: 1fr 1fr !important; }
+}
+</style>
+
+<section class="section section--warm">
+  <div class="container">
     <div class="section-header">
-      <span class="eyebrow eyebrow--teal">Company profile</span>
+      <span class="eyebrow">Company profile</span>
       <h2>From <em>NCCS pioneers</em> to a regional specialist group.</h2>
       <p>The milestones that shaped AARO — and the regional radiation oncology programmes our team helped build along the way.</p>
     </div>
@@ -186,7 +184,7 @@
         <div class="step-num">2015</div>
         <div class="step-body">
           <h4>Medscan Moscow consultancy</h4>
-          <p>AARO designed, commissioned and operationalised a 15,000 sq ft outpatient oncology centre in Moscow, including TrueBeam LINAC. The site passed UPMC accreditation in 2017 and now carries 'in collaboration with UPMC' branding; AARO continues to support its plan reviews and clinical development.</p>
+          <p>AARO designed, commissioned and operationalised a 15,000 sq ft outpatient oncology centre in Moscow, including TrueBeam Linac. The site passed UPMC accreditation in 2017 and now carries 'in collaboration with UPMC' branding; AARO continues to support its plan reviews and clinical development.</p>
         </div>
       </div>
       <div class="step">
@@ -211,62 +209,6 @@
         </div>
       </div>
     </div>
-
-    <div class="grid grid-cols-2 mt-5" style="gap:32px;">
-      <div class="img-placeholder aspect-3/2" data-category="clinic" data-filename="about-csr-construction-archive.jpg" data-dimensions="1200×800 (3:2)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--clinic">Clinic</span>
-    <span class="img-placeholder-desc">Archive shot of CSR Adam Road build — historical / black-and-white acceptable</span>
-    <span class="img-placeholder-meta">/assets/images/clinics/about-csr-construction-archive.jpg · 1200×800 (3:2)</span>
-  </div>
-</div>
-      <div class="img-placeholder aspect-3/2" data-category="doctor" data-filename="about-team-multidisciplinary-meeting.jpg" data-dimensions="1200×800 (3:2)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--doctor">Doctor</span>
-    <span class="img-placeholder-desc">Multidisciplinary team meeting — candid, around a planning console with imaging on screens</span>
-    <span class="img-placeholder-meta">/assets/images/doctors/about-team-multidisciplinary-meeting.jpg · 1200×800 (3:2)</span>
-  </div>
-</div>
-    </div>
-  </div>
-</section>
-
-<section class="section section--warm">
-  <div class="container">
-    <div class="section-header text-center">
-      <span class="eyebrow eyebrow--teal">Accreditations &amp; affiliations</span>
-      <h2>Internationally <em>benchmarked.</em></h2>
-    </div>
-    <div class="grid grid-cols-4" style="gap:16px;">
-      <div class="img-placeholder aspect-2/1" data-category="brand" data-filename="accreditation-upmc-logo.png" data-dimensions="400×200 (2:1)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--brand">Brand</span>
-    <span class="img-placeholder-desc">UPMC affiliation logo (clean, transparent background)</span>
-    <span class="img-placeholder-meta">/assets/images/brands/accreditation-upmc-logo.png · 400×200 (2:1)</span>
-  </div>
-</div>
-      <div class="img-placeholder aspect-2/1" data-category="brand" data-filename="accreditation-md-anderson-logo.png" data-dimensions="400×200 (2:1)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--brand">Brand</span>
-    <span class="img-placeholder-desc">MD Anderson affiliation logo</span>
-    <span class="img-placeholder-meta">/assets/images/brands/accreditation-md-anderson-logo.png · 400×200 (2:1)</span>
-  </div>
-</div>
-      <div class="img-placeholder aspect-2/1" data-category="brand" data-filename="accreditation-moh-singapore.png" data-dimensions="400×200 (2:1)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--brand">Brand</span>
-    <span class="img-placeholder-desc">Singapore Ministry of Health licensure mark</span>
-    <span class="img-placeholder-meta">/assets/images/brands/accreditation-moh-singapore.png · 400×200 (2:1)</span>
-  </div>
-</div>
-      <div class="img-placeholder aspect-2/1" data-category="brand" data-filename="accreditation-isrs-logo.png" data-dimensions="400×200 (2:1)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--brand">Brand</span>
-    <span class="img-placeholder-desc">International Stereotactic Radiosurgery Society</span>
-    <span class="img-placeholder-meta">/assets/images/brands/accreditation-isrs-logo.png · 400×200 (2:1)</span>
-  </div>
-</div>
-    </div>
   </div>
 </section>
 
@@ -285,17 +227,10 @@
 
 </main>
 
-<!-- ============================================================
-     SITE FOOTER
-     On WP conversion: extract everything between the markers below
-     into footer.php
-     ============================================================ -->
 <!-- @wp:get_footer() -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-
     <div class="footer-grid">
-
       <div class="footer-brand-col">
         <div class="footer-logo">AARO</div>
         <div class="footer-tagline">Precision Oncology · Personalised Care</div>
@@ -311,7 +246,6 @@
           <a href="#" aria-label="YouTube">Yt</a>
         </div>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-1) -->
       <div>
         <h5>Cancers We Treat</h5>
@@ -324,7 +258,6 @@
         <li><a href="cancers-we-treat/index.html">View all 12 →</a></li>
         </ul>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-2) -->
       <div>
         <h5>Our Specialists</h5>
@@ -336,7 +269,6 @@
         <li><a href="our-specialists/index.html">Meet the team →</a></li>
         </ul>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-3) -->
       <div>
         <h5>Quick Links</h5>
@@ -351,9 +283,7 @@
         <li><a href="careers.html">Careers</a></li>
         </ul>
       </div>
-
-    </div><!-- /.footer-grid -->
-
+    </div>
     <div class="footer-bottom">
       <span>© <span id="yr">2026</span> Asian Alliance Radiation &amp; Oncology Pte Ltd. All rights reserved.</span>
       <span class="footer-bottom-links">
@@ -363,7 +293,6 @@
         <a href="#">Sitemap</a>
       </span>
     </div>
-
   </div>
 </footer>
 <!-- @wp:wp_footer() -->

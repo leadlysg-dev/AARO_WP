@@ -49,8 +49,10 @@ Then visit **http://localhost:8000** in your browser. This serves the site over 
 
 ## 🎨 What's already styled vs what's a placeholder
 
-### Already styled
-- All brand tokens applied directly from the AARO Brand Architecture document — Navy `#0B2240`, Teal `#0A7E6A`, Gold `#B8882A`, Warm white `#F7F4EF`, with Cormorant Garamond / DM Sans / DM Mono.
+### Already styled (v1.1 — moodboard-aligned)
+- Design system follows the AARO moodboard "Clinical" palette: Navy `#0B2240`, Teal `#0A7E6A`, Surface `#F4F7FB`. Cormorant Garamond for display, **Inter** for body, DM Mono for meta.
+- Home, About, Specialists index, Dr Daniel Tan profile, Second Opinion, Patient Stories index, Adam Road CSR clinic, and SBRT treatment pages all use **real photography** — supplied by AARO. Other pages still use refined placeholders.
+- Home page hero now follows the moodboard pattern: white background, content stacked above a 16:9 hero image (the four senior doctors at the Elekta Linac).
 - Every component used across the site: hero blocks, doctor cards, cancer tiles, treatment cards, story cards, clinic cards, breadcrumbs, FAQ accordion, CTA bands, footer.
 - Mobile-first responsive design. Breakpoints at 640 / 1024 / 1280 px.
 - A consistent grey image-placeholder pattern (with category tag, filename, and dimensions) — replace these with real images when ready.

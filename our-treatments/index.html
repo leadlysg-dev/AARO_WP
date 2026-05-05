@@ -11,28 +11,19 @@
 <meta property="og:site_name" content="AARO — Asian Alliance Radiation & Oncology">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <!-- @wp:wp_head() -->
 </head>
 <body class="archive-treatments">
 <!-- @wp:body_open() -->
 
-<!-- ============================================================
-     SITE HEADER
-     On WP conversion: extract everything between the markers below
-     into header.php
-     ============================================================ -->
 <!-- @wp:get_header() -->
-
-<!-- Utility bar (top thin strip) -->
 <!-- @wp:dynamic_sidebar(header-utility) -->
 <div class="utility-bar">
   <div class="container">
     <div class="utility-bar-inner">
-      <div class="utility-bar-left">
-        <span>Novena Medical Centre · Singapore</span>
-      </div>
+      <div class="utility-bar-left"><span>Novena Medical Centre · Singapore</span></div>
       <div class="utility-bar-right">
         <a href="tel:+6581023838">+65 8102 3838</a>
         <a href="https://wa.me/6581023838" target="_blank" rel="noopener">WhatsApp</a>
@@ -45,15 +36,13 @@
 <header class="site-header" role="banner">
   <div class="container">
     <div class="site-header-inner">
-
       <a class="site-logo" href="../" aria-label="AARO home">
         AARO
         <small>Asian Alliance Radiation &amp; Oncology</small>
       </a>
-
       <!-- @wp:wp_nav_menu(primary) -->
       <nav class="primary-nav" role="navigation" aria-label="Primary">
-        <ul style="display:flex; gap:28px; align-items:center;">
+        <ul>
         <li><a href="../our-specialists/index.html" data-nav-link="our-specialists/index.html">Our Specialists</a></li>
         <li><a href="../cancers-we-treat/index.html" data-nav-link="cancers-we-treat/index.html">Cancers We Treat</a></li>
         <li><a href="../our-treatments/index.html" data-nav-link="our-treatments/index.html">Our Treatments</a></li>
@@ -63,18 +52,14 @@
         <li><a href="../about.html" data-nav-link="about.html">About</a></li>
         </ul>
       </nav>
-
       <a class="header-cta" href="../contact.html">Book Consultation</a>
-
       <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-
     </div>
   </div>
 </header>
 
-<!-- Mobile nav drawer -->
 <div class="mobile-nav" data-mobile-nav role="dialog" aria-label="Mobile navigation">
   <div class="mobile-nav-head">
     <span class="site-logo" style="font-size:1.25rem;">AARO</span>
@@ -93,7 +78,6 @@
   </ul>
   <a class="header-cta" href="../contact.html">Book Consultation</a>
 </div>
-
 <!-- @wp:get_header_end -->
 
 <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -108,29 +92,28 @@
 <main id="main" role="main">
 <!-- @wp:the_content() -->
 
-<section class="hero hero--navy">
-  <div class="container container--narrow">
-    <span class="eyebrow eyebrow--light hero-eyebrow">Our Treatments</span>
-    <h1>The full radiation toolkit, <em>under one roof.</em></h1>
-    <p>AARO offers every modern radiation therapy modality — and dual-trained oncologists who can recommend chemotherapy and targeted therapy where they fit. Each treatment below has its own page with what it is, who it's for, and what to expect.</p>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow hero-eyebrow">Our Treatments</span>
+      <h1>The full radiation toolkit, <em>under one roof.</em></h1>
+      <p class="lead">AARO offers every modern radiation therapy modality — and dual-trained oncologists who can recommend chemotherapy and targeted therapy where they fit. Each treatment below has its own page with what it is, who it's for, and what to expect.</p>
+    </div>
+    <div class="hero-media">
+      <div class="img-wrap aspect-16/9"><img src="assets/images/treatment/patient-linac-breath-hold-sbrt.jpg" alt="A patient on the Elekta Linac couch with breath-hold device, ready for SBRT treatment delivery." loading="lazy"></div>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow eyebrow--teal">Treatments</span>
+      <span class="eyebrow">Treatments</span>
       <h2>What we offer</h2>
     </div>
     <div class="grid grid-cols-3">
       <article class="card treatment-card">
-        <div class="img-placeholder aspect-16/10" data-category="equipment" data-filename="treatment-sbrt-card.jpg" data-dimensions="1200×750 (16:10)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--equipment">Equipment</span>
-    <span class="img-placeholder-desc">Stereotactic Body Radiation Therapy — equipment or procedure illustration</span>
-    <span class="img-placeholder-meta">/assets/images/equipments/treatment-sbrt-card.jpg · 1200×750 (16:10)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-16/10"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Treatment</span><span class="img-placeholder-desc">SBRT delivery</span></div></div>
         <div class="card-body">
           <span class="card-tag">3–5 sessions over 1–2 weeks</span>
           <h3 class="card-title">SBRT</h3>
@@ -139,60 +122,36 @@
         </div>
       </article>
       <article class="card treatment-card">
-        <div class="img-placeholder aspect-16/10" data-category="equipment" data-filename="treatment-srs-radiosurgery-card.jpg" data-dimensions="1200×750 (16:10)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--equipment">Equipment</span>
-    <span class="img-placeholder-desc">Stereotactic Radiosurgery — equipment or procedure illustration</span>
-    <span class="img-placeholder-meta">/assets/images/equipments/treatment-srs-radiosurgery-card.jpg · 1200×750 (16:10)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-16/10"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Treatment</span><span class="img-placeholder-desc">SRS planning</span></div></div>
         <div class="card-body">
-          <span class="card-tag">Single session — same-day outpatient</span>
+          <span class="card-tag">Single session — outpatient</span>
           <h3 class="card-title">SRS / Radiosurgery</h3>
           <p class="card-excerpt">Single- or few-fraction precision radiation for brain and spine tumours.</p>
-          <a class="card-link" href="srs-radiosurgery.html">Learn about SRS / Radiosurgery</a>
+          <a class="card-link" href="srs-radiosurgery.html">Learn about SRS</a>
         </div>
       </article>
       <article class="card treatment-card">
-        <div class="img-placeholder aspect-16/10" data-category="equipment" data-filename="treatment-vmat-imrt-card.jpg" data-dimensions="1200×750 (16:10)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--equipment">Equipment</span>
-    <span class="img-placeholder-desc">Volumetric Modulated Arc Therapy / Intensity-Modulated Radiation Therapy — equipment or procedure illustration</span>
-    <span class="img-placeholder-meta">/assets/images/equipments/treatment-vmat-imrt-card.jpg · 1200×750 (16:10)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-16/10"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Treatment</span><span class="img-placeholder-desc">VMAT/IMRT delivery</span></div></div>
         <div class="card-body">
-          <span class="card-tag">Typically 5–8 weeks of daily sessions</span>
+          <span class="card-tag">Typically 5–8 weeks daily</span>
           <h3 class="card-title">VMAT / IMRT</h3>
           <p class="card-excerpt">The modern standard for external-beam radiation therapy.</p>
-          <a class="card-link" href="vmat-imrt.html">Learn about VMAT / IMRT</a>
+          <a class="card-link" href="vmat-imrt.html">Learn about VMAT/IMRT</a>
         </div>
       </article>
       <article class="card treatment-card">
-        <div class="img-placeholder aspect-16/10" data-category="equipment" data-filename="treatment-brachytherapy-card.jpg" data-dimensions="1200×750 (16:10)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--equipment">Equipment</span>
-    <span class="img-placeholder-desc">Internal Radiation (Brachytherapy) — equipment or procedure illustration</span>
-    <span class="img-placeholder-meta">/assets/images/equipments/treatment-brachytherapy-card.jpg · 1200×750 (16:10)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-16/10"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Treatment</span><span class="img-placeholder-desc">Brachytherapy suite</span></div></div>
         <div class="card-body">
-          <span class="card-tag">Variable — 1 session (HDR) to multi-day implant (LDR)</span>
+          <span class="card-tag">Variable — 1 session (HDR) or implant</span>
           <h3 class="card-title">Brachytherapy</h3>
           <p class="card-excerpt">Radiation delivered from inside the body — placed close to the tumour.</p>
           <a class="card-link" href="brachytherapy.html">Learn about Brachytherapy</a>
         </div>
       </article>
       <article class="card treatment-card">
-        <div class="img-placeholder aspect-16/10" data-category="equipment" data-filename="treatment-chemotherapy-card.jpg" data-dimensions="1200×750 (16:10)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--equipment">Equipment</span>
-    <span class="img-placeholder-desc">Chemotherapy &amp; Systemic Therapy — equipment or procedure illustration</span>
-    <span class="img-placeholder-meta">/assets/images/equipments/treatment-chemotherapy-card.jpg · 1200×750 (16:10)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-16/10"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Treatment</span><span class="img-placeholder-desc">Chemotherapy infusion</span></div></div>
         <div class="card-body">
-          <span class="card-tag">Variable — typically multi-cycle over weeks/months</span>
+          <span class="card-tag">Multi-cycle over weeks/months</span>
           <h3 class="card-title">Chemotherapy</h3>
           <p class="card-excerpt">Drug-based treatment delivered by our medical oncology team.</p>
           <a class="card-link" href="chemotherapy.html">Learn about Chemotherapy</a>
@@ -205,7 +164,7 @@
 <section class="section section--warm">
   <div class="container container--narrow">
     <div class="prose">
-      <span class="eyebrow eyebrow--teal">Choosing the right treatment</span>
+      <span class="eyebrow">Choosing the right treatment</span>
       <h2 class="mt-2">Modality matching, not modality marketing.</h2>
       <p>Different radiation modalities suit different clinical situations. SBRT is often the right choice for small, well-defined targets where dose-escalation matters. VMAT/IMRT is the workhorse for larger volumes and complex anatomy. Brachytherapy is essential for many gynaecological cases. SRS is the standard for brain metastases.</p>
       <p>At AARO, your specialist recommends the modality that fits your tumour — not the one we happen to advertise. If we believe a treatment we don't offer is right for you, we'll tell you that too, and help you access it.</p>
@@ -215,17 +174,10 @@
 
 </main>
 
-<!-- ============================================================
-     SITE FOOTER
-     On WP conversion: extract everything between the markers below
-     into footer.php
-     ============================================================ -->
 <!-- @wp:get_footer() -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-
     <div class="footer-grid">
-
       <div class="footer-brand-col">
         <div class="footer-logo">AARO</div>
         <div class="footer-tagline">Precision Oncology · Personalised Care</div>
@@ -241,7 +193,6 @@
           <a href="#" aria-label="YouTube">Yt</a>
         </div>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-1) -->
       <div>
         <h5>Cancers We Treat</h5>
@@ -254,7 +205,6 @@
         <li><a href="../cancers-we-treat/index.html">View all 12 →</a></li>
         </ul>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-2) -->
       <div>
         <h5>Our Specialists</h5>
@@ -266,7 +216,6 @@
         <li><a href="../our-specialists/index.html">Meet the team →</a></li>
         </ul>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-3) -->
       <div>
         <h5>Quick Links</h5>
@@ -281,9 +230,7 @@
         <li><a href="../careers.html">Careers</a></li>
         </ul>
       </div>
-
-    </div><!-- /.footer-grid -->
-
+    </div>
     <div class="footer-bottom">
       <span>© <span id="yr">2026</span> Asian Alliance Radiation &amp; Oncology Pte Ltd. All rights reserved.</span>
       <span class="footer-bottom-links">
@@ -293,7 +240,6 @@
         <a href="#">Sitemap</a>
       </span>
     </div>
-
   </div>
 </footer>
 <!-- @wp:wp_footer() -->

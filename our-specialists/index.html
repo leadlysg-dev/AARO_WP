@@ -11,28 +11,19 @@
 <meta property="og:site_name" content="AARO — Asian Alliance Radiation & Oncology">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css">
 <!-- @wp:wp_head() -->
 </head>
 <body class="archive-doctors">
 <!-- @wp:body_open() -->
 
-<!-- ============================================================
-     SITE HEADER
-     On WP conversion: extract everything between the markers below
-     into header.php
-     ============================================================ -->
 <!-- @wp:get_header() -->
-
-<!-- Utility bar (top thin strip) -->
 <!-- @wp:dynamic_sidebar(header-utility) -->
 <div class="utility-bar">
   <div class="container">
     <div class="utility-bar-inner">
-      <div class="utility-bar-left">
-        <span>Novena Medical Centre · Singapore</span>
-      </div>
+      <div class="utility-bar-left"><span>Novena Medical Centre · Singapore</span></div>
       <div class="utility-bar-right">
         <a href="tel:+6581023838">+65 8102 3838</a>
         <a href="https://wa.me/6581023838" target="_blank" rel="noopener">WhatsApp</a>
@@ -45,15 +36,13 @@
 <header class="site-header" role="banner">
   <div class="container">
     <div class="site-header-inner">
-
       <a class="site-logo" href="../" aria-label="AARO home">
         AARO
         <small>Asian Alliance Radiation &amp; Oncology</small>
       </a>
-
       <!-- @wp:wp_nav_menu(primary) -->
       <nav class="primary-nav" role="navigation" aria-label="Primary">
-        <ul style="display:flex; gap:28px; align-items:center;">
+        <ul>
         <li><a href="../our-specialists/index.html" data-nav-link="our-specialists/index.html">Our Specialists</a></li>
         <li><a href="../cancers-we-treat/index.html" data-nav-link="cancers-we-treat/index.html">Cancers We Treat</a></li>
         <li><a href="../our-treatments/index.html" data-nav-link="our-treatments/index.html">Our Treatments</a></li>
@@ -63,18 +52,14 @@
         <li><a href="../about.html" data-nav-link="about.html">About</a></li>
         </ul>
       </nav>
-
       <a class="header-cta" href="../contact.html">Book Consultation</a>
-
       <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-
     </div>
   </div>
 </header>
 
-<!-- Mobile nav drawer -->
 <div class="mobile-nav" data-mobile-nav role="dialog" aria-label="Mobile navigation">
   <div class="mobile-nav-head">
     <span class="site-logo" style="font-size:1.25rem;">AARO</span>
@@ -93,7 +78,6 @@
   </ul>
   <a class="header-cta" href="../contact.html">Book Consultation</a>
 </div>
-
 <!-- @wp:get_header_end -->
 
 <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -108,89 +92,64 @@
 <main id="main" role="main">
 <!-- @wp:the_content() -->
 
-<section class="hero hero--navy">
-  <div class="container container--narrow">
-    <span class="eyebrow eyebrow--light hero-eyebrow">Our Specialists</span>
-    <h1>Each AARO oncologist is a <em>sub-specialist</em>, not a generalist.</h1>
-    <p>Our seven specialists were trained at the National Cancer Centre Singapore — the institution that built Singapore's modern radiation oncology programme. Each focuses on a defined cancer area, so your case is handled by someone whose practice is dedicated to it.</p>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow hero-eyebrow">Our Specialists</span>
+      <h1>Each AARO oncologist is a <em>sub-specialist</em>, not a generalist.</h1>
+      <p class="lead">Our seven specialists were trained at the National Cancer Centre Singapore — the institution that built Singapore's modern radiation oncology programme. Each focuses on a defined cancer area, so your case is handled by someone whose practice is dedicated to it.</p>
+    </div>
+    <div class="hero-media">
+      <div class="img-wrap aspect-16/9"><img src="assets/images/doctors/home-hero-four-doctors-linac.jpg" alt="Four senior AARO specialists at the Centre for Stereotactic Radiosurgery." loading="lazy"></div>
+    </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
     <div class="section-header">
-      <span class="eyebrow eyebrow--teal">Meet the team</span>
+      <span class="eyebrow">Meet the team</span>
       <h2>Seven specialists. <em>One focused practice.</em></h2>
     </div>
     <div class="grid grid-cols-3">
       <article class="card doctor-card">
-        <div class="img-placeholder aspect-4/5" data-category="doctor" data-filename="doctor-dr-daniel-tan-portrait.jpg" data-dimensions="1200×1500 (4:5)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--doctor">Doctor</span>
-    <span class="img-placeholder-desc">Dr Daniel Tan Yat Harn — formal portrait, navy backdrop</span>
-    <span class="img-placeholder-meta">/assets/images/doctors/doctor-dr-daniel-tan-portrait.jpg · 1200×1500 (4:5)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-4/5"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Doctor</span><span class="img-placeholder-desc">Dr Daniel Tan — formal portrait</span><span class="img-placeholder-meta">1200×1500 (4:5)</span></div></div>
         <div class="card-body">
-          <span class="card-tag">Director</span>
-          <h3 class="card-title">Dr Daniel Tan Yat Harn</h3>
-          <p class="card-meta">Brain Cancer, Spine Cancer, Lung Cancer, Prostate Cancer, SRS, SBRT</p>
+          <span class="card-tag card-tag--gold">Director</span>
+          <h3 class="card-title">Dr Daniel Tan</h3>
+          <p class="card-meta">SRS · SBRT · Brain · Spine · Prostate</p>
           <a class="card-link" href="dr-daniel-tan.html">View profile</a>
         </div>
       </article>
       <article class="card doctor-card">
-        <div class="img-placeholder aspect-4/5" data-category="doctor" data-filename="doctor-dr-david-tan-portrait.jpg" data-dimensions="1200×1500 (4:5)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--doctor">Doctor</span>
-    <span class="img-placeholder-desc">Dr David Tan Boon Harn — formal portrait, navy backdrop</span>
-    <span class="img-placeholder-meta">/assets/images/doctors/doctor-dr-david-tan-portrait.jpg · 1200×1500 (4:5)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-4/5"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Doctor</span><span class="img-placeholder-desc">Dr Jonathan Teh — formal portrait</span><span class="img-placeholder-meta">1200×1500 (4:5)</span></div></div>
         <div class="card-body">
-          <span class="card-tag">Senior Consultant</span>
-          <h3 class="card-title">Dr David Tan Boon Harn</h3>
-          <p class="card-meta">Prostate Cancer, SBRT, Genitourinary</p>
-          <a class="card-link" href="dr-david-tan.html">View profile</a>
-        </div>
-      </article>
-      <article class="card doctor-card">
-        <div class="img-placeholder aspect-4/5" data-category="doctor" data-filename="doctor-dr-jonathan-teh-portrait.jpg" data-dimensions="1200×1500 (4:5)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--doctor">Doctor</span>
-    <span class="img-placeholder-desc">Dr Jonathan Teh Yi Hui — formal portrait, navy backdrop</span>
-    <span class="img-placeholder-meta">/assets/images/doctors/doctor-dr-jonathan-teh-portrait.jpg · 1200×1500 (4:5)</span>
-  </div>
-</div>
-        <div class="card-body">
-          <span class="card-tag">Medical Director, CSR</span>
-          <h3 class="card-title">Dr Jonathan Teh Yi Hui</h3>
-          <p class="card-meta">Breast Cancer, Prostate Cancer, Gynaecological Cancer</p>
+          <span class="card-tag card-tag--gold">Medical Director, CSR</span>
+          <h3 class="card-title">Dr Jonathan Teh</h3>
+          <p class="card-meta">Breast · Prostate · Gynaecological</p>
           <a class="card-link" href="dr-jonathan-teh.html">View profile</a>
         </div>
       </article>
       <article class="card doctor-card">
-        <div class="img-placeholder aspect-4/5" data-category="doctor" data-filename="doctor-dr-michelle-tseng-portrait.jpg" data-dimensions="1200×1500 (4:5)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--doctor">Doctor</span>
-    <span class="img-placeholder-desc">Dr Michelle Tseng Shu Fen — formal portrait, navy backdrop</span>
-    <span class="img-placeholder-meta">/assets/images/doctors/doctor-dr-michelle-tseng-portrait.jpg · 1200×1500 (4:5)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-4/5"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Doctor</span><span class="img-placeholder-desc">Dr David Tan — formal portrait</span><span class="img-placeholder-meta">1200×1500 (4:5)</span></div></div>
         <div class="card-body">
           <span class="card-tag">Senior Consultant</span>
-          <h3 class="card-title">Dr Michelle Tseng Shu Fen</h3>
-          <p class="card-meta">Head & Neck Cancer, Lung Cancer, Breast Cancer</p>
+          <h3 class="card-title">Dr David Tan</h3>
+          <p class="card-meta">SBRT · Prostate · Genitourinary</p>
+          <a class="card-link" href="dr-david-tan.html">View profile</a>
+        </div>
+      </article>
+      <article class="card doctor-card">
+        <div class="img-placeholder aspect-4/5"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Doctor</span><span class="img-placeholder-desc">Dr Michelle Tseng — formal portrait</span><span class="img-placeholder-meta">1200×1500 (4:5)</span></div></div>
+        <div class="card-body">
+          <span class="card-tag">Senior Consultant</span>
+          <h3 class="card-title">Dr Michelle Tseng</h3>
+          <p class="card-meta">Head &amp; Neck · Lung · Breast</p>
           <a class="card-link" href="dr-michelle-tseng.html">View profile</a>
         </div>
       </article>
       <article class="card doctor-card">
-        <div class="img-placeholder aspect-4/5" data-category="doctor" data-filename="doctor-dr-andrew-tan-portrait.jpg" data-dimensions="1200×1500 (4:5)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--doctor">Doctor</span>
-    <span class="img-placeholder-desc">Dr Andrew Tan — formal portrait, navy backdrop</span>
-    <span class="img-placeholder-meta">/assets/images/doctors/doctor-dr-andrew-tan-portrait.jpg · 1200×1500 (4:5)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-4/5"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Doctor</span><span class="img-placeholder-desc">Dr Andrew Tan — formal portrait</span><span class="img-placeholder-meta">1200×1500 (4:5)</span></div></div>
         <div class="card-body">
           <span class="card-tag">Consultant</span>
           <h3 class="card-title">Dr Andrew Tan</h3>
@@ -199,13 +158,7 @@
         </div>
       </article>
       <article class="card doctor-card">
-        <div class="img-placeholder aspect-4/5" data-category="doctor" data-filename="doctor-dr-manish-taneja-portrait.jpg" data-dimensions="1200×1500 (4:5)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--doctor">Doctor</span>
-    <span class="img-placeholder-desc">Dr Manish Taneja — formal portrait, navy backdrop</span>
-    <span class="img-placeholder-meta">/assets/images/doctors/doctor-dr-manish-taneja-portrait.jpg · 1200×1500 (4:5)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-4/5"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Doctor</span><span class="img-placeholder-desc">Dr Manish Taneja — formal portrait</span><span class="img-placeholder-meta">1200×1500 (4:5)</span></div></div>
         <div class="card-body">
           <span class="card-tag">Consultant</span>
           <h3 class="card-title">Dr Manish Taneja</h3>
@@ -214,17 +167,11 @@
         </div>
       </article>
       <article class="card doctor-card">
-        <div class="img-placeholder aspect-4/5" data-category="doctor" data-filename="doctor-dr-ooi-wei-seong-portrait.jpg" data-dimensions="1200×1500 (4:5)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--doctor">Doctor</span>
-    <span class="img-placeholder-desc">Dr Ooi Wei Seong — formal portrait, navy backdrop</span>
-    <span class="img-placeholder-meta">/assets/images/doctors/doctor-dr-ooi-wei-seong-portrait.jpg · 1200×1500 (4:5)</span>
-  </div>
-</div>
+        <div class="img-placeholder aspect-4/5"><div class="img-placeholder-inner"><span class="img-placeholder-cat">Doctor</span><span class="img-placeholder-desc">Dr Ooi Wei Seong — formal portrait</span><span class="img-placeholder-meta">1200×1500 (4:5)</span></div></div>
         <div class="card-body">
-          <span class="card-tag">Consultant</span>
+          <span class="card-tag">Consultant Medical Oncologist</span>
           <h3 class="card-title">Dr Ooi Wei Seong</h3>
-          <p class="card-meta">Medical Oncology, Chemotherapy</p>
+          <p class="card-meta">Medical Oncology · Chemotherapy</p>
           <a class="card-link" href="dr-ooi-wei-seong.html">View profile</a>
         </div>
       </article>
@@ -234,44 +181,37 @@
 
 <section class="section section--warm">
   <div class="container">
-    <div class="grid grid-cols-2" style="gap:48px; align-items:center;">
+    <div class="grid" style="grid-template-columns: 1fr; gap: 48px; align-items: center;">
       <div>
-        <span class="eyebrow eyebrow--teal">Beyond the doctors</span>
-        <h2>The <em>full clinical team.</em></h2>
-        <p>Treatment delivery is a team sport. Behind every consultation is a coordinated team of medical physicists, radiation therapists, oncology nurses and care coordinators.</p>
+        <span class="eyebrow">Beyond the doctors</span>
+        <h2 class="mt-2 mb-3">The <em>full clinical team.</em></h2>
+        <p class="mb-3">Treatment delivery is a team sport. Behind every consultation is a coordinated team of medical physicists, radiation therapists, oncology nurses and care coordinators.</p>
         <ul class="prose mt-3">
-          <li>Medical Physicists — plan optimisation, dose verification, machine QA</li>
-          <li>Radiation Therapists — daily treatment delivery, image guidance</li>
-          <li>Oncology Nurses — patient education, side-effect management</li>
-          <li>Care Coordinators — scheduling, insurance, your single point of contact</li>
+          <li><strong>Medical Physicists</strong> — plan optimisation, dose verification, machine QA</li>
+          <li><strong>Radiation Therapists</strong> — daily treatment delivery, image guidance</li>
+          <li><strong>Oncology Nurses</strong> — patient education, side-effect management</li>
+          <li><strong>Care Coordinators</strong> — scheduling, insurance, your single point of contact</li>
         </ul>
       </div>
       <div>
-        <div class="img-placeholder aspect-4/3" data-category="staff" data-filename="specialists-team-group.jpg" data-dimensions="1400×1050 (4:3)">
-  <div class="img-placeholder-inner">
-    <span class="img-placeholder-cat img-placeholder-cat--staff">Staff</span>
-    <span class="img-placeholder-desc">AARO clinical team group photo — environmental, in CSR</span>
-    <span class="img-placeholder-meta">/assets/images/staffs/specialists-team-group.jpg · 1400×1050 (4:3)</span>
-  </div>
-</div>
+        <div class="img-wrap aspect-3/2"><img src="assets/images/staff/team-full-group-portrait.jpg" alt="AARO clinical team group photograph at the CSR studio." loading="lazy"></div>
       </div>
     </div>
   </div>
 </section>
 
+<style>
+@media (min-width: 1024px) {
+  .section--warm .grid[style*="grid-template-columns: 1fr"] { grid-template-columns: 1fr 1.4fr !important; gap: 56px !important; }
+}
+</style>
+
 </main>
 
-<!-- ============================================================
-     SITE FOOTER
-     On WP conversion: extract everything between the markers below
-     into footer.php
-     ============================================================ -->
 <!-- @wp:get_footer() -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-
     <div class="footer-grid">
-
       <div class="footer-brand-col">
         <div class="footer-logo">AARO</div>
         <div class="footer-tagline">Precision Oncology · Personalised Care</div>
@@ -287,7 +227,6 @@
           <a href="#" aria-label="YouTube">Yt</a>
         </div>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-1) -->
       <div>
         <h5>Cancers We Treat</h5>
@@ -300,7 +239,6 @@
         <li><a href="../cancers-we-treat/index.html">View all 12 →</a></li>
         </ul>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-2) -->
       <div>
         <h5>Our Specialists</h5>
@@ -312,7 +250,6 @@
         <li><a href="../our-specialists/index.html">Meet the team →</a></li>
         </ul>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-3) -->
       <div>
         <h5>Quick Links</h5>
@@ -327,9 +264,7 @@
         <li><a href="../careers.html">Careers</a></li>
         </ul>
       </div>
-
-    </div><!-- /.footer-grid -->
-
+    </div>
     <div class="footer-bottom">
       <span>© <span id="yr">2026</span> Asian Alliance Radiation &amp; Oncology Pte Ltd. All rights reserved.</span>
       <span class="footer-bottom-links">
@@ -339,7 +274,6 @@
         <a href="#">Sitemap</a>
       </span>
     </div>
-
   </div>
 </footer>
 <!-- @wp:wp_footer() -->
