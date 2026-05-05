@@ -23,16 +23,17 @@
     Referrer-Policy       = "strict-origin-when-cross-origin"
     Permissions-Policy    = "geolocation=(), microphone=(), camera=()"
 
-# Cache CSS / JS for an hour (so updates push out fast)
+# Cache CSS / JS for 5 minutes only, with must-revalidate. We're still iterating
+# the design — once the site is stable, bump this back to 3600 (1 hour).
 [[headers]]
   for = "/style.css"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, max-age=300, must-revalidate"
 
 [[headers]]
   for = "/scripts.js"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, max-age=300, must-revalidate"
 
 # Long-cache static assets — once you add real images here, they
 # can be cached aggressively because filenames are content-addressed.
