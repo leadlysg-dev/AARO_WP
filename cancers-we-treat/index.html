@@ -1,38 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Cancers We Treat — AARO Singapore Radiation Oncology</title>
-<meta name="description" content="AARO treats 12 major cancer types — breast, prostate, lung, brain, liver, spine, colorectal, GI, GU, gynaecological, head & neck, lymphomas. Specialist sub-team for each.">
-<meta property="og:title" content="Cancers We Treat — AARO Singapore Radiation Oncology">
-<meta property="og:description" content="AARO treats 12 major cancer types — breast, prostate, lung, brain, liver, spine, colorectal, GI, GU, gynaecological, head & neck, lymphomas. Specialist sub-team for each.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="AARO — Asian Alliance Radiation & Oncology">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<meta content="AARO treats 12 major cancer types — breast, prostate, lung, brain, liver, spine, colorectal, GI, GU, gynaecological, head &amp; neck, lymphomas. Specialist sub-team for each." name="description"/>
+<meta content="Cancers We Treat — AARO Singapore Radiation Oncology" property="og:title"/>
+<meta content="AARO treats 12 major cancer types — breast, prostate, lung, brain, liver, spine, colorectal, GI, GU, gynaecological, head &amp; neck, lymphomas. Specialist sub-team for each." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="AARO — Asian Alliance Radiation &amp; Oncology" property="og:site_name"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../style.css" rel="stylesheet"/>
 <!-- @wp:wp_head() -->
 </head>
 <body class="archive-cancers">
 <!-- @wp:body_open() -->
-
 <!-- ============================================================
      SITE HEADER
      On WP conversion: extract everything between the markers below
      into header.php
      ============================================================ -->
 <!-- @wp:get_header() -->
-
-<!-- Utility bar (top thin strip) -->
 <!-- @wp:dynamic_sidebar(header-utility) -->
 <div class="utility-bar">
   <div class="container">
     <div class="utility-bar-inner">
-      <div class="utility-bar-left">
-        <span>Novena Medical Centre · Singapore</span>
-      </div>
+      <div class="utility-bar-left"><span>Novena Medical Centre · Singapore</span></div>
       <div class="utility-bar-right">
         <a href="tel:+6581023838">+65 8102 3838</a>
         <a href="https://wa.me/6581023838" target="_blank" rel="noopener">WhatsApp</a>
@@ -41,40 +37,75 @@
     </div>
   </div>
 </div>
-
 <header class="site-header" role="banner">
   <div class="container">
     <div class="site-header-inner">
-
       <a class="site-logo" href="../" aria-label="AARO home">
         AARO
         <small>Asian Alliance Radiation &amp; Oncology</small>
       </a>
-
       <!-- @wp:wp_nav_menu(primary) -->
       <nav class="primary-nav" role="navigation" aria-label="Primary">
-        <ul style="display:flex; gap:28px; align-items:center;">
-        <li><a href="../our-specialists/index.html" data-nav-link="our-specialists/index.html">Our Specialists</a></li>
-        <li><a href="../cancers-we-treat/index.html" data-nav-link="cancers-we-treat/index.html">Cancers We Treat</a></li>
-        <li><a href="../our-treatments/index.html" data-nav-link="our-treatments/index.html">Our Treatments</a></li>
-        <li><a href="../patient-stories/index.html" data-nav-link="patient-stories/index.html">Patient Stories</a></li>
+        <ul>
+        <li class="has-dropdown">
+          <a href="../our-specialists/index.html" data-nav-link="our-specialists/index.html">Specialists<span class="nav-chev" aria-hidden="true"></span></a>
+          <button class="nav-chev-btn" aria-label="Open Specialists submenu" aria-expanded="false" data-dropdown-toggle></button>
+          <ul class="dropdown" role="menu">
+            <li><a href="../our-specialists/index.html" class="dropdown-view-all">View all 7 specialists →</a></li>
+            <li><a href="../our-specialists/dr-daniel-tan.html">Dr Daniel Tan<span class="dropdown-meta">Director · Brain, Spine, SRS/SBRT</span></a></li>
+            <li><a href="../our-specialists/dr-jonathan-teh.html">Dr Jonathan Teh<span class="dropdown-meta">Medical Director, CSR · Breast, Prostate</span></a></li>
+            <li><a href="../our-specialists/dr-david-tan.html">Dr David Tan<span class="dropdown-meta">SBRT · Prostate, Genitourinary</span></a></li>
+            <li><a href="../our-specialists/dr-michelle-tseng.html">Dr Michelle Tseng<span class="dropdown-meta">Head & Neck · Lung, Breast</span></a></li>
+            <li><a href="../our-specialists/dr-andrew-tan.html">Dr Andrew Tan<span class="dropdown-meta">Radiation Oncology</span></a></li>
+            <li><a href="../our-specialists/dr-manish-taneja.html">Dr Manish Taneja<span class="dropdown-meta">Interventional / GU</span></a></li>
+            <li><a href="../our-specialists/dr-ooi-wei-seong.html">Dr Ooi Wei Seong<span class="dropdown-meta">Medical Oncology</span></a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="../cancers-we-treat/index.html" data-nav-link="cancers-we-treat/index.html">Cancers<span class="nav-chev" aria-hidden="true"></span></a>
+          <button class="nav-chev-btn" aria-label="Open Cancers submenu" aria-expanded="false" data-dropdown-toggle></button>
+          <ul class="dropdown" role="menu">
+            <li><a href="../cancers-we-treat/index.html" class="dropdown-view-all">View all 12 cancers →</a></li>
+            <li><a href="../cancers-we-treat/breast-cancer.html">Breast Cancer</a></li>
+            <li><a href="../cancers-we-treat/prostate-cancer.html">Prostate Cancer</a></li>
+            <li><a href="../cancers-we-treat/lung-cancer.html">Lung Cancer</a></li>
+            <li><a href="../cancers-we-treat/brain-cancer.html">Brain Cancer</a></li>
+            <li><a href="../cancers-we-treat/liver-cancer.html">Liver Cancer</a></li>
+            <li><a href="../cancers-we-treat/spine-cancer.html">Spine Cancer</a></li>
+            <li><a href="../cancers-we-treat/colorectal-cancer.html">Colorectal Cancer</a></li>
+            <li><a href="../cancers-we-treat/gastrointestinal-cancer.html">Gastrointestinal</a></li>
+            <li><a href="../cancers-we-treat/genitourinary-cancer.html">Genitourinary</a></li>
+            <li><a href="../cancers-we-treat/gynaecological-cancer.html">Gynaecological</a></li>
+            <li><a href="../cancers-we-treat/head-and-neck-cancer.html">Head & Neck</a></li>
+            <li><a href="../cancers-we-treat/secondary-lymph-node-and-lymphomas.html">Lymph Node / Lymphomas</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="../our-treatments/index.html" data-nav-link="our-treatments/index.html">Treatments<span class="nav-chev" aria-hidden="true"></span></a>
+          <button class="nav-chev-btn" aria-label="Open Treatments submenu" aria-expanded="false" data-dropdown-toggle></button>
+          <ul class="dropdown" role="menu">
+            <li><a href="../our-treatments/index.html" class="dropdown-view-all">View all treatments →</a></li>
+            <li><a href="../our-treatments/sbrt.html">SBRT<span class="dropdown-meta">3–5 sessions</span></a></li>
+            <li><a href="../our-treatments/srs-radiosurgery.html">SRS / Radiosurgery<span class="dropdown-meta">Single session</span></a></li>
+            <li><a href="../our-treatments/vmat-imrt.html">VMAT / IMRT<span class="dropdown-meta">5–8 weeks daily</span></a></li>
+            <li><a href="../our-treatments/brachytherapy.html">Brachytherapy<span class="dropdown-meta">Internal radiation</span></a></li>
+            <li><a href="../our-treatments/chemotherapy.html">Chemotherapy<span class="dropdown-meta">Systemic therapy</span></a></li>
+          </ul>
+        </li>
+        <li><a href="../patient-stories.html" data-nav-link="patient-stories.html">Patient Stories</a></li>
+        <li><a href="../articles.html" data-nav-link="articles.html">Articles</a></li>
         <li><a href="../second-opinion.html" data-nav-link="second-opinion.html">Second Opinion</a></li>
         <li><a href="../for-clinicians.html" data-nav-link="for-clinicians.html">For Clinicians</a></li>
         <li><a href="../about.html" data-nav-link="about.html">About</a></li>
         </ul>
       </nav>
-
       <a class="header-cta" href="../contact.html">Book Consultation</a>
-
       <button class="nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-
     </div>
   </div>
 </header>
-
-<!-- Mobile nav drawer -->
 <div class="mobile-nav" data-mobile-nav role="dialog" aria-label="Mobile navigation">
   <div class="mobile-nav-head">
     <span class="site-logo" style="font-size:1.25rem;">AARO</span>
@@ -83,75 +114,116 @@
     </button>
   </div>
   <ul>
-      <li><a href="../our-specialists/index.html">Our Specialists</a></li>
-      <li><a href="../cancers-we-treat/index.html">Cancers We Treat</a></li>
-      <li><a href="../our-treatments/index.html">Our Treatments</a></li>
-      <li><a href="../patient-stories/index.html">Patient Stories</a></li>
+      <li class="has-dropdown-mobile">
+        <div class="m-row">
+          <a href="../our-specialists/index.html">Specialists</a>
+          <button class="m-chev" aria-label="Toggle Specialists submenu" aria-expanded="false" data-mobile-dropdown-toggle></button>
+        </div>
+        <ul class="m-dropdown">
+          <li><a href="../our-specialists/index.html" class="dropdown-view-all">View all 7 specialists →</a></li>
+          <li><a href="../our-specialists/dr-daniel-tan.html">Dr Daniel Tan</a></li>
+          <li><a href="../our-specialists/dr-jonathan-teh.html">Dr Jonathan Teh</a></li>
+          <li><a href="../our-specialists/dr-david-tan.html">Dr David Tan</a></li>
+          <li><a href="../our-specialists/dr-michelle-tseng.html">Dr Michelle Tseng</a></li>
+          <li><a href="../our-specialists/dr-andrew-tan.html">Dr Andrew Tan</a></li>
+          <li><a href="../our-specialists/dr-manish-taneja.html">Dr Manish Taneja</a></li>
+          <li><a href="../our-specialists/dr-ooi-wei-seong.html">Dr Ooi Wei Seong</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown-mobile">
+        <div class="m-row">
+          <a href="../cancers-we-treat/index.html">Cancers</a>
+          <button class="m-chev" aria-label="Toggle Cancers submenu" aria-expanded="false" data-mobile-dropdown-toggle></button>
+        </div>
+        <ul class="m-dropdown">
+          <li><a href="../cancers-we-treat/index.html" class="dropdown-view-all">View all 12 cancers →</a></li>
+          <li><a href="../cancers-we-treat/breast-cancer.html">Breast Cancer</a></li>
+          <li><a href="../cancers-we-treat/prostate-cancer.html">Prostate Cancer</a></li>
+          <li><a href="../cancers-we-treat/lung-cancer.html">Lung Cancer</a></li>
+          <li><a href="../cancers-we-treat/brain-cancer.html">Brain Cancer</a></li>
+          <li><a href="../cancers-we-treat/liver-cancer.html">Liver Cancer</a></li>
+          <li><a href="../cancers-we-treat/spine-cancer.html">Spine Cancer</a></li>
+          <li><a href="../cancers-we-treat/colorectal-cancer.html">Colorectal Cancer</a></li>
+          <li><a href="../cancers-we-treat/gastrointestinal-cancer.html">Gastrointestinal</a></li>
+          <li><a href="../cancers-we-treat/genitourinary-cancer.html">Genitourinary</a></li>
+          <li><a href="../cancers-we-treat/gynaecological-cancer.html">Gynaecological</a></li>
+          <li><a href="../cancers-we-treat/head-and-neck-cancer.html">Head & Neck</a></li>
+          <li><a href="../cancers-we-treat/secondary-lymph-node-and-lymphomas.html">Lymph Node / Lymphomas</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown-mobile">
+        <div class="m-row">
+          <a href="../our-treatments/index.html">Treatments</a>
+          <button class="m-chev" aria-label="Toggle Treatments submenu" aria-expanded="false" data-mobile-dropdown-toggle></button>
+        </div>
+        <ul class="m-dropdown">
+          <li><a href="../our-treatments/index.html" class="dropdown-view-all">View all treatments →</a></li>
+          <li><a href="../our-treatments/sbrt.html">SBRT</a></li>
+          <li><a href="../our-treatments/srs-radiosurgery.html">SRS / Radiosurgery</a></li>
+          <li><a href="../our-treatments/vmat-imrt.html">VMAT / IMRT</a></li>
+          <li><a href="../our-treatments/brachytherapy.html">Brachytherapy</a></li>
+          <li><a href="../our-treatments/chemotherapy.html">Chemotherapy</a></li>
+        </ul>
+      </li>
+      <li><a href="../patient-stories.html">Patient Stories</a></li>
+      <li><a href="../articles.html">Articles</a></li>
       <li><a href="../second-opinion.html">Second Opinion</a></li>
       <li><a href="../for-clinicians.html">For Clinicians</a></li>
       <li><a href="../about.html">About</a></li>
   </ul>
   <a class="header-cta" href="../contact.html">Book Consultation</a>
 </div>
-
 <!-- @wp:get_header_end -->
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="../index.html">Home</a></li>
-      <li>Cancers We Treat</li>
-    </ol>
-  </div>
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+<div class="container">
+<ol>
+<li><a href="../index.html">Home</a></li>
+<li>Cancers We Treat</li>
+</ol>
+</div>
 </nav>
-
 <main id="main" role="main">
 <!-- @wp:the_content() -->
-
 <section class="hero hero--navy">
-  <div class="container container--narrow">
-    <span class="eyebrow eyebrow--light hero-eyebrow">Cancers We Treat</span>
-    <h1>Twelve cancer types. <em>Specialist focus</em> on each.</h1>
-    <p>AARO treats every major solid-tumour cancer plus haematological cancers requiring radiation. Click any cancer below for our diagnostic approach, treatment options, and the specialists who lead that area.</p>
-  </div>
+<div class="container container--narrow">
+<span class="eyebrow eyebrow--light hero-eyebrow">Cancers We Treat</span>
+<h1>Twelve cancer types. <em>Specialist focus</em> on each.</h1>
+<p>AARO treats every major solid-tumour cancer plus haematological cancers requiring radiation. Click any cancer below for our diagnostic approach, treatment options, and the specialists who lead that area.</p>
+</div>
 </section>
-
 <section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow eyebrow--teal">All cancer types</span>
-      <h2>Find <em>your cancer.</em></h2>
-    </div>
-    <div class="grid grid-cols-3">
-      <a class="cancer-tile" href="breast-cancer.html"><h3>Breast Cancer</h3><p>The most commonly diagnosed cancer in Singaporean women.</p></a>
-      <a class="cancer-tile" href="prostate-cancer.html"><h3>Prostate Cancer</h3><p>The most commonly diagnosed cancer in Singaporean men.</p></a>
-      <a class="cancer-tile" href="lung-cancer.html"><h3>Lung Cancer</h3><p>Singapore's leading cause of cancer death — and one where SBRT can be curative.</p></a>
-      <a class="cancer-tile" href="brain-cancer.html"><h3>Brain Cancer</h3><p>Primary brain tumours and brain metastases — where precision is everything.</p></a>
-      <a class="cancer-tile" href="liver-cancer.html"><h3>Liver Cancer</h3><p>Hepatocellular carcinoma and metastatic liver disease — including options when surgery is not feasible.</p></a>
-      <a class="cancer-tile" href="spine-cancer.html"><h3>Spine Cancer</h3><p>Primary and metastatic spinal tumours — including re-irradiation cases.</p></a>
-      <a class="cancer-tile" href="colorectal-cancer.html"><h3>Colorectal Cancer</h3><p>Cancer of the colon, rectum, and anus — locally advanced and metastatic.</p></a>
-      <a class="cancer-tile" href="gastrointestinal-cancer.html"><h3>Gastrointestinal Cancer</h3><p>Stomach, oesophagus, pancreas, gallbladder and bile-duct cancers.</p></a>
-      <a class="cancer-tile" href="genitourinary-cancer.html"><h3>Genitourinary Cancer</h3><p>Cancers of the kidney, bladder, ureter, urethra and testis.</p></a>
-      <a class="cancer-tile" href="gynaecological-cancer.html"><h3>Gynaecological Cancer</h3><p>Cervical, endometrial, ovarian, vulvar and vaginal cancers.</p></a>
-      <a class="cancer-tile" href="head-and-neck-cancer.html"><h3>Head &amp; Neck Cancer</h3><p>Tumours of the oral cavity, throat, larynx, nasopharynx, salivary glands, and thyroid.</p></a>
-      <a class="cancer-tile" href="secondary-lymph-node-and-lymphomas.html"><h3>Secondary Lymph Node Cancers &amp; Lymphomas</h3><p>Hodgkin and non-Hodgkin lymphoma, plus secondary nodal involvement from other cancers.</p></a>
-    </div>
-  </div>
+<div class="container">
+<div class="section-header">
+<span class="eyebrow eyebrow--teal">All cancer types</span>
+<h2>Find <em>your cancer.</em></h2>
+</div>
+<div class="grid grid-cols-3">
+<a class="cancer-tile" href="breast-cancer.html"><h3>Breast Cancer</h3><p>The most commonly diagnosed cancer in Singaporean women.</p></a>
+<a class="cancer-tile" href="prostate-cancer.html"><h3>Prostate Cancer</h3><p>The most commonly diagnosed cancer in Singaporean men.</p></a>
+<a class="cancer-tile" href="lung-cancer.html"><h3>Lung Cancer</h3><p>Singapore's leading cause of cancer death — and one where SBRT can be curative.</p></a>
+<a class="cancer-tile" href="brain-cancer.html"><h3>Brain Cancer</h3><p>Primary brain tumours and brain metastases — where precision is everything.</p></a>
+<a class="cancer-tile" href="liver-cancer.html"><h3>Liver Cancer</h3><p>Hepatocellular carcinoma and metastatic liver disease — including options when surgery is not feasible.</p></a>
+<a class="cancer-tile" href="spine-cancer.html"><h3>Spine Cancer</h3><p>Primary and metastatic spinal tumours — including re-irradiation cases.</p></a>
+<a class="cancer-tile" href="colorectal-cancer.html"><h3>Colorectal Cancer</h3><p>Cancer of the colon, rectum, and anus — locally advanced and metastatic.</p></a>
+<a class="cancer-tile" href="gastrointestinal-cancer.html"><h3>Gastrointestinal Cancer</h3><p>Stomach, oesophagus, pancreas, gallbladder and bile-duct cancers.</p></a>
+<a class="cancer-tile" href="genitourinary-cancer.html"><h3>Genitourinary Cancer</h3><p>Cancers of the kidney, bladder, ureter, urethra and testis.</p></a>
+<a class="cancer-tile" href="gynaecological-cancer.html"><h3>Gynaecological Cancer</h3><p>Cervical, endometrial, ovarian, vulvar and vaginal cancers.</p></a>
+<a class="cancer-tile" href="head-and-neck-cancer.html"><h3>Head &amp; Neck Cancer</h3><p>Tumours of the oral cavity, throat, larynx, nasopharynx, salivary glands, and thyroid.</p></a>
+<a class="cancer-tile" href="secondary-lymph-node-and-lymphomas.html"><h3>Secondary Lymph Node Cancers &amp; Lymphomas</h3><p>Hodgkin and non-Hodgkin lymphoma, plus secondary nodal involvement from other cancers.</p></a>
+</div>
+</div>
 </section>
-
 <section class="section section--warm">
-  <div class="container container--narrow">
-    <div class="prose">
-      <span class="eyebrow eyebrow--teal">If your cancer isn't listed</span>
-      <h2 class="mt-2">Other cancer types</h2>
-      <p>The cancers above are those we treat most frequently — but radiation oncology applies to many other diagnoses, including rarer tumours. If your cancer isn't listed above, please WhatsApp or call us. Our specialists will confirm whether radiation therapy is part of the standard treatment for your case, and which AARO doctor would lead it.</p>
-      <p><a class="btn btn--whatsapp mt-2" href="https://wa.me/6581023838">WhatsApp Us About Your Diagnosis →</a></p>
-    </div>
-  </div>
+<div class="container container--narrow">
+<div class="prose">
+<span class="eyebrow eyebrow--teal">If your cancer isn't listed</span>
+<h2 class="mt-2">Other cancer types</h2>
+<p>The cancers above are those we treat most frequently — but radiation oncology applies to many other diagnoses, including rarer tumours. If your cancer isn't listed above, please WhatsApp or call us. Our specialists will confirm whether radiation therapy is part of the standard treatment for your case, and which AARO doctor would lead it.</p>
+<p><a class="btn btn--whatsapp mt-2" href="https://wa.me/6581023838">WhatsApp Us About Your Diagnosis →</a></p>
+</div>
+</div>
 </section>
-
 </main>
-
 <!-- ============================================================
      SITE FOOTER
      On WP conversion: extract everything between the markers below
@@ -160,9 +232,7 @@
 <!-- @wp:get_footer() -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-
     <div class="footer-grid">
-
       <div class="footer-brand-col">
         <div class="footer-logo">AARO</div>
         <div class="footer-tagline">Precision Oncology · Personalised Care</div>
@@ -178,49 +248,36 @@
           <a href="#" aria-label="YouTube">Yt</a>
         </div>
       </div>
-
       <!-- @wp:dynamic_sidebar(footer-1) -->
-      <div>
-        <h5>Cancers We Treat</h5>
-        <ul>
+      <div><h5>Cancers We Treat</h5><ul>
         <li><a href="../cancers-we-treat/breast-cancer.html">Breast Cancer</a></li>
         <li><a href="../cancers-we-treat/prostate-cancer.html">Prostate Cancer</a></li>
         <li><a href="../cancers-we-treat/lung-cancer.html">Lung Cancer</a></li>
         <li><a href="../cancers-we-treat/brain-cancer.html">Brain Cancer</a></li>
         <li><a href="../cancers-we-treat/liver-cancer.html">Liver Cancer</a></li>
         <li><a href="../cancers-we-treat/index.html">View all 12 →</a></li>
-        </ul>
-      </div>
-
+      </ul></div>
       <!-- @wp:dynamic_sidebar(footer-2) -->
-      <div>
-        <h5>Our Specialists</h5>
-        <ul>
+      <div><h5>Our Specialists</h5><ul>
         <li><a href="../our-specialists/dr-daniel-tan.html">Dr Daniel Tan</a></li>
         <li><a href="../our-specialists/dr-david-tan.html">Dr David Tan</a></li>
         <li><a href="../our-specialists/dr-jonathan-teh.html">Dr Jonathan Teh</a></li>
         <li><a href="../our-specialists/dr-michelle-tseng.html">Dr Michelle Tseng</a></li>
         <li><a href="../our-specialists/index.html">Meet the team →</a></li>
-        </ul>
-      </div>
-
+      </ul></div>
       <!-- @wp:dynamic_sidebar(footer-3) -->
-      <div>
-        <h5>Quick Links</h5>
-        <ul>
+      <div><h5>Quick Links</h5><ul>
+        <li><a href="../patient-stories.html">Patient Stories</a></li>
+        <li><a href="../articles.html">Articles</a></li>
         <li><a href="../second-opinion.html">Second Opinion</a></li>
         <li><a href="../for-clinicians.html">For Clinicians</a></li>
-        <li><a href="../patient-stories/index.html">Patient Stories</a></li>
         <li><a href="../contact.html">Book Consultation</a></li>
         <li><a href="../our-clinics/index.html">Our Clinics</a></li>
         <li><a href="../financing.html">Financing</a></li>
         <li><a href="../faqs.html">FAQs</a></li>
         <li><a href="../careers.html">Careers</a></li>
-        </ul>
-      </div>
-
-    </div><!-- /.footer-grid -->
-
+      </ul></div>
+    </div>
     <div class="footer-bottom">
       <span>© <span id="yr">2026</span> Asian Alliance Radiation &amp; Oncology Pte Ltd. All rights reserved.</span>
       <span class="footer-bottom-links">
@@ -230,11 +287,9 @@
         <a href="#">Sitemap</a>
       </span>
     </div>
-
   </div>
 </footer>
 <!-- @wp:wp_footer() -->
-
 <script src="../scripts.js"></script>
 </body>
 </html>

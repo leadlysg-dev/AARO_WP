@@ -15,7 +15,6 @@ Built as a static HTML skeleton, designed for a clean conversion to a WordPress 
 | `cancers-we-treat/` | 1 cancer archive page + 12 individual cancer pages |
 | `our-treatments/` | 1 treatments archive page + 5 treatment pages (SBRT, SRS, VMAT/IMRT, Brachytherapy, Chemotherapy) |
 | `our-clinics/` | 1 clinic archive page + 6 individual clinic pages |
-| `patient-stories/` | 1 stories archive page + 3 sample patient story pages |
 | `style.css` | Single-file stylesheet — all design tokens, components, and layout. Mobile-first. |
 | `scripts.js` | Mobile nav drawer, FAQ accordion, current-page highlighter |
 | `assets/images/` | Empty image folders, organised by category — drop real photos in here using the filenames in the shotlist |
@@ -23,7 +22,7 @@ Built as a static HTML skeleton, designed for a clean conversion to a WordPress 
 | `image-shotlist.md` | Photographer's brief — every image slot in the site, by category, with filename, dimensions, and which pages use it |
 | `README.md` | This file |
 
-**Total: 46 HTML pages.** All previewable locally. No build step required.
+**Total: 42 HTML pages.** All previewable locally. No build step required. *(Patient stories will be CMS-managed as posts in WordPress, not as static pages.)*
 
 ---
 
@@ -51,7 +50,7 @@ Then visit **http://localhost:8000** in your browser. This serves the site over 
 
 ### Already styled (v1.1 — moodboard-aligned)
 - Design system follows the AARO moodboard "Clinical" palette: Navy `#0B2240`, Teal `#0A7E6A`, Surface `#F4F7FB`. Cormorant Garamond for display, **Inter** for body, DM Mono for meta.
-- Home, About, Specialists index, Dr Daniel Tan profile, Second Opinion, Patient Stories index, Adam Road CSR clinic, and SBRT treatment pages all use **real photography** — supplied by AARO. Other pages still use refined placeholders.
+- Home, About, Specialists index, Dr Daniel Tan profile, Second Opinion, Treatments index, and Adam Road CSR clinic pages all use **real photography** — supplied by AARO. Other pages still use refined placeholders.
 - Home page hero now follows the moodboard pattern: white background, content stacked above a 16:9 hero image (the four senior doctors at the Elekta Linac).
 - Every component used across the site: hero blocks, doctor cards, cancer tiles, treatment cards, story cards, clinic cards, breadcrumbs, FAQ accordion, CTA bands, footer.
 - Mobile-first responsive design. Breakpoints at 640 / 1024 / 1280 px.
@@ -69,7 +68,7 @@ Then visit **http://localhost:8000** in your browser. This serves the site over 
 - Contact, Financing, FAQs, Careers: full structure with key copy
 - Breast Cancer page: full 5-section content (What is / Symptoms / Mammogram / Risk / Treatment)
 - Prostate Cancer page: full content including the SBRT-vs-surgery framing, stage-by-stage selector, SpaceOAR explainer, and full FAQ block
-- Dr Daniel Tan profile: full 10-section bio, publications, "when to see me", linked patient story
+- Dr Daniel Tan profile: full 10-section bio, publications, "when to see me"
 
 ---
 
@@ -102,10 +101,8 @@ Every page has a body class indicating what kind of WP template it should become
 | `our-treatments/sbrt.html` | `single-treatment` | `single-treatment.php` |
 | `our-clinics/index.html` | `archive-clinics` | `archive-clinic.php` |
 | `our-clinics/adam-road-csr.html` | `single-clinic` | `single-clinic.php` |
-| `patient-stories/index.html` | `archive-stories` | `archive-story.php` |
-| `patient-stories/helen-saada-ching.html` | `single-story` | `single-story.php` |
 
-The four custom post types you'll register are: **doctor**, **cancer**, **treatment**, **clinic**, **story**.
+The four custom post types you'll register are: **doctor**, **cancer**, **treatment**, **clinic**. Patient stories will use WordPress's built-in Posts type (or a `story` custom post type if you prefer separation), with `archive.php` rendering the listing and `single.php` rendering each story — your dev's call.
 
 ### 3. Inline WordPress markers
 
@@ -129,11 +126,10 @@ These aren't doing anything functionally — they're signposts for the developer
 
 For clean content management, suggested field groups for each custom post type:
 
-- **Doctor**: name, role_short, role_long, qualifications, focus_tags (taxonomy), specialties_one_line, bio (rich text), publications (repeater: title + meta), when_to_see (repeater: list item), linked_stories (relationship to Story CPT).
-- **Cancer**: name, tagline, intro_paragraphs (rich text), symptoms (rich text), diagnosis (rich text), risk_factors (rich text), treatment_approach (rich text), specialists (relationship to Doctor CPT), treatments_used (relationship to Treatment CPT), featured_story (relationship to Story CPT).
+- **Doctor**: name, role_short, role_long, qualifications, focus_tags (taxonomy), specialties_one_line, bio (rich text), publications (repeater: title + meta), when_to_see (repeater: list item).
+- **Cancer**: name, tagline, intro_paragraphs (rich text), symptoms (rich text), diagnosis (rich text), risk_factors (rich text), treatment_approach (rich text), specialists (relationship to Doctor CPT), treatments_used (relationship to Treatment CPT).
 - **Treatment**: name, name_full, tagline, what_summary, how_it_works (rich text), used_for (repeater: cancer + 1-line context), what_to_expect (rich text), side_effects (rich text), comparison (rich text), sessions, cost_block (rich text).
 - **Clinic**: name, name_short, tagline, is_flagship (boolean), address, phone, opening_hours, public_transport, parking, doctors_on_site (relationship to Doctor CPT), gallery_images (gallery).
-- **Story**: name, cancer_tag, treatment, doctor (relationship to Doctor CPT), pull_quote, narrative_diagnosis (rich text), narrative_decision (rich text), narrative_treatment (rich text), narrative_aftercare (rich text), hero_portrait (image), secondary_portrait (image).
 
 ---
 
@@ -164,7 +160,6 @@ Sections currently marked `[CONTENT TBC]` need a content writer or editor before
 - **10 of 12 cancer pages** — the templates are fully laid out (intro, symptoms, diagnosis, risk, treatment approach), but prose needs to be written. Breast Cancer and Prostate Cancer pages show the depth required.
 - **All 5 treatment pages** — the structure is in place; the "What it is", "How it works", "What to expect", "Side effects" and "Comparison" sections all need writing.
 - **5 of 6 clinic pages** (every clinic except Adam Road) — addresses, opening hours, public transport, parking and on-site doctor rosters need filling in.
-- **All 3 patient story pages** — narratives need writing (with patient consent), pull quotes need extracting.
 - **Careers page** — actual open roles need adding (or the page reverts to "send us a speculative CV").
 
 ---

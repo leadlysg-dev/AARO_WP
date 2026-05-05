@@ -1,6 +1,6 @@
 /*!
  * AARO — minimal frontend behavior
- * Mobile nav toggle + FAQ accordion + smooth-scroll fallback
+ * Mobile nav + FAQ accordion + nav dropdowns + smooth-scroll fallback
  */
 (function () {
   'use strict';
@@ -16,12 +16,56 @@
   if (navToggle) navToggle.addEventListener('click', openNav);
   if (navClose)  navClose.addEventListener('click', closeNav);
 
-  // close on link click
-  document.querySelectorAll('[data-mobile-nav] a').forEach(a => a.addEventListener('click', closeNav));
+  // close on link click — but not when clicking the chevron toggle inside an accordion row
+  document.querySelectorAll('[data-mobile-nav] a').forEach(a => {
+    a.addEventListener('click', () => closeNav());
+  });
 
-  // close on Escape
+  // Mobile accordion toggles
+  document.querySelectorAll('[data-mobile-dropdown-toggle]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      e.stopPropagation();
+      const li = btn.closest('.has-dropdown-mobile');
+      if (!li) return;
+      const isOpen = li.classList.toggle('is-expanded');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+
+  /* ---------- Desktop nav dropdowns (click-toggle for non-hover devices) ---------- */
+  document.querySelectorAll('[data-dropdown-toggle]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      // Only intercept on touch / non-hover devices.
+      // On real hover devices, we let CSS :hover handle it and don't preventDefault here.
+      if (window.matchMedia('(hover: hover)').matches) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const li = btn.closest('.has-dropdown');
+      if (!li) return;
+      // close other open dropdowns first
+      document.querySelectorAll('.primary-nav .has-dropdown.is-open').forEach(other => {
+        if (other !== li) other.classList.remove('is-open');
+      });
+      const isOpen = li.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+
+  // close any open desktop dropdown on click outside
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.primary-nav')) {
+      document.querySelectorAll('.primary-nav .has-dropdown.is-open').forEach(li => {
+        li.classList.remove('is-open');
+      });
+    }
+  });
+
+  /* ---------- Escape closes any open menu/dropdown ---------- */
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && mobileNav && mobileNav.classList.contains('is-open')) closeNav();
+    if (e.key !== 'Escape') return;
+    if (mobileNav && mobileNav.classList.contains('is-open')) closeNav();
+    document.querySelectorAll('.primary-nav .has-dropdown.is-open').forEach(li => li.classList.remove('is-open'));
   });
 
   /* ---------- FAQ accordion ---------- */

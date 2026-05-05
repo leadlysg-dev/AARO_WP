@@ -1,7 +1,7 @@
 # AARO — Photographer & Image Shotlist
 
-**Total unique image slots:** 178
-**Source:** Generated automatically from all 46 site pages.
+**Total unique image slots:** 160 (across 6 categories)
+**Source:** Generated from all 42 site pages.
 **Conventions:** All filenames are lowercase, hyphenated, descriptive. Aspect ratio shown in dimensions. Save under `/assets/images/{category}s/`.
 
 ---
@@ -200,31 +200,6 @@ _Process shots: patient on Linac couch, planning workstation with imaging on scr
 | `treatment-sbrt-planning.jpg` | 1200×800 (3:2) | Treatment planning console for SBRT — physicist + clinician at workstation | our-treatments/sbrt |
 | `treatment-srs-radiosurgery-planning.jpg` | 1200×800 (3:2) | Treatment planning console for SRS / Radiosurgery — physicist + clinician at workstation | our-treatments/srs-radiosurgery |
 | `treatment-vmat-imrt-planning.jpg` | 1200×800 (3:2) | Treatment planning console for VMAT / IMRT — physicist + clinician at workstation | our-treatments/vmat-imrt |
-
-## Patient Stories (18 unique shots)
-
-_Patient story portraits. Always shot with explicit consent. Vertical hero portraits (4:5) for hero blocks; horizontal lifestyle/environmental shots (4:3 or 16:10) for secondary blocks. Show life-after-treatment, not the treatment itself._
-
-| Filename | Dimensions | Description | Pages used on |
-|---|---|---|---|
-| `story-alison-breast-card.jpg` | 1200×900 (4:3) | Alison — breast cancer patient story portrait | cancers-we-treat/breast-cancer |
-| `story-haziq-card.jpg` | 1200×900 (4:3) | Haziq — patient story portrait card | patient-stories/index |
-| `story-haziq-colorectal-cancer-feature.jpg` | 1200×900 (4:3) | Haziq — patient story portrait | cancers-we-treat/colorectal-cancer |
-| `story-haziq-hero-portrait.jpg` | 1200×1500 (4:5) | Haziq — large hero portrait, life-after-treatment | patient-stories/haziq |
-| `story-haziq-portrait.jpg` | 1200×900 (4:3) | Haziq — younger patient, candid lifestyle shot | home |
-| `story-haziq-secondary-portrait.jpg` | 1400×900 (16:10) | Haziq — secondary lifestyle shot (with family, at favourite place, doing favourite activity) | patient-stories/haziq |
-| `story-helen-saada-ching-brain-cancer-feature.jpg` | 1200×900 (4:3) | Helen Saada-Ching — patient story portrait | cancers-we-treat/brain-cancer |
-| `story-helen-saada-ching-breast-card.jpg` | 1200×900 (4:3) | Helen Saada-Ching — life-after-treatment portrait | cancers-we-treat/breast-cancer |
-| `story-helen-saada-ching-card.jpg` | 1200×900 (4:3) | Helen Saada-Ching — patient story portrait | our-specialists/dr-daniel-tan, patient-stories/index |
-| `story-helen-saada-ching-hero-portrait.jpg` | 1200×1500 (4:5) | Helen Saada-Ching — large hero portrait, life-after-treatment | patient-stories/helen-saada-ching |
-| `story-helen-saada-ching-portrait.jpg` | 1200×900 (4:3) | Helen Saada-Ching — confident, life-after-treatment portrait, natural setting | home |
-| `story-helen-saada-ching-secondary-portrait.jpg` | 1400×900 (16:10) | Helen Saada-Ching — secondary lifestyle shot (with family, at favourite place, doing favourite activity) | patient-stories/helen-saada-ching |
-| `story-julie-breast-card.jpg` | 1200×900 (4:3) | Julie — breast cancer patient story portrait | cancers-we-treat/breast-cancer |
-| `story-pak-tjugito-card.jpg` | 1200×900 (4:3) | Pak Tjugito — patient story portrait | our-specialists/dr-david-tan, patient-stories/index |
-| `story-pak-tjugito-hero-portrait.jpg` | 1200×1500 (4:5) | Pak Tjugito — large hero portrait, life-after-treatment | patient-stories/pak-tjugito |
-| `story-pak-tjugito-portrait.jpg` | 1200×900 (4:3) | Pak Tjugito — relaxed, post-treatment portrait | home |
-| `story-pak-tjugito-prostate-feature.jpg` | 1200×900 (4:3) | Pak Tjugito — relaxed, life-after-treatment shot | cancers-we-treat/prostate-cancer |
-| `story-pak-tjugito-secondary-portrait.jpg` | 1400×900 (16:10) | Pak Tjugito — secondary lifestyle shot (with family, at favourite place, doing favourite activity) | patient-stories/pak-tjugito |
 
 ## Brand / Logos / Insurance / Accreditation (8 unique shots)
 

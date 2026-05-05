@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>FAQs — AARO Radiation Oncology Singapore</title>
-<meta content="Plain answers to the questions patients actually ask AARO — about consultations, treatment duration, costs, MediShield coverage, second opinions, and travel from overseas." name="description"/>
-<meta content="FAQs — AARO Radiation Oncology Singapore" property="og:title"/>
-<meta content="Plain answers to the questions patients actually ask AARO — about consultations, treatment duration, costs, MediShield coverage, second opinions, and travel from overseas." property="og:description"/>
-<meta content="website" property="og:type"/>
-<meta content="AARO — Asian Alliance Radiation &amp; Oncology" property="og:site_name"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css" rel="stylesheet"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patient Stories — Real Outcomes at AARO Singapore</title>
+<meta name="description" content="Real stories of AARO patients — diagnosis, treatment, and life beyond cancer. CMS-driven listing of patient journeys.">
+<meta property="og:title" content="Patient Stories — Real Outcomes at AARO Singapore">
+<meta property="og:description" content="Real stories of AARO patients — diagnosis, treatment, and life beyond cancer. CMS-driven listing of patient journeys.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AARO — Asian Alliance Radiation & Oncology">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <!-- @wp:wp_head() -->
 </head>
-<body class="page-faqs">
+<body class="page-template archive-stories">
 <!-- @wp:body_open() -->
-<!-- ============================================================
-     SITE HEADER
-     On WP conversion: extract everything between the markers below
-     into header.php
-     ============================================================ -->
+
 <!-- @wp:get_header() -->
 <!-- @wp:dynamic_sidebar(header-utility) -->
 <div class="utility-bar">
@@ -174,124 +169,164 @@
   <a class="header-cta" href="contact.html">Book Consultation</a>
 </div>
 <!-- @wp:get_header_end -->
-<nav aria-label="Breadcrumb" class="breadcrumbs">
-<div class="container">
-<ol>
-<li><a href="index.html">Home</a></li>
-<li>FAQs</li>
-</ol>
-</div>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li>Patient Stories</li>
+    </ol>
+  </div>
 </nav>
+
 <main id="main" role="main">
 <!-- @wp:the_content() -->
+
 <section class="hero">
-<div class="container container--narrow">
-<span class="eyebrow eyebrow--teal hero-eyebrow">FAQs</span>
-<h1>Your questions, <em>answered plainly.</em></h1>
-<p>The questions our patients actually ask — covering consultations, treatment, costs, second opinions, and travel from overseas. If your question isn't here, WhatsApp us.</p>
-</div>
+  <div class="container">
+    <div class="hero-content">
+      <span class="eyebrow hero-eyebrow">Patient Stories</span>
+      <h1>Stories of <em>hope.</em></h1>
+      <p class="lead">The patients we have walked alongside — through diagnosis, treatment, recovery, and life beyond cancer. Each story shared with permission. None exceptional cases — these are the kinds of outcomes that come with the right specialist, the right technology, and the right team.</p>
+    </div>
+  </div>
 </section>
+
+<div class="container" style="padding-top:24px;">
+  <span class="tbc">This page is a layout template. Once Patient Stories is wired up in WordPress (as a custom post type or as filtered Posts), the cards below will be replaced by a dynamic loop pulling the latest published stories. Filtering by cancer type, doctor, and treatment is recommended once 10+ stories exist.</span>
+</div>
+
 <section class="section">
-<div class="container container--narrow">
-<div class="section-header">
-<span class="eyebrow eyebrow--teal">About AARO &amp; consultations</span>
-<h2 class="mt-2">Getting started</h2>
-</div>
-<div class="faq-list mb-4">
-<div class="faq-item">
-<button class="faq-q">Do I need a referral to see an AARO specialist? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>No. You can contact us directly — by WhatsApp, phone, or the online form. We see patients who come on their own initiative as well as those referred by GPs or other specialists.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">How quickly can I get an appointment? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>For urgent cases, we typically offer appointments within 2–3 business days. Standard consultations are usually available within a week. Contact us and we'll advise based on your situation.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">What should I bring to my first appointment? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>All existing medical reports, imaging (CD or digital link if available), pathology results, and your current medication list. If you have a prior treatment summary from another doctor, bring that too. You cannot bring too much — we will review everything.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">Is AARO a hospital or a specialist clinic? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>AARO is a specialist outpatient clinic, not a hospital. We operate from Novena Medical Centre and our dedicated Centre for Stereotactic Radiosurgery on Adam Road. We focus exclusively on radiation oncology — which means undivided expertise and purpose-built technology for your treatment.</p></div>
-</div>
-</div>
-<div class="section-header">
-<span class="eyebrow eyebrow--teal">About treatment &amp; costs</span>
-<h2 class="mt-2">Practical questions</h2>
-</div>
-<div class="faq-list mb-4">
-<div class="faq-item">
-<button class="faq-q">Is SBRT covered by MediShield Life or Medisave? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>SBRT and many of AARO's treatments are listed under the Ministry of Health's approved procedures and can be claimed under MediShield Life and Medisave, subject to your plan limits. Our patient care coordinators will help you understand your coverage before treatment begins.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">Do you accept international health insurance? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>Yes. We work with most major international private insurers. We will assist with pre-authorisation paperwork and treatment cost estimates before your appointment if required.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">How long does a course of radiotherapy at AARO take? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>It depends on the treatment. SBRT typically requires 3–5 sessions over 1–2 weeks. Conventional radiotherapy courses may be 4–6 weeks of daily sessions. Your specialist will explain the exact protocol for your case at consultation.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">Will I lose my hair or feel very unwell during treatment? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>Side effects vary significantly by treatment type and cancer location. SBRT and SRS are generally very well tolerated — many patients continue working throughout treatment. Conventional radiation can cause fatigue and localised skin reactions. Your doctor will describe what to realistically expect for your specific protocol.</p></div>
-</div>
-</div>
-<div class="section-header">
-<span class="eyebrow eyebrow--teal">About second opinions</span>
-<h2 class="mt-2">If you already have an oncologist</h2>
-</div>
-<div class="faq-list mb-4">
-<div class="faq-item">
-<button class="faq-q">Will getting a second opinion at AARO upset my current oncologist? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>Almost certainly not. Experienced oncologists regularly encourage their patients to seek specialist input — it is standard practice in complex cases. If you are concerned, you can simply tell your doctor you are consulting a radiation oncology specialist about the radiation component of your care.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">What if AARO's opinion differs from my current doctor's? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>We will give you our honest assessment. If our view differs from your current plan, we will explain why clearly and in plain language — and encourage a conversation between your teams. Having two well-considered perspectives is not a problem; it is an advantage.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">Can AARO take over my treatment entirely if I prefer? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>Yes. Many patients do transition their radiation treatment to AARO after a second opinion. Others keep AARO as a specialist consultant alongside their existing oncologist. Both arrangements work well — we follow your lead on what feels right.</p></div>
-</div>
-</div>
-<div class="section-header">
-<span class="eyebrow eyebrow--teal">For international patients</span>
-<h2 class="mt-2">Travelling for treatment</h2>
-</div>
-<div class="faq-list mb-4">
-<div class="faq-item">
-<button class="faq-q">I'm based in another country. Can I travel to Singapore for treatment? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>Yes. AARO treats a significant number of patients from Malaysia, Indonesia, the Philippines, and across the region. We can conduct an initial consultation via video call to assess whether your case is suitable before you travel. Our team can also advise on accommodation and logistics.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">Can I send my scans for a remote second opinion before flying? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>Yes. Send us your imaging files and reports via our secure upload link and we can provide a preliminary assessment within 3–5 business days. This helps you decide whether it is worth travelling for a full in-person consultation.</p></div>
-</div>
-<div class="faq-item">
-<button class="faq-q">What languages do the AARO doctors speak? <span class="faq-q-icon">+</span></button>
-<div class="faq-a"><p>Our specialists consult in English, Mandarin, and Bahasa. Malay and Tamil-speaking support staff are also available. For other languages, we can arrange medical interpreters for your consultation.</p></div>
-</div>
-</div>
-</div>
+  <div class="container">
+    <div class="section-header">
+      <span class="eyebrow">Browse</span>
+      <h2>Stories by <em>cancer type, doctor, or treatment.</em></h2>
+      <p>Once stories are published, this filter row will render dynamically from CMS taxonomies.</p>
+    </div>
+
+    <div class="pill-row mb-4">
+      <span class="pill">All stories</span>
+      <span class="pill">Breast Cancer</span>
+      <span class="pill">Prostate Cancer</span>
+      <span class="pill">Brain · Spine</span>
+      <span class="pill">Lung Cancer</span>
+      <span class="pill">Colorectal</span>
+      <span class="pill">Other</span>
+    </div>
+
+    <div class="grid grid-cols-3">
+      <article class="card story-card">
+        <div class="img-placeholder aspect-4/3">
+          <div class="img-placeholder-inner">
+            <span class="img-placeholder-cat">CMS</span>
+            <span class="img-placeholder-desc">Featured image</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Stage 4 Breast → Brain Metastases</span>
+          <h3 class="card-title">Helen Saada-Ching</h3>
+          <p class="card-meta">Dr Daniel Tan · Stereotactic Radiosurgery</p>
+          <p class="card-excerpt">I did not expect to be sitting here, telling my story.</p>
+          <span class="card-link">Read more</span>
+        </div>
+      </article>
+      <article class="card story-card">
+        <div class="img-placeholder aspect-4/3">
+          <div class="img-placeholder-inner">
+            <span class="img-placeholder-cat">CMS</span>
+            <span class="img-placeholder-desc">Featured image</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Stage 2 Prostate Cancer</span>
+          <h3 class="card-title">Pak Tjugito</h3>
+          <p class="card-meta">Dr David Tan · SBRT (5 sessions)</p>
+          <p class="card-excerpt">5 sessions, no catheter, back to normal in days. Five years on, my PSA is undetectable.</p>
+          <span class="card-link">Read more</span>
+        </div>
+      </article>
+      <article class="card story-card">
+        <div class="img-placeholder aspect-4/3">
+          <div class="img-placeholder-inner">
+            <span class="img-placeholder-cat">CMS</span>
+            <span class="img-placeholder-desc">Featured image</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Colorectal — metastatic</span>
+          <h3 class="card-title">Haziq</h3>
+          <p class="card-meta">AARO multidisciplinary team</p>
+          <p class="card-excerpt">Being told I had cancer at 32 felt like the end. It wasn't.</p>
+          <span class="card-link">Read more</span>
+        </div>
+      </article>
+      <article class="card story-card">
+        <div class="img-placeholder aspect-4/3">
+          <div class="img-placeholder-inner">
+            <span class="img-placeholder-cat">CMS</span>
+            <span class="img-placeholder-desc">Featured image</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Brain Tumour — Craniopharyngioma</span>
+          <h3 class="card-title">Godfrey Cooray</h3>
+          <p class="card-meta">Dr Daniel Tan · Radiosurgery</p>
+          <p class="card-excerpt">[Story TBC — Godfrey was mentioned in the brand architecture as a brain tumour patient case.]</p>
+          <span class="card-link">Read more</span>
+        </div>
+      </article>
+      <article class="card story-card">
+        <div class="img-placeholder aspect-4/3">
+          <div class="img-placeholder-inner">
+            <span class="img-placeholder-cat">CMS</span>
+            <span class="img-placeholder-desc">Featured image</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Early-stage Breast</span>
+          <h3 class="card-title">Julie</h3>
+          <p class="card-meta">[Specialist TBC]</p>
+          <p class="card-excerpt">[Excerpt TBC — short, hopeful pull-quote that captures the heart of Julie's journey.]</p>
+          <span class="card-link">Read more</span>
+        </div>
+      </article>
+      <article class="card story-card">
+        <div class="img-placeholder aspect-4/3">
+          <div class="img-placeholder-inner">
+            <span class="img-placeholder-cat">CMS</span>
+            <span class="img-placeholder-desc">Featured image</span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="card-tag">Locally Advanced Breast</span>
+          <h3 class="card-title">Alison</h3>
+          <p class="card-meta">[Specialist TBC]</p>
+          <p class="card-excerpt">[Excerpt TBC — short pull-quote.]</p>
+          <span class="card-link">Read more</span>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center" style="margin-top:40px;">
+      <span class="tbc" style="display:inline-block;">Pagination component goes here once stories exceed first-page limit.</span>
+    </div>
+  </div>
 </section>
+
 <section class="section section--warm">
-<div class="container">
-<div class="cta-band">
-<div>
-<h3>Question not answered here?</h3>
-<p>WhatsApp us — most replies come within the hour during working hours.</p>
-</div>
-<a class="btn btn--whatsapp" href="https://wa.me/6581023838">WhatsApp Us Now</a>
-</div>
-</div>
+  <div class="container">
+    <div class="cta-band cta-band--navy">
+      <div>
+        <h3>Could your story help others?</h3>
+        <p>Patients tell us their stories help them — and help others who are just starting their journey. If you'd like to share, we'd be honoured.</p>
+      </div>
+      <a class="btn" href="mailto:stories@aaro.sg">Email stories@aaro.sg →</a>
+    </div>
+  </div>
 </section>
+
 </main>
-<!-- ============================================================
-     SITE FOOTER
-     On WP conversion: extract everything between the markers below
-     into footer.php
-     ============================================================ -->
+
 <!-- @wp:get_footer() -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
@@ -353,6 +388,7 @@
   </div>
 </footer>
 <!-- @wp:wp_footer() -->
+
 <script src="scripts.js"></script>
 </body>
 </html>

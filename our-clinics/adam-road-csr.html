@@ -1,23 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Centre for Stereotactic Radiosurgery — Adam Road Flagship | AARO</title>
-<meta name="description" content="AARO's flagship Centre for Stereotactic Radiosurgery on Adam Road — Elekta Linac, brachytherapy suite, private patient lounges, on-site planning and QA.">
-<meta property="og:title" content="Centre for Stereotactic Radiosurgery — Adam Road Flagship | AARO">
-<meta property="og:description" content="AARO's flagship Centre for Stereotactic Radiosurgery on Adam Road — Elekta Linac, brachytherapy suite, private patient lounges, on-site planning and QA.">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="AARO — Asian Alliance Radiation & Oncology">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../style.css">
+<meta content="AARO's flagship Centre for Stereotactic Radiosurgery on Adam Road — Elekta Linac, brachytherapy suite, private patient lounges, on-site planning and QA." name="description"/>
+<meta content="Centre for Stereotactic Radiosurgery — Adam Road Flagship | AARO" property="og:title"/>
+<meta content="AARO's flagship Centre for Stereotactic Radiosurgery on Adam Road — Elekta Linac, brachytherapy suite, private patient lounges, on-site planning and QA." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="AARO — Asian Alliance Radiation &amp; Oncology" property="og:site_name"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="../style.css" rel="stylesheet"/>
 <!-- @wp:wp_head() -->
 </head>
 <body class="single-clinic">
 <!-- @wp:body_open() -->
-
 <!-- @wp:get_header() -->
 <!-- @wp:dynamic_sidebar(header-utility) -->
 <div class="utility-bar">
@@ -32,7 +32,6 @@
     </div>
   </div>
 </div>
-
 <header class="site-header" role="banner">
   <div class="container">
     <div class="site-header-inner">
@@ -43,10 +42,53 @@
       <!-- @wp:wp_nav_menu(primary) -->
       <nav class="primary-nav" role="navigation" aria-label="Primary">
         <ul>
-        <li><a href="../our-specialists/index.html" data-nav-link="our-specialists/index.html">Our Specialists</a></li>
-        <li><a href="../cancers-we-treat/index.html" data-nav-link="cancers-we-treat/index.html">Cancers We Treat</a></li>
-        <li><a href="../our-treatments/index.html" data-nav-link="our-treatments/index.html">Our Treatments</a></li>
-        <li><a href="../patient-stories/index.html" data-nav-link="patient-stories/index.html">Patient Stories</a></li>
+        <li class="has-dropdown">
+          <a href="../our-specialists/index.html" data-nav-link="our-specialists/index.html">Specialists<span class="nav-chev" aria-hidden="true"></span></a>
+          <button class="nav-chev-btn" aria-label="Open Specialists submenu" aria-expanded="false" data-dropdown-toggle></button>
+          <ul class="dropdown" role="menu">
+            <li><a href="../our-specialists/index.html" class="dropdown-view-all">View all 7 specialists →</a></li>
+            <li><a href="../our-specialists/dr-daniel-tan.html">Dr Daniel Tan<span class="dropdown-meta">Director · Brain, Spine, SRS/SBRT</span></a></li>
+            <li><a href="../our-specialists/dr-jonathan-teh.html">Dr Jonathan Teh<span class="dropdown-meta">Medical Director, CSR · Breast, Prostate</span></a></li>
+            <li><a href="../our-specialists/dr-david-tan.html">Dr David Tan<span class="dropdown-meta">SBRT · Prostate, Genitourinary</span></a></li>
+            <li><a href="../our-specialists/dr-michelle-tseng.html">Dr Michelle Tseng<span class="dropdown-meta">Head & Neck · Lung, Breast</span></a></li>
+            <li><a href="../our-specialists/dr-andrew-tan.html">Dr Andrew Tan<span class="dropdown-meta">Radiation Oncology</span></a></li>
+            <li><a href="../our-specialists/dr-manish-taneja.html">Dr Manish Taneja<span class="dropdown-meta">Interventional / GU</span></a></li>
+            <li><a href="../our-specialists/dr-ooi-wei-seong.html">Dr Ooi Wei Seong<span class="dropdown-meta">Medical Oncology</span></a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="../cancers-we-treat/index.html" data-nav-link="cancers-we-treat/index.html">Cancers<span class="nav-chev" aria-hidden="true"></span></a>
+          <button class="nav-chev-btn" aria-label="Open Cancers submenu" aria-expanded="false" data-dropdown-toggle></button>
+          <ul class="dropdown" role="menu">
+            <li><a href="../cancers-we-treat/index.html" class="dropdown-view-all">View all 12 cancers →</a></li>
+            <li><a href="../cancers-we-treat/breast-cancer.html">Breast Cancer</a></li>
+            <li><a href="../cancers-we-treat/prostate-cancer.html">Prostate Cancer</a></li>
+            <li><a href="../cancers-we-treat/lung-cancer.html">Lung Cancer</a></li>
+            <li><a href="../cancers-we-treat/brain-cancer.html">Brain Cancer</a></li>
+            <li><a href="../cancers-we-treat/liver-cancer.html">Liver Cancer</a></li>
+            <li><a href="../cancers-we-treat/spine-cancer.html">Spine Cancer</a></li>
+            <li><a href="../cancers-we-treat/colorectal-cancer.html">Colorectal Cancer</a></li>
+            <li><a href="../cancers-we-treat/gastrointestinal-cancer.html">Gastrointestinal</a></li>
+            <li><a href="../cancers-we-treat/genitourinary-cancer.html">Genitourinary</a></li>
+            <li><a href="../cancers-we-treat/gynaecological-cancer.html">Gynaecological</a></li>
+            <li><a href="../cancers-we-treat/head-and-neck-cancer.html">Head & Neck</a></li>
+            <li><a href="../cancers-we-treat/secondary-lymph-node-and-lymphomas.html">Lymph Node / Lymphomas</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="../our-treatments/index.html" data-nav-link="our-treatments/index.html">Treatments<span class="nav-chev" aria-hidden="true"></span></a>
+          <button class="nav-chev-btn" aria-label="Open Treatments submenu" aria-expanded="false" data-dropdown-toggle></button>
+          <ul class="dropdown" role="menu">
+            <li><a href="../our-treatments/index.html" class="dropdown-view-all">View all treatments →</a></li>
+            <li><a href="../our-treatments/sbrt.html">SBRT<span class="dropdown-meta">3–5 sessions</span></a></li>
+            <li><a href="../our-treatments/srs-radiosurgery.html">SRS / Radiosurgery<span class="dropdown-meta">Single session</span></a></li>
+            <li><a href="../our-treatments/vmat-imrt.html">VMAT / IMRT<span class="dropdown-meta">5–8 weeks daily</span></a></li>
+            <li><a href="../our-treatments/brachytherapy.html">Brachytherapy<span class="dropdown-meta">Internal radiation</span></a></li>
+            <li><a href="../our-treatments/chemotherapy.html">Chemotherapy<span class="dropdown-meta">Systemic therapy</span></a></li>
+          </ul>
+        </li>
+        <li><a href="../patient-stories.html" data-nav-link="patient-stories.html">Patient Stories</a></li>
+        <li><a href="../articles.html" data-nav-link="articles.html">Articles</a></li>
         <li><a href="../second-opinion.html" data-nav-link="second-opinion.html">Second Opinion</a></li>
         <li><a href="../for-clinicians.html" data-nav-link="for-clinicians.html">For Clinicians</a></li>
         <li><a href="../about.html" data-nav-link="about.html">About</a></li>
@@ -59,7 +101,6 @@
     </div>
   </div>
 </header>
-
 <div class="mobile-nav" data-mobile-nav role="dialog" aria-label="Mobile navigation">
   <div class="mobile-nav-head">
     <span class="site-logo" style="font-size:1.25rem;">AARO</span>
@@ -68,10 +109,59 @@
     </button>
   </div>
   <ul>
-      <li><a href="../our-specialists/index.html">Our Specialists</a></li>
-      <li><a href="../cancers-we-treat/index.html">Cancers We Treat</a></li>
-      <li><a href="../our-treatments/index.html">Our Treatments</a></li>
-      <li><a href="../patient-stories/index.html">Patient Stories</a></li>
+      <li class="has-dropdown-mobile">
+        <div class="m-row">
+          <a href="../our-specialists/index.html">Specialists</a>
+          <button class="m-chev" aria-label="Toggle Specialists submenu" aria-expanded="false" data-mobile-dropdown-toggle></button>
+        </div>
+        <ul class="m-dropdown">
+          <li><a href="../our-specialists/index.html" class="dropdown-view-all">View all 7 specialists →</a></li>
+          <li><a href="../our-specialists/dr-daniel-tan.html">Dr Daniel Tan</a></li>
+          <li><a href="../our-specialists/dr-jonathan-teh.html">Dr Jonathan Teh</a></li>
+          <li><a href="../our-specialists/dr-david-tan.html">Dr David Tan</a></li>
+          <li><a href="../our-specialists/dr-michelle-tseng.html">Dr Michelle Tseng</a></li>
+          <li><a href="../our-specialists/dr-andrew-tan.html">Dr Andrew Tan</a></li>
+          <li><a href="../our-specialists/dr-manish-taneja.html">Dr Manish Taneja</a></li>
+          <li><a href="../our-specialists/dr-ooi-wei-seong.html">Dr Ooi Wei Seong</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown-mobile">
+        <div class="m-row">
+          <a href="../cancers-we-treat/index.html">Cancers</a>
+          <button class="m-chev" aria-label="Toggle Cancers submenu" aria-expanded="false" data-mobile-dropdown-toggle></button>
+        </div>
+        <ul class="m-dropdown">
+          <li><a href="../cancers-we-treat/index.html" class="dropdown-view-all">View all 12 cancers →</a></li>
+          <li><a href="../cancers-we-treat/breast-cancer.html">Breast Cancer</a></li>
+          <li><a href="../cancers-we-treat/prostate-cancer.html">Prostate Cancer</a></li>
+          <li><a href="../cancers-we-treat/lung-cancer.html">Lung Cancer</a></li>
+          <li><a href="../cancers-we-treat/brain-cancer.html">Brain Cancer</a></li>
+          <li><a href="../cancers-we-treat/liver-cancer.html">Liver Cancer</a></li>
+          <li><a href="../cancers-we-treat/spine-cancer.html">Spine Cancer</a></li>
+          <li><a href="../cancers-we-treat/colorectal-cancer.html">Colorectal Cancer</a></li>
+          <li><a href="../cancers-we-treat/gastrointestinal-cancer.html">Gastrointestinal</a></li>
+          <li><a href="../cancers-we-treat/genitourinary-cancer.html">Genitourinary</a></li>
+          <li><a href="../cancers-we-treat/gynaecological-cancer.html">Gynaecological</a></li>
+          <li><a href="../cancers-we-treat/head-and-neck-cancer.html">Head & Neck</a></li>
+          <li><a href="../cancers-we-treat/secondary-lymph-node-and-lymphomas.html">Lymph Node / Lymphomas</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown-mobile">
+        <div class="m-row">
+          <a href="../our-treatments/index.html">Treatments</a>
+          <button class="m-chev" aria-label="Toggle Treatments submenu" aria-expanded="false" data-mobile-dropdown-toggle></button>
+        </div>
+        <ul class="m-dropdown">
+          <li><a href="../our-treatments/index.html" class="dropdown-view-all">View all treatments →</a></li>
+          <li><a href="../our-treatments/sbrt.html">SBRT</a></li>
+          <li><a href="../our-treatments/srs-radiosurgery.html">SRS / Radiosurgery</a></li>
+          <li><a href="../our-treatments/vmat-imrt.html">VMAT / IMRT</a></li>
+          <li><a href="../our-treatments/brachytherapy.html">Brachytherapy</a></li>
+          <li><a href="../our-treatments/chemotherapy.html">Chemotherapy</a></li>
+        </ul>
+      </li>
+      <li><a href="../patient-stories.html">Patient Stories</a></li>
+      <li><a href="../articles.html">Articles</a></li>
       <li><a href="../second-opinion.html">Second Opinion</a></li>
       <li><a href="../for-clinicians.html">For Clinicians</a></li>
       <li><a href="../about.html">About</a></li>
@@ -79,124 +169,109 @@
   <a class="header-cta" href="../contact.html">Book Consultation</a>
 </div>
 <!-- @wp:get_header_end -->
-
-<nav class="breadcrumbs" aria-label="Breadcrumb">
-  <div class="container">
-    <ol>
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../our-clinics/index.html">Our Clinics</a></li>
-      <li>CSR Adam Road</li>
-    </ol>
-  </div>
+<nav aria-label="Breadcrumb" class="breadcrumbs">
+<div class="container">
+<ol>
+<li><a href="../index.html">Home</a></li>
+<li><a href="../our-clinics/index.html">Our Clinics</a></li>
+<li>CSR Adam Road</li>
+</ol>
+</div>
 </nav>
-
 <main id="main" role="main">
 <!-- @wp:the_content() -->
-
 <section class="hero">
-  <div class="container">
-    <div class="hero-content">
-      <span class="pill pill--gold mb-2" style="margin-bottom:16px;">Flagship Facility</span>
-      <span class="eyebrow hero-eyebrow">Our Clinics</span>
-      <h1>Centre for Stereotactic Radiosurgery, <em>Adam Road.</em></h1>
-      <p class="lead">CSR is the region's first dedicated radiation therapy facility. Every technology, every specialist, under one roof — designed around precision and patient comfort in equal measure.</p>
-      <div class="hero-ctas">
-        <a class="btn btn--primary btn--lg" href="../contact.html">Book Here</a>
-        <a class="btn btn--secondary btn--lg" href="tel:+6581023838">Call +65 8102 3838</a>
-      </div>
-    </div>
-    <div class="hero-media">
-      <div class="img-wrap aspect-16/9"><img src="../assets/images/clinic/csr-private-lounge-mint.jpg" alt="The CSR private patient lounge — mint velvet seating with rattan accents and a refreshment bar, designed for calm and dignity during treatment days." loading="lazy"></div>
-    </div>
-  </div>
+<div class="container">
+<div class="hero-content">
+<span class="pill pill--gold mb-2" style="margin-bottom:16px;">Flagship Facility</span>
+<span class="eyebrow hero-eyebrow">Our Clinics</span>
+<h1>Centre for Stereotactic Radiosurgery, <em>Adam Road.</em></h1>
+<p class="lead">CSR is the region's first dedicated radiation therapy facility. Every technology, every specialist, under one roof — designed around precision and patient comfort in equal measure.</p>
+<div class="hero-ctas">
+<a class="btn btn--primary btn--lg" href="../contact.html">Book Here</a>
+<a class="btn btn--secondary btn--lg" href="tel:+6581023838">Call +65 8102 3838</a>
+</div>
+</div>
+<div class="hero-media">
+<div class="img-wrap aspect-16/9"><img alt="The CSR private patient lounge — mint velvet seating with rattan accents and a refreshment bar, designed for calm and dignity during treatment days." loading="lazy" src="../assets/images/clinic/csr-private-lounge-mint.jpg"/></div>
+</div>
+</div>
 </section>
-
 <section class="section">
-  <div class="container">
-    <div class="grid grid-cols-2" style="gap:48px;">
-      <div>
-        <span class="eyebrow">Visit information</span>
-        <h2 class="mt-2 mb-3">Location &amp; access</h2>
-
-        <h6>Address</h6>
-        <p class="mb-3"><span class="tbc">Add full Adam Road address.</span></p>
-
-        <h6>Phone &amp; WhatsApp</h6>
-        <p class="mb-3"><a href="tel:+6581023838">+65 8102 3838</a></p>
-
-        <h6>Opening hours</h6>
-        <p class="mb-3"><span class="tbc">Mon–Fri 8.30am–6pm. Sat 8.30am–1pm. Closed Sun + PH. — Confirm exact hours.</span></p>
-
-        <h6>Public transport</h6>
-        <p class="mb-3"><span class="tbc">Nearest MRT station + bus services + walking time from station.</span></p>
-
-        <h6>Parking</h6>
-        <p class="mb-3"><span class="tbc">Building's parking facilities, hourly rates, alternative options.</span></p>
-      </div>
-
-      <div>
-        <span class="eyebrow">What sets CSR apart</span>
-        <h2 class="mt-2 mb-3">A facility designed <em>around the patient.</em></h2>
-        <div class="prose">
-          <ul>
-            <li><strong>Elekta linear accelerator</strong> — the latest-generation Linac for SBRT, SRS and VMAT delivery</li>
-            <li><strong>Brachytherapy suite</strong> — purpose-built for image-guided HDR brachytherapy</li>
-            <li><strong>Private patient lounges</strong> — for rest, refreshments and family between sessions</li>
-            <li><strong>On-site planning &amp; QA</strong> — physicists and oncologists in the same building, every day</li>
-            <li><strong>Multidisciplinary review rooms</strong> — for complex case discussions and tumour boards</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="container">
+<div class="grid grid-cols-2" style="gap:48px;">
+<div>
+<span class="eyebrow">Visit information</span>
+<h2 class="mt-2 mb-3">Location &amp; access</h2>
+<h6>Address</h6>
+<p class="mb-3"><span class="tbc">Add full Adam Road address.</span></p>
+<h6>Phone &amp; WhatsApp</h6>
+<p class="mb-3"><a href="tel:+6581023838">+65 8102 3838</a></p>
+<h6>Opening hours</h6>
+<p class="mb-3"><span class="tbc">Mon–Fri 8.30am–6pm. Sat 8.30am–1pm. Closed Sun + PH. — Confirm exact hours.</span></p>
+<h6>Public transport</h6>
+<p class="mb-3"><span class="tbc">Nearest MRT station + bus services + walking time from station.</span></p>
+<h6>Parking</h6>
+<p class="mb-3"><span class="tbc">Building's parking facilities, hourly rates, alternative options.</span></p>
+</div>
+<div>
+<span class="eyebrow">What sets CSR apart</span>
+<h2 class="mt-2 mb-3">A facility designed <em>around the patient.</em></h2>
+<div class="prose">
+<ul>
+<li><strong>Elekta linear accelerator</strong> — the latest-generation Linac for SBRT, SRS and VMAT delivery</li>
+<li><strong>Brachytherapy suite</strong> — purpose-built for image-guided HDR brachytherapy</li>
+<li><strong>Private patient lounges</strong> — for rest, refreshments and family between sessions</li>
+<li><strong>On-site planning &amp; QA</strong> — physicists and oncologists in the same building, every day</li>
+<li><strong>Multidisciplinary review rooms</strong> — for complex case discussions and tumour boards</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section section--warm">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">A look inside</span>
-      <h2>The <em>spaces</em> &amp; the team.</h2>
-    </div>
-    <div class="grid grid-cols-3">
-      <div class="img-wrap aspect-3/2"><img src="../assets/images/clinic/csr-private-lounge-mint.jpg" alt="CSR private patient lounge — quiet space between sessions." loading="lazy"></div>
-      <div class="img-wrap aspect-3/2"><img src="../assets/images/staff/planning-console-imaging-review.jpg" alt="Treatment planning console — physicist and clinician reviewing imaging." loading="lazy"></div>
-      <div class="img-wrap aspect-3/2"><img src="../assets/images/treatment/patient-linac-breath-hold-sbrt.jpg" alt="A patient on the Linac couch with breath-hold device, ready for SBRT delivery." loading="lazy"></div>
-    </div>
-  </div>
+<div class="container">
+<div class="section-header">
+<span class="eyebrow">A look inside</span>
+<h2>The <em>spaces</em> &amp; the team.</h2>
+</div>
+<div class="grid grid-cols-3">
+<div class="img-wrap aspect-3/2"><img alt="CSR private patient lounge — quiet space between sessions." loading="lazy" src="../assets/images/clinic/csr-private-lounge-mint.jpg"/></div>
+<div class="img-wrap aspect-3/2"><img alt="Treatment planning console — physicist and clinician reviewing imaging." loading="lazy" src="../assets/images/staff/planning-console-imaging-review.jpg"/></div>
+<div class="img-wrap aspect-3/2"><img alt="A patient on the Linac couch with breath-hold device, ready for SBRT delivery." loading="lazy" src="../assets/images/treatment/patient-linac-breath-hold-sbrt.jpg"/></div>
+</div>
+</div>
 </section>
-
 <section class="section">
-  <div class="container">
-    <div class="section-header">
-      <span class="eyebrow">Specialists at this location</span>
-      <h2>Who you'll see</h2>
-    </div>
-    <div class="prose">
-      <p>The following specialists hold consultation sessions at CSR Adam Road:</p>
-      <ul>
-        <li><a href="../our-specialists/dr-daniel-tan.html">Dr Daniel Tan</a> — Director · SRS/SBRT lead</li>
-        <li><a href="../our-specialists/dr-jonathan-teh.html">Dr Jonathan Teh</a> — Medical Director, CSR · Breast, Prostate, Gynaecological</li>
-        <li><a href="../our-specialists/dr-david-tan.html">Dr David Tan</a> — SBRT for Prostate · Genitourinary</li>
-      </ul>
-      <p><span class="tbc">Confirm full doctor roster + days each specialist consults at this location.</span></p>
-    </div>
-  </div>
+<div class="container">
+<div class="section-header">
+<span class="eyebrow">Specialists at this location</span>
+<h2>Who you'll see</h2>
+</div>
+<div class="prose">
+<p>The following specialists hold consultation sessions at CSR Adam Road:</p>
+<ul>
+<li><a href="../our-specialists/dr-daniel-tan.html">Dr Daniel Tan</a> — Director · SRS/SBRT lead</li>
+<li><a href="../our-specialists/dr-jonathan-teh.html">Dr Jonathan Teh</a> — Medical Director, CSR · Breast, Prostate, Gynaecological</li>
+<li><a href="../our-specialists/dr-david-tan.html">Dr David Tan</a> — SBRT for Prostate · Genitourinary</li>
+</ul>
+<p><span class="tbc">Confirm full doctor roster + days each specialist consults at this location.</span></p>
+</div>
+</div>
 </section>
-
 <section class="section">
-  <div class="container">
-    <div class="cta-band">
-      <div>
-        <h3>Book a consultation at CSR Adam Road.</h3>
-        <p>WhatsApp our patient care team — same working day reply.</p>
-      </div>
-      <a class="btn" href="https://wa.me/6581023838?text=Hi%2C%20I%27d%20like%20to%20book%20at%20CSR%20Adam%20Road">WhatsApp Us</a>
-    </div>
-  </div>
+<div class="container">
+<div class="cta-band">
+<div>
+<h3>Book a consultation at CSR Adam Road.</h3>
+<p>WhatsApp our patient care team — same working day reply.</p>
+</div>
+<a class="btn" href="https://wa.me/6581023838?text=Hi%2C%20I%27d%20like%20to%20book%20at%20CSR%20Adam%20Road">WhatsApp Us</a>
+</div>
+</div>
 </section>
-
 </main>
-
 <!-- @wp:get_footer() -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
@@ -217,42 +292,34 @@
         </div>
       </div>
       <!-- @wp:dynamic_sidebar(footer-1) -->
-      <div>
-        <h5>Cancers We Treat</h5>
-        <ul>
+      <div><h5>Cancers We Treat</h5><ul>
         <li><a href="../cancers-we-treat/breast-cancer.html">Breast Cancer</a></li>
         <li><a href="../cancers-we-treat/prostate-cancer.html">Prostate Cancer</a></li>
         <li><a href="../cancers-we-treat/lung-cancer.html">Lung Cancer</a></li>
         <li><a href="../cancers-we-treat/brain-cancer.html">Brain Cancer</a></li>
         <li><a href="../cancers-we-treat/liver-cancer.html">Liver Cancer</a></li>
         <li><a href="../cancers-we-treat/index.html">View all 12 →</a></li>
-        </ul>
-      </div>
+      </ul></div>
       <!-- @wp:dynamic_sidebar(footer-2) -->
-      <div>
-        <h5>Our Specialists</h5>
-        <ul>
+      <div><h5>Our Specialists</h5><ul>
         <li><a href="../our-specialists/dr-daniel-tan.html">Dr Daniel Tan</a></li>
         <li><a href="../our-specialists/dr-david-tan.html">Dr David Tan</a></li>
         <li><a href="../our-specialists/dr-jonathan-teh.html">Dr Jonathan Teh</a></li>
         <li><a href="../our-specialists/dr-michelle-tseng.html">Dr Michelle Tseng</a></li>
         <li><a href="../our-specialists/index.html">Meet the team →</a></li>
-        </ul>
-      </div>
+      </ul></div>
       <!-- @wp:dynamic_sidebar(footer-3) -->
-      <div>
-        <h5>Quick Links</h5>
-        <ul>
+      <div><h5>Quick Links</h5><ul>
+        <li><a href="../patient-stories.html">Patient Stories</a></li>
+        <li><a href="../articles.html">Articles</a></li>
         <li><a href="../second-opinion.html">Second Opinion</a></li>
         <li><a href="../for-clinicians.html">For Clinicians</a></li>
-        <li><a href="../patient-stories/index.html">Patient Stories</a></li>
         <li><a href="../contact.html">Book Consultation</a></li>
         <li><a href="../our-clinics/index.html">Our Clinics</a></li>
         <li><a href="../financing.html">Financing</a></li>
         <li><a href="../faqs.html">FAQs</a></li>
         <li><a href="../careers.html">Careers</a></li>
-        </ul>
-      </div>
+      </ul></div>
     </div>
     <div class="footer-bottom">
       <span>© <span id="yr">2026</span> Asian Alliance Radiation &amp; Oncology Pte Ltd. All rights reserved.</span>
@@ -266,7 +333,6 @@
   </div>
 </footer>
 <!-- @wp:wp_footer() -->
-
 <script src="../scripts.js"></script>
 </body>
 </html>
