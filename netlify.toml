@@ -1,0 +1,42 @@
+# ============================================================
+# netlify.toml — Netlify site configuration
+# Docs: https://docs.netlify.com/configure-builds/file-based-configuration/
+# ============================================================
+
+[build]
+  # No build step needed — this is plain static HTML.
+  # Publish from the repo root (where index.html sits).
+  publish = "."
+
+# ------------------------------------------------------------
+# Pretty URLs are ON by default in Netlify, so /about will
+# resolve to /about.html automatically. Internal links in this
+# project still use .html, which works fine — Netlify serves both.
+# ------------------------------------------------------------
+
+# Security headers applied to every page
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options       = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy       = "strict-origin-when-cross-origin"
+    Permissions-Policy    = "geolocation=(), microphone=(), camera=()"
+
+# Cache CSS / JS for an hour (so updates push out fast)
+[[headers]]
+  for = "/style.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/scripts.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Long-cache static assets — once you add real images here, they
+# can be cached aggressively because filenames are content-addressed.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
