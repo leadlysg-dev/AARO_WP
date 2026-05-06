@@ -137,7 +137,7 @@ p { color: var(--ink-muted); }
 .site-logo small { display: block; font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.16em; color: var(--ink-soft); font-weight: 400; margin-top: 4px; text-transform: uppercase; }
 
 .primary-nav { display: none; align-items: center; gap: 28px; }
-.primary-nav ul { display: flex; gap: 28px; align-items: center; list-style: none; }
+.primary-nav > ul { display: flex; gap: 28px; align-items: center; list-style: none; margin: 0; padding: 0; }
 .primary-nav a { font-size: 13px; color: var(--ink-muted); font-weight: 500; position: relative; padding: 8px 0; transition: color .18s ease; }
 .primary-nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: var(--ink); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
 .primary-nav a:hover { color: var(--ink); }
@@ -481,7 +481,7 @@ p { color: var(--ink-muted); }
    ============================================================ */
 /* tighten primary-nav spacing so 8 items fit comfortably at 1024+ */
 @media (min-width: 1024px) {
-  .primary-nav, .primary-nav ul { gap: 22px; }
+  .primary-nav, .primary-nav > ul { gap: 22px; }
   .primary-nav a { font-size: 12.5px; }
 }
 
@@ -522,16 +522,20 @@ p { color: var(--ink-muted); }
   border-radius: var(--r-md);
   box-shadow: var(--shadow-md);
   padding: 8px;
-  min-width: 280px;
+  margin: 0;
+  width: 280px;
   list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+  display: block;
   opacity: 0;
   visibility: hidden;
   transform: translateY(8px);
   transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
   z-index: 80;
+}
+.primary-nav .dropdown li {
+  display: block;
+  width: 100%;
+  margin: 0;
 }
 .primary-nav li.has-dropdown:hover > .dropdown,
 .primary-nav li.has-dropdown:focus-within > .dropdown,
@@ -546,7 +550,7 @@ p { color: var(--ink-muted); }
   top: 100%; left: 0; right: 0;
   height: 4px;
 }
-.primary-nav .dropdown li { padding: 0; border: none; }
+.primary-nav .dropdown li { padding: 0; border: none; display: block; width: 100%; }
 .primary-nav .dropdown li + li { border-top: 1px solid var(--line-soft); }
 .primary-nav .dropdown a {
   display: block;
