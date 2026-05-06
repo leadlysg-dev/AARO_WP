@@ -35,6 +35,13 @@
   [headers.values]
     Cache-Control = "public, max-age=300, must-revalidate"
 
+# Images — must-revalidate during iteration so updates land immediately.
+# Once the site is stable, change to a long max-age and use filename hashing.
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=300, must-revalidate"
+
 # Long-cache static assets — once you add real images here, they
 # can be cached aggressively because filenames are content-addressed.
 [[headers]]
