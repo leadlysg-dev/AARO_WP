@@ -1,14 +1,20 @@
 /*!
- * AARO — minimal frontend behavior
- * Mobile nav + FAQ accordion + nav dropdowns + smooth-scroll fallback
+ * AARO — site behavior
+ *  - mobile nav drawer
+ *  - desktop dropdown nav
+ *  - mobile dropdown accordion
+ *  - FAQ / accordion rows
+ *  - scroll-triggered reveals
+ *  - animated counters on viewport entry
+ *  - current-page highlight in nav
  */
 (function () {
   'use strict';
 
   /* ---------- Mobile nav drawer ---------- */
-  const navToggle  = document.querySelector('[data-nav-toggle]');
-  const navClose   = document.querySelector('[data-nav-close]');
-  const mobileNav  = document.querySelector('[data-mobile-nav]');
+  const navToggle = document.querySelector('[data-nav-toggle]');
+  const navClose  = document.querySelector('[data-nav-close]');
+  const mobileNav = document.querySelector('[data-mobile-nav]');
 
   function openNav()  { if (mobileNav) { mobileNav.classList.add('is-open'); document.body.style.overflow = 'hidden'; } }
   function closeNav() { if (mobileNav) { mobileNav.classList.remove('is-open'); document.body.style.overflow = ''; } }
@@ -16,12 +22,11 @@
   if (navToggle) navToggle.addEventListener('click', openNav);
   if (navClose)  navClose.addEventListener('click', closeNav);
 
-  // close on link click — but not when clicking the chevron toggle inside an accordion row
   document.querySelectorAll('[data-mobile-nav] a').forEach(a => {
     a.addEventListener('click', () => closeNav());
   });
 
-  // Mobile accordion toggles
+  /* ---------- Mobile dropdown accordion ---------- */
   document.querySelectorAll('[data-mobile-dropdown-toggle]').forEach(btn => {
     btn.addEventListener('click', e => {
       e.preventDefault();
@@ -33,17 +38,14 @@
     });
   });
 
-  /* ---------- Desktop nav dropdowns (click-toggle for non-hover devices) ---------- */
+  /* ---------- Desktop dropdown — touch fallback ---------- */
   document.querySelectorAll('[data-dropdown-toggle]').forEach(btn => {
     btn.addEventListener('click', e => {
-      // Only intercept on touch / non-hover devices.
-      // On real hover devices, we let CSS :hover handle it and don't preventDefault here.
       if (window.matchMedia('(hover: hover)').matches) return;
       e.preventDefault();
       e.stopPropagation();
       const li = btn.closest('.has-dropdown');
       if (!li) return;
-      // close other open dropdowns first
       document.querySelectorAll('.primary-nav .has-dropdown.is-open').forEach(other => {
         if (other !== li) other.classList.remove('is-open');
       });
@@ -51,33 +53,36 @@
       btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });
   });
-
-  // close any open desktop dropdown on click outside
   document.addEventListener('click', e => {
     if (!e.target.closest('.primary-nav')) {
-      document.querySelectorAll('.primary-nav .has-dropdown.is-open').forEach(li => {
-        li.classList.remove('is-open');
-      });
+      document.querySelectorAll('.primary-nav .has-dropdown.is-open').forEach(li => li.classList.remove('is-open'));
     }
   });
 
-  /* ---------- Escape closes any open menu/dropdown ---------- */
+  /* ---------- Escape closes all menus ---------- */
   document.addEventListener('keydown', e => {
     if (e.key !== 'Escape') return;
     if (mobileNav && mobileNav.classList.contains('is-open')) closeNav();
     document.querySelectorAll('.primary-nav .has-dropdown.is-open').forEach(li => li.classList.remove('is-open'));
   });
 
-  /* ---------- FAQ accordion ---------- */
+  /* ---------- FAQ + Accordion ---------- */
   document.querySelectorAll('.faq-q').forEach(q => {
     q.addEventListener('click', () => {
       const item = q.closest('.faq-item');
-      if (!item) return;
-      item.classList.toggle('is-open');
+      if (item) item.classList.toggle('is-open');
     });
   });
+  document.querySelectorAll('.accordion-row').forEach(row => {
+    row.addEventListener('click', () => row.classList.toggle('is-open'));
+  });
 
-  /* ---------- Highlight current page in nav ---------- */
+  /* ---------- Toggle ---------- */
+  document.querySelectorAll('.toggle').forEach(t => {
+    t.addEventListener('click', e => e.currentTarget.classList.toggle('is-on'));
+  });
+
+  /* ---------- Current-page highlight in nav ---------- */
   const path = window.location.pathname.split('/').filter(Boolean).pop() || 'index.html';
   document.querySelectorAll('[data-nav-link]').forEach(link => {
     const target = link.getAttribute('data-nav-link');
@@ -85,5 +90,68 @@
       link.classList.add('is-current');
     }
   });
+
+  /* ---------- Respect reduced motion ---------- */
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- Scroll-triggered reveals ---------- */
+  if (!prefersReduced && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+  } else {
+    // No observer / reduced motion — show everything immediately
+    document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('revealed'));
+  }
+
+  /* ---------- Animated counters ---------- */
+  function animateCounters(container) {
+    container.querySelectorAll('[data-target]').forEach((el, i) => {
+      const target = parseInt(el.dataset.target, 10);
+      if (isNaN(target)) return;
+      const suffix = el.dataset.suffix || '';
+      const duration = 1300;
+      const startDelay = i * 90;
+      el.textContent = '0' + suffix;
+      setTimeout(() => {
+        const start = performance.now();
+        function tick(now) {
+          const t = Math.min(1, (now - start) / duration);
+          const ease = 1 - Math.pow(1 - t, 3);
+          const val = Math.floor(target * ease);
+          el.textContent = (val >= 1000 ? val.toLocaleString() : val) + suffix;
+          if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+      }, startDelay);
+    });
+  }
+
+  if (!prefersReduced && 'IntersectionObserver' in window) {
+    const counterFlags = new WeakSet();
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !counterFlags.has(entry.target)) {
+          counterFlags.add(entry.target);
+          animateCounters(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('.trust-bar, .counter-bar, [data-counter-group]').forEach(el =>
+      counterObserver.observe(el)
+    );
+  }
+
+  /* ---------- Footer year ---------- */
+  const yr = document.getElementById('yr');
+  if (yr) yr.textContent = new Date().getFullYear();
 
 })();
