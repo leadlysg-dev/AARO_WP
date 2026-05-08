@@ -789,18 +789,21 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
 
 /* PARTNER LIST */
 .location-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px 32px;
+  align-content: start;
+}
+@media (min-width: 600px) {
+  .location-list { grid-template-columns: 1fr 1fr; }
 }
 .location-item {
-  padding: 22px 0;
-  border-bottom: 1px solid var(--line);
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 0;
+  border: none;
 }
-.location-item:first-child { padding-top: 0; }
-.location-item:last-child { border-bottom: none; padding-bottom: 0; }
 .location-item h4 {
   font-size: 18px;
   margin: 0;
@@ -1205,5 +1208,40 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   padding: 2px 6px;
   border-radius: 100px;
   line-height: 1.2;
+}
+
+
+/* ============================================================ */
+/* SERVICE CARD — disabled "In development" state              */
+/* Same gold pill, same softer treatment as nav-disabled         */
+/* ============================================================ */
+.service-card--locked {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.service-card--locked:hover {
+  transform: none;
+  box-shadow: var(--shadow-md);
+}
+.service-card--locked .ic {
+  filter: saturate(0.6);
+}
+
+.service-card .card-link-disabled {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-soft);
+  padding: 3px 8px;
+  border-radius: 100px;
+  align-self: flex-start;
+  line-height: 1.3;
+  margin-top: auto;
+  cursor: not-allowed;
+  user-select: none;
 }
 
