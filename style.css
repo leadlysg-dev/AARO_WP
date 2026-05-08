@@ -1807,3 +1807,265 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   }
 }
 
+
+/* ============================================================================ */
+/* MOBILE STACKING DECK — cancer cards in 'What we treat' section               */
+/* On mobile, cancer cards become substantial sticky cards that stack like a    */
+/* deck of cards as the user scrolls. Desktop layout (4-up grid) is unchanged. */
+/* ============================================================================ */
+@media (max-width: 767px) {
+  .service-grid--stack-mobile {
+    display: block;
+    position: relative;
+  }
+
+  .service-grid--stack-mobile .service-card {
+    /* Sticky, with each card sticking at progressively lower offset */
+    position: sticky;
+    margin: 0 0 14px;
+    padding: 28px 26px 26px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    box-shadow: 0 -10px 30px -8px rgba(11, 34, 64, 0.10),
+                0 4px 12px rgba(11, 34, 64, 0.04);
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Smooth transition feel as cards become sticky */
+    will-change: transform;
+  }
+
+  /* Staircase offsets — each card sticks 6px lower than the one before,
+     creating a deck-of-cards peek-out effect at the top edge */
+  .service-grid--stack-mobile .service-card:nth-child(1)  { top: 84px; }
+  .service-grid--stack-mobile .service-card:nth-child(2)  { top: 90px; }
+  .service-grid--stack-mobile .service-card:nth-child(3)  { top: 96px; }
+  .service-grid--stack-mobile .service-card:nth-child(4)  { top: 102px; }
+  .service-grid--stack-mobile .service-card:nth-child(5)  { top: 108px; }
+  .service-grid--stack-mobile .service-card:nth-child(6)  { top: 114px; }
+  .service-grid--stack-mobile .service-card:nth-child(7)  { top: 120px; }
+  .service-grid--stack-mobile .service-card:nth-child(8)  { top: 126px; }
+  .service-grid--stack-mobile .service-card:nth-child(9)  { top: 132px; }
+  .service-grid--stack-mobile .service-card:nth-child(10) { top: 138px; }
+  .service-grid--stack-mobile .service-card:nth-child(11) { top: 144px; }
+  .service-grid--stack-mobile .service-card:nth-child(12) { top: 150px; }
+
+  /* Bigger, rounder icon — iconic, surface-toned circle */
+  .service-grid--stack-mobile .service-card .ic {
+    width: 52px;
+    height: 52px;
+    background: var(--surface);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 4px;
+    color: var(--ink);
+  }
+  .service-grid--stack-mobile .service-card .ic svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Big display heading per card */
+  .service-grid--stack-mobile .service-card h3 {
+    font-family: var(--font-display);
+    font-size: 26px;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink);
+    font-weight: var(--display-weight, 400);
+  }
+
+  /* Description gets room to breathe */
+  .service-grid--stack-mobile .service-card p {
+    font-size: 14.5px;
+    line-height: 1.55;
+    margin: 0;
+    color: var(--ink-muted);
+    flex-grow: 1;
+  }
+
+  /* ============ ACTIVE card (the one that links somewhere) ============ */
+  .service-grid--stack-mobile .service-card:not(.service-card--locked) {
+    /* Subtle teal accent on the top edge to flag "this is live" */
+    border-top: 3px solid var(--accent);
+  }
+  .service-grid--stack-mobile .service-card:not(.service-card--locked) .ic {
+    background: rgba(15, 118, 110, 0.08);
+    color: var(--accent);
+  }
+  .service-grid--stack-mobile .service-card:not(.service-card--locked) > a {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 14.5px;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+  }
+  .service-grid--stack-mobile .service-card:not(.service-card--locked) > a .arr-link {
+    transition: transform 0.2s var(--ease, ease);
+  }
+  .service-grid--stack-mobile .service-card:not(.service-card--locked) > a:hover .arr-link {
+    transform: translateX(4px);
+  }
+
+  /* ============ LOCKED card ============ */
+  .service-grid--stack-mobile .service-card--locked {
+    /* Still substantial — just no accent border, and a gold "In development" pill */
+    border-top: 3px solid transparent;
+  }
+  .service-grid--stack-mobile .service-card--locked h3 {
+    color: var(--ink);  /* still readable, not muted */
+  }
+  .service-grid--stack-mobile .service-card--locked .card-link-disabled {
+    align-self: flex-start;
+    background: rgba(193, 154, 91, 0.10);
+    color: var(--gold, #C19A5B);
+    padding: 5px 11px;
+    border-radius: 100px;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+}
+
+
+/* ============================================================================ */
+/* DESKTOP FEATURE EFFECTS — cancer cards in 'What we treat' section            */
+/* Hover-driven micro-interactions + permanent distinction for active cards.    */
+/* Scoped to .service-grid--stack-mobile so OTHER service-cards aren't affected. */
+/* ============================================================================ */
+@media (min-width: 768px) {
+  .service-grid--stack-mobile .service-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+      transform 0.5s cubic-bezier(0.2, 0.6, 0.2, 1),
+      box-shadow 0.5s cubic-bezier(0.2, 0.6, 0.2, 1),
+      border-color 0.3s ease;
+    /* Smoothest possible animation */
+    will-change: transform, box-shadow;
+  }
+
+  /* Animated top accent bar — uses ::before so we don't fight existing borders */
+  .service-grid--stack-mobile .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--accent);
+    transition: width 0.55s cubic-bezier(0.2, 0.6, 0.2, 1);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Active cards: partial accent bar visible at rest (signals "live")           */
+  .service-grid--stack-mobile .service-card:not(.service-card--locked)::before {
+    width: 32%;
+  }
+
+  /* Active cards: teal-tinted icon background at rest                           */
+  .service-grid--stack-mobile .service-card:not(.service-card--locked) .ic {
+    background: rgba(15, 118, 110, 0.07);
+    color: var(--accent);
+    transition:
+      transform 0.45s cubic-bezier(0.2, 0.6, 0.2, 1),
+      background 0.3s ease;
+  }
+
+  /* Active card link: teal, mono-styled, with arrow ready to slide              */
+  .service-grid--stack-mobile .service-card:not(.service-card--locked) > a {
+    color: var(--accent);
+    font-weight: 500;
+    text-decoration: none;
+    align-self: flex-start;
+    margin-top: auto;
+    transition: color 0.2s ease;
+  }
+  .service-grid--stack-mobile .service-card:not(.service-card--locked) > a .arr-link {
+    display: inline-block;
+    transition: transform 0.4s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+
+  /* Locked cards: muted, no accent, no link styling                             */
+  .service-grid--stack-mobile .service-card--locked .ic {
+    transition: transform 0.45s cubic-bezier(0.2, 0.6, 0.2, 1);
+  }
+  .service-grid--stack-mobile .service-card--locked .card-link-disabled {
+    align-self: flex-start;
+    margin-top: auto;
+    background: rgba(193, 154, 91, 0.10);
+    color: var(--gold, #C19A5B);
+    padding: 5px 11px;
+    border-radius: 100px;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  /* ============ HOVER STATE ============ */
+
+  /* All cards: lift + deeper shadow                                             */
+  .service-grid--stack-mobile .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      0 28px 60px -20px rgba(11, 34, 64, 0.18),
+      0 12px 24px rgba(11, 34, 64, 0.06);
+  }
+
+  /* All cards on hover: accent bar grows full width                             */
+  .service-grid--stack-mobile .service-card:hover::before {
+    width: 100%;
+  }
+
+  /* All cards on hover: icon scales up                                          */
+  .service-grid--stack-mobile .service-card:hover .ic {
+    transform: scale(1.08);
+  }
+
+  /* Active card: teal-tinted shadow on hover (premium feel)                     */
+  .service-grid--stack-mobile .service-card:not(.service-card--locked):hover {
+    box-shadow:
+      0 28px 60px -20px rgba(15, 118, 110, 0.28),
+      0 12px 24px rgba(15, 118, 110, 0.10);
+  }
+
+  /* Active card: arrow slides forward on hover                                  */
+  .service-grid--stack-mobile .service-card:not(.service-card--locked):hover > a .arr-link {
+    transform: translateX(8px);
+  }
+
+  /* Active card: icon background slightly more saturated on hover               */
+  .service-grid--stack-mobile .service-card:not(.service-card--locked):hover .ic {
+    background: rgba(15, 118, 110, 0.12);
+  }
+
+  /* Locked card on hover: smaller lift (signals "not actionable")               */
+  .service-grid--stack-mobile .service-card--locked:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 16px 32px -16px rgba(11, 34, 64, 0.10),
+      0 4px 12px rgba(11, 34, 64, 0.04);
+  }
+  /* Locked card: accent bar stays minimal (don't pretend to be active)          */
+  .service-grid--stack-mobile .service-card--locked:hover::before {
+    width: 0;
+  }
+}
+
