@@ -2248,3 +2248,306 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   margin-left: 4px;
 }
 
+
+/* ============================================================ */
+/* MOBILE HERO — push content lower so team image is visible    */
+/* before text starts (the team photo is the wow moment)        */
+/* ============================================================ */
+@media (max-width: 767px) {
+  .hero--full .container {
+    padding-top: 22vh !important;
+    padding-bottom: 48px;
+    min-height: 90vh;
+    min-height: 90dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .hero--full {
+    min-height: 90vh;
+    min-height: 90dvh;
+  }
+  /* Image positioning so team faces show at top */
+  .hero--full .hero-bg img {
+    object-position: center 30%;
+  }
+  /* Hero overlay: gentler at top so image breathes, stronger at bottom for text */
+  .hero--full .hero-overlay {
+    background: linear-gradient(180deg,
+      rgba(11, 34, 64, 0.10) 0%,
+      rgba(11, 34, 64, 0.20) 25%,
+      rgba(11, 34, 64, 0.55) 55%,
+      rgba(11, 34, 64, 0.85) 100%);
+  }
+}
+
+/* ============================================================ */
+/* TRUST BAR — full-width background, edge-to-edge              */
+/* ============================================================ */
+.trust-bar {
+  /* Make it span the full page width so the surface bg goes edge-to-edge */
+  background: var(--surface-2, #F1F4F7);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 32px var(--section-pad-x);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+.trust-bar > * {
+  /* Re-center inner items within the max-width */
+}
+@media (min-width: 768px) {
+  .trust-bar {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px max(var(--section-pad-x), calc(50% - var(--container)/2 + var(--section-pad-x)));
+  }
+}
+.trust-item { text-align: left; }
+.trust-item .num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+.trust-item .lbl {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* ============================================================ */
+/* MOBILE DR DANIEL TAN HERO — face cropping                    */
+/* On mobile, story-row__media goes 4:3. For portrait headshots,  */
+/* this can cut the face. Shift object-position to top.         */
+/* ============================================================ */
+@media (max-width: 767px) {
+  .single-doctor .story-row__media .img-wrap {
+    aspect-ratio: 3/4;  /* portrait-leaning, doesn't squeeze face */
+  }
+  .single-doctor .story-row__media img {
+    object-position: center 22%;
+  }
+}
+
+/* ============================================================ */
+/* LOCATIONS — flagship + grid of mini cards                    */
+/* ============================================================ */
+.locations-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (min-width: 1024px) {
+  .locations-grid { gap: 40px; }
+}
+
+/* Flagship CSR card: full width, image-on-top layout */
+.location-flagship {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+@media (min-width: 768px) {
+  .location-flagship {
+    grid-template-columns: 1.1fr 1fr;
+  }
+}
+.location-flagship .img-wrap {
+  aspect-ratio: 16/10;
+}
+@media (min-width: 768px) {
+  .location-flagship .img-wrap {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 320px;
+  }
+}
+.location-flagship .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.location-flagship__body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  .location-flagship__body { padding: 44px; }
+}
+.location-flagship__body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.15;
+  margin: 4px 0 0;
+  color: var(--ink);
+}
+.location-flagship__body address {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+.location-flagship-note {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 8px 0 0;
+}
+
+/* Grid of partner clinic mini cards */
+.location-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+@media (min-width: 600px) {
+  .location-cards-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
+}
+@media (min-width: 1024px) {
+  .location-cards-grid { grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+}
+
+.location-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md, 12px);
+  padding: 24px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s var(--ease, ease), box-shadow 0.3s var(--ease, ease), border-color 0.3s ease;
+}
+.location-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px -12px rgba(11, 34, 64, 0.12);
+  border-color: rgba(11, 34, 64, 0.16);
+}
+.location-card__head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.location-card__tag {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+  align-self: flex-start;
+}
+.location-card h4 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--ink);
+  font-weight: var(--display-weight, 400);
+}
+.location-card address {
+  font-style: normal;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  flex-grow: 1;
+}
+.location-card .text-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-start;
+  margin-top: 2px;
+  transition: gap 0.2s ease;
+}
+.location-card .text-link:hover { gap: 8px; }
+.location-card .text-link .arr-link { display: inline-block; }
+
+/* Mobile full-bleed flagship */
+@media (max-width: 767px) {
+  .location-flagship {
+    margin-left: calc(-1 * var(--section-pad-x));
+    margin-right: calc(-1 * var(--section-pad-x));
+    width: calc(100% + 2 * var(--section-pad-x));
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .location-flagship__body { padding: 28px var(--section-pad-x); }
+}
+
+/* ============================================================ */
+/* FOOTER SOCIALS — icon-only buttons                           */
+/* ============================================================ */
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+.footer-social {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+.footer-social:hover {
+  background: var(--accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ============================================================ */
+/* SECONDARY BUTTONS — visible border at rest (more defined)    */
+/* ============================================================ */
+.btn--secondary,
+.btn--ghost-light {
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  color: var(--ink);
+  transition: background 0.25s var(--ease, ease), color 0.25s var(--ease, ease), border-color 0.25s var(--ease, ease);
+}
+.btn--secondary:hover,
+.btn--ghost-light:hover {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+/* On dark backgrounds (hero) — light border, white text */
+.hero--full .btn--ghost-light,
+.cta-band--navy .btn--ghost-light {
+  border: 1.5px solid rgba(255, 255, 255, 0.55);
+  color: #fff;
+}
+.hero--full .btn--ghost-light:hover,
+.cta-band--navy .btn--ghost-light:hover {
+  background: #fff;
+  color: var(--ink);
+  border-color: #fff;
+}
+
