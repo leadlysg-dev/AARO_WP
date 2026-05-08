@@ -2606,3 +2606,78 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   margin-top: 12px;
 }
 
+/* ============================================================ */
+/* COMBINED-STATEMENT HERO (Variant C)                          */
+/* For cancer + treatment pages: H1 weaves page name into the   */
+/* line itself. The name gets a soft teal marker-highlight.     */
+/* ============================================================ */
+.eyebrow--strong {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 18px;
+  position: relative;
+  padding-left: 18px;
+}
+.eyebrow--strong::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 1.5px;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+
+.hero-h1--combined {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5.2vw, 64px);
+  line-height: 1.05;
+  margin: 0 0 24px;
+  color: var(--ink);
+  font-weight: var(--display-weight, 400);
+  letter-spacing: -0.018em;
+  max-width: 22ch;
+}
+
+/* Page-name marker — soft teal pen-highlight behind the cancer/treatment name */
+.name-mark {
+  background-image: linear-gradient(
+    transparent 62%,
+    rgba(15, 118, 110, 0.18) 62%,
+    rgba(15, 118, 110, 0.18) 94%,
+    transparent 94%
+  );
+  background-repeat: repeat-x;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0 4px;
+  margin: 0 -4px;
+}
+
+/* The italic teal accent on the closing word */
+.hero-h1--combined em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+/* Tighten lead spacing under the combined H1 */
+.hero-h1--combined + .lead {
+  margin-top: 8px;
+}
+
+@media (max-width: 600px) {
+  .hero-h1--combined {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+  /* Drop the explicit <br> on small screens — let the line wrap naturally */
+  .hero-h1--combined br {
+    display: none;
+  }
+}
+
