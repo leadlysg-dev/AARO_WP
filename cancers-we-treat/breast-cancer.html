@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="../style.css?v=44" rel="stylesheet"/>
+<link href="../style.css?v=46" rel="stylesheet"/>
 <!-- @wp:wp_head() -->
 </head>
 <body class="single-cancer">
@@ -165,15 +165,6 @@
 </nav>
 <main id="main" role="main">
 <!-- @wp:the_content() -->
-<nav aria-label="Breadcrumbs" class="breadcrumbs">
-<div class="container">
-<ol>
-<li><a href="../index.html">Home</a></li>
-<li>Breast Cancer</li>
-</ol>
-</div>
-</nav>
-
 <!-- ========== 1. CANCER HERO ========== -->
 <section class="block">
 <div class="story-row" data-reveal="">
@@ -203,8 +194,10 @@
 <section class="block alt">
 <div class="story-row story-row--reverse" data-reveal="">
 <div class="story-row__media">
-<div class="img-wrap">
-<img alt="A patient on the SBRT couch using a breath-hold spirometer — the deep-inspiration technique used to protect the heart during left-sided breast radiation." loading="lazy" src="../assets/images/treatment/patient-sbrt-breath-hold-csr.jpg"/>
+<div class="stock-placeholder" role="img" aria-label="Stock image needed: breast anatomy illustration or cellular microscopy">
+<svg class="stock-placeholder__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="8.5" cy="10" r="0.8" fill="currentColor"/><circle cx="15.5" cy="13.5" r="0.8" fill="currentColor"/><circle cx="11" cy="14.5" r="0.6" fill="currentColor"/></svg>
+<span class="stock-placeholder__tag">Stock image needed</span>
+<span class="stock-placeholder__desc">Breast anatomy illustration or cellular microscopy<br/>Suggested: ducts &amp; lobules diagram, or H&amp;E-stained tissue</span>
 </div>
 </div>
 <div class="story-row__text">
@@ -389,8 +382,41 @@
 </section>
 
 
-<!-- ========== WHAT TREATMENT IS LIKE — story-row ========== -->
+
+<!-- ========== PRECISION BEHIND EVERY TREATMENT — equipment showcase ========== -->
 <section class="block">
+<div class="section-head" data-reveal="">
+<span class="eyebrow">Precision behind every treatment</span>
+<h2 class="h-section">Hours of <em>planning,</em> for one careful treatment.</h2>
+<p>Every breast cancer plan at AARO goes through detailed contouring, dose simulation, and physics review before a single beam is delivered. Two senior radiation therapists check every plan independently. We do this so the radiation hits exactly the tissue that needs it — and avoids the heart, lungs and surrounding healthy tissue.</p>
+</div>
+<div class="precision-grid" data-reveal="">
+
+<article class="precision-card">
+<div class="img-wrap">
+<img alt="Two AARO radiation therapists at the planning console, reviewing a treatment plan together on a multi-monitor workstation." loading="lazy" src="../assets/images/staff/planning-console-staff-review.jpg"/>
+</div>
+<div class="precision-card__body">
+<h3>We plan every dose.</h3>
+<p>Our medical physicists and radiation therapists collaborate on each plan — contouring tumour and organs-at-risk, simulating dose distribution, and stress-testing for breathing motion before delivery.</p>
+</div>
+</article>
+
+<article class="precision-card">
+<div class="img-wrap">
+<img alt="A patient using a breath-hold spirometer device beneath the linear accelerator — the deep-inspiration breath-hold technique used to protect the heart during left-sided breast radiation." loading="lazy" src="../assets/images/treatment/patient-sbrt-breath-hold-csr.jpg"/>
+</div>
+<div class="precision-card__body">
+<h3>We protect what matters.</h3>
+<p>For left-sided breast cancers, we use Deep-Inspiration Breath-Hold (DIBH) — the patient takes a deep breath at each pulse, expanding the chest and pulling the heart away from the radiation field.</p>
+</div>
+</article>
+
+</div>
+</section>
+
+<!-- ========== WHAT TREATMENT IS LIKE — story-row ========== -->
+<section class="block alt">
 <div class="story-row story-row--reverse" data-reveal="">
 <div class="story-row__media">
 <div class="img-wrap">
@@ -408,7 +434,7 @@
 </section>
 
 <!-- ========== 7. SPECIALISTS — specialists-preview ========== -->
-<section class="block alt">
+<section class="block">
 <div class="specialists-preview" data-reveal="">
 <div class="img-wrap">
 <img alt="The four senior AARO specialists at the Centre for Stereotactic Radiosurgery." loading="lazy" src="../assets/images/doctors/four-doctors-linac-elekta.jpg"/>
@@ -428,7 +454,7 @@
 </section>
 
 <!-- ========== 8. CTA BAND ========== -->
-<section class="block">
+<section class="block alt">
 <div class="cta-band cta-band--navy" data-reveal="">
 <div>
 <h3>Recently diagnosed? Or seeking a second opinion?</h3>
@@ -503,6 +529,6 @@
 </div>
 </footer>
 <!-- @wp:wp_footer() -->
-<script src="../scripts.js?v=44"></script>
+<script src="../scripts.js?v=46"></script>
 </body>
 </html>
