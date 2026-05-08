@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="../style.css?v=38" rel="stylesheet"/>
+<link href="../style.css?v=55" rel="stylesheet"/>
 <!-- @wp:wp_head() -->
 </head>
 <body class="single-cancer">
@@ -165,151 +165,264 @@
 </nav>
 <main id="main" role="main">
 <!-- @wp:the_content() -->
-<section class="hero">
-<div class="container">
-<div class="hero-content">
-<span class="eyebrow hero-eyebrow">Cancers We Treat · Breast Cancer</span>
-<h1>Breast cancer is <em>highly treatable</em><br/>when caught early.</h1>
-<p class="lead">It is the most common cancer in Singaporean women — and one with strong outcomes when diagnosed in time. AARO offers the full radiation toolkit: VMAT, deep-inspiration breath-hold (DIBH), accelerated partial-breast irradiation, and stereotactic body radiotherapy (SBRT) for oligometastatic disease.</p>
+<!-- ========== 1. CANCER HERO ========== -->
+<section class="block">
+<div class="story-row" data-reveal="">
+<div class="story-row__text">
+<span class="eyebrow">Cancers We Treat · Breast Cancer</span>
+<h1>Breast cancer is highly treatable <em>when caught early.</em></h1>
+<p class="lead">It is the most common cancer in Singaporean women — and one with strong outcomes when diagnosed in time. AARO offers the full radiation toolkit: VMAT, deep-inspiration breath-hold, accelerated partial-breast irradiation, and SBRT for oligometastatic spread.</p>
+<div class="cancer-stats">
+<div class="stat"><span class="stat-num">~2,000</span><span class="stat-lbl">New cases per year in Singapore</span></div>
+<div class="stat"><span class="stat-num">99%</span><span class="stat-lbl">5-year survival when caught at stage 0–1</span></div>
+<div class="stat"><span class="stat-num">3</span><span class="stat-lbl">AARO specialists treat breast cancer</span></div>
+</div>
 <div class="hero-ctas">
-<a class="btn btn--primary btn--lg" href="../index.html#book">Book a Consultation</a>
-<a class="btn btn--whatsapp btn--lg" href="https://wa.me/6581023838?text=Hi%2C%20I%27d%20like%20to%20discuss%20breast%20cancer%20treatment">WhatsApp About Breast Care</a>
+<a class="btn btn--accent btn--lg" href="../index.html#book">Book a consultation<span class="arr">→</span></a>
+<a class="btn btn--secondary btn--lg" href="https://wa.me/6581023838" rel="noopener" target="_blank">WhatsApp us<span class="arr">→</span></a>
 </div>
 </div>
-<div class="hero-media">
-<div class="img-wrap aspect-16/9">
-<img alt="A patient on the linear accelerator couch with a breath-hold device for deep-inspiration breath-hold (DIBH) radiotherapy — a technique that protects the heart and lungs during left-sided breast cancer treatment." loading="lazy" src="../assets/images/treatment/patient-linac-breath-hold-sbrt.jpg"/>
+<div class="story-row__media">
+<div class="img-wrap">
+<img alt="The Centre for Stereotactic Radiosurgery treatment room — Elekta linear accelerator and HexaPOD couch beneath the signature starry ceiling." loading="eager" src="../assets/images/treatment/csr-elekta-treatment-room.jpg"/>
 </div>
 </div>
 </div>
 </section>
-<section class="section">
-<div class="container container--narrow">
-<div class="prose">
+<!-- ========== 2. WHAT IS BREAST CANCER ========== -->
+<section class="block alt">
+<div class="story-row story-row--reverse" data-reveal="">
+<div class="story-row__media">
+<div class="img-wrap">
+<img alt="Stained tissue under microscope — cellular structure of glandular tissue, similar to the milk-duct cells where most breast cancers originate." loading="lazy" src="../assets/images/medical-illustrations/breast-cells-microscopy.jpg"/>
+</div>
+</div>
+<div class="story-row__text">
 <span class="eyebrow">What is breast cancer?</span>
-<h2 class="mt-2">Cancer that begins in the cells of the breast.</h2>
-<p>Breast cancer is a malignancy that develops when cells in the breast — most commonly in the milk ducts (ductal carcinoma) or milk-producing glands (lobular carcinoma) — begin to grow uncontrollably. Left untreated, these cells can invade nearby tissue and spread (metastasise) to other parts of the body, most often to the lymph nodes, lungs, liver, bones or brain.</p>
-<p>Breast cancer is the most common cancer in Singaporean women, with about 2,000 new cases diagnosed every year. The good news: when caught at stage 0 or stage 1, five-year survival exceeds 95%. Early detection — through routine self-examination, clinical examination, and mammographic screening — is the single most important factor in outcomes.</p>
+<h2 class="h-section">Cancer that begins in the cells of the <em>breast.</em></h2>
+<p>Breast cancer is a malignancy that develops when cells in the breast — most commonly in the milk ducts (ductal carcinoma) or milk-producing glands (lobular carcinoma) — begin to grow uncontrollably. Some types stay confined within the duct or lobule (in situ); others invade surrounding breast tissue and may spread to lymph nodes or distant organs.</p>
+<p>It is the most common cancer in Singaporean women, with about 2,000 new cases diagnosed every year. The good news: when caught at stage 0 or stage 1, five-year survival exceeds 99%.</p>
 </div>
 </div>
 </section>
-<section class="section section--warm">
-<div class="container container--narrow">
+<!-- ========== 3. SYMPTOMS & SIGNS — service-grid ========== -->
+<section class="block">
+<div class="section-head" data-reveal="">
 <span class="eyebrow">Symptoms &amp; signs</span>
-<h2 class="mt-2 mb-3">When to see a doctor</h2>
-<div class="prose">
-<p>Many breast cancers are first detected as a painless lump. But cancer can also present without a palpable lump. The signs that warrant prompt medical evaluation include:</p>
-<ul>
-<li>A new lump or thickening in the breast or armpit, even if painless</li>
-<li>Change in the size, shape or contour of the breast</li>
-<li>Skin changes — dimpling, puckering, redness, scaling, or an "orange-peel" texture</li>
-<li>Nipple changes — inversion (turning inward), discharge (especially bloody), or scaling</li>
-<li>Persistent breast or nipple pain</li>
-<li>Swollen lymph nodes in the armpit or above the collarbone</li>
-</ul>
-<p>Most lumps are benign — but only a clinical examination, imaging and (if indicated) biopsy can confirm that. Don't wait.</p>
+<h2 class="h-section">When to see a <em>doctor.</em></h2>
+<p>Many breast cancers are first detected as a painless lump — but not all. Most lumps are benign, but only a clinical exam, imaging and (if indicated) biopsy can confirm. Don't wait.</p>
 </div>
+<div class="service-grid service-grid--3up" data-reveal="">
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg></div>
+<h3>A new lump</h3>
+<p>Any new lump or thickening in the breast or armpit, even if painless. The most common first sign of breast cancer.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12a9 9 0 1 0 18 0 9 9 0 0 0-18 0z"></path><path d="M9 12h6"></path></svg></div>
+<h3>Change in size or shape</h3>
+<p>One breast becoming visibly different in size, shape or contour from the other — especially if the change is recent.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
+<h3>Skin changes</h3>
+<p>Dimpling, puckering, redness, scaling or an "orange-peel" texture on the breast skin.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20M2 12h20"></path></svg></div>
+<h3>Nipple changes</h3>
+<p>Inversion (turning inward), discharge (especially bloody), or scaling of the nipple.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" x2="9.01" y1="9" y2="9"></line><line x1="15" x2="15.01" y1="9" y2="9"></line></svg></div>
+<h3>Persistent pain</h3>
+<p>Breast or nipple pain that doesn't resolve, particularly if associated with other symptoms in this list.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path></svg></div>
+<h3>Swollen lymph nodes</h3>
+<p>Lumps or swelling in the armpit or above the collarbone — this can sometimes appear before a breast lump is detectable.</p>
+</article>
 </div>
 </section>
-<section class="section">
-<div class="container container--narrow">
+<!-- ========== 4. DIAGNOSIS — care-strip 4-step ========== -->
+<section class="block alt">
+<div class="section-head" data-reveal="">
 <span class="eyebrow">Diagnosis</span>
-<h2 class="mt-2 mb-3">How breast cancer is diagnosed</h2>
-<div class="prose">
-<p>Diagnosis typically follows a stepwise pathway:</p>
-<ol>
-<li><strong>Clinical examination.</strong> A doctor examines both breasts and the lymph node areas in the armpits and neck.</li>
-<li><strong>Imaging.</strong> Mammography is the standard screening and diagnostic tool. Ultrasound is often added for women with dense breast tissue. MRI is reserved for high-risk patients or for evaluating extent of disease before surgery.</li>
-<li><strong>Biopsy.</strong> If imaging shows a suspicious lesion, a needle biopsy (core needle or vacuum-assisted) is performed. This confirms whether the lesion is cancerous and, if so, identifies its sub-type, hormone-receptor status (ER/PR), HER2 status, and grade — all of which guide treatment.</li>
-<li><strong>Staging.</strong> Once cancer is confirmed, additional imaging (CT, bone scan, PET-CT) may be needed to assess whether the disease is local, locally advanced, or metastatic.</li>
-</ol>
-<p>Singaporean women aged 40–49 are encouraged to have a mammogram every year; women 50 and over, every two years through the BreastScreen Singapore programme.</p>
+<h2 class="h-section">How breast cancer is <em>diagnosed.</em></h2>
+<p>Diagnosis follows a stepwise pathway. Singaporean women aged 40–49 should screen yearly; women 50+ every two years through BreastScreen Singapore.</p>
+</div>
+<div class="care-strip" data-reveal="">
+<div class="care-step">
+<div class="care-step-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path></svg></div>
+<span class="step-num">Step 01</span>
+<h4>Clinical examination</h4>
+<p>A doctor examines both breasts and the lymph node areas in the armpits and neck.</p>
+</div>
+<div class="care-step">
+<div class="care-step-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect height="18" rx="2" width="18" x="3" y="3"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"></path></svg></div>
+<span class="step-num">Step 02</span>
+<h4>Imaging</h4>
+<p>Mammography is standard. Ultrasound is added for dense breast tissue. MRI is reserved for high-risk patients.</p>
+</div>
+<div class="care-step">
+<div class="care-step-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><path d="M14 2v6h6"></path></svg></div>
+<span class="step-num">Step 03</span>
+<h4>Biopsy</h4>
+<p>If imaging is suspicious, a needle biopsy confirms whether the lesion is cancerous and identifies its biological profile.</p>
+</div>
+<div class="care-step">
+<div class="care-step-icon"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
+<span class="step-num">Step 04</span>
+<h4>Staging</h4>
+<p>Once confirmed, additional imaging (CT, bone scan, PET-CT) assesses whether the disease is local, locally advanced, or metastatic.</p>
 </div>
 </div>
 </section>
-<section class="section section--warm">
-<div class="container container--narrow">
+<!-- ========== 5. RISK FACTORS ========== -->
+<section class="block">
+<div class="section-head" data-reveal="">
 <span class="eyebrow">Risk factors</span>
-<h2 class="mt-2 mb-3">What raises your risk?</h2>
-<div class="prose">
-<p>Most women diagnosed with breast cancer have no family history. Still, several factors are associated with higher risk:</p>
-<ul>
-<li><strong>Sex and age.</strong> Being a woman is the largest risk factor. Risk rises sharply after age 50.</li>
-<li><strong>Family history.</strong> A first-degree relative (mother, sister, daughter) with breast cancer roughly doubles your risk. Two affected first-degree relatives quadruple it.</li>
-<li><strong>Inherited gene mutations.</strong> BRCA1, BRCA2, PALB2 and other gene mutations can dramatically raise lifetime risk. Genetic testing may be appropriate if there is a strong family history.</li>
-<li><strong>Hormonal factors.</strong> Early menarche (before 12), late menopause (after 55), no pregnancies or first pregnancy after 30, hormone-replacement therapy after menopause.</li>
-<li><strong>Lifestyle.</strong> Obesity (especially after menopause), regular alcohol consumption, sedentary lifestyle.</li>
-<li><strong>Previous radiation exposure</strong> to the chest area before age 30 (e.g., for childhood lymphoma).</li>
-</ul>
+<h2 class="h-section">What raises your <em>risk?</em></h2>
+<p>Most women diagnosed with breast cancer have no family history. Still, several factors are associated with higher risk — knowing them helps you decide when to screen and when to seek a specialist's input.</p>
 </div>
+<div class="service-grid service-grid--3up" data-reveal="">
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4"></circle><path d="M16 14H8a2 2 0 0 0-2 2v6h12v-6a2 2 0 0 0-2-2z"></path></svg></div>
+<h3>Sex &amp; age</h3>
+<p>Being a woman is the largest risk factor. Risk rises sharply after age 50.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="7" r="4"></circle><circle cx="17" cy="7" r="4"></circle><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"></path><path d="M16 11h2a4 4 0 0 1 4 4v2"></path></svg></div>
+<h3>Family history</h3>
+<p>A first-degree relative (mother, sister, daughter) with breast cancer roughly doubles your risk. Two affected first-degree relatives quadruples it.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 3v18h18"></path><path d="m7 14 4-4 4 4 5-5"></path></svg></div>
+<h3>Inherited mutations</h3>
+<p>BRCA1, BRCA2, PALB2 and other gene mutations dramatically raise lifetime risk. Genetic testing may be appropriate with a strong family history.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+<h3>Hormonal factors</h3>
+<p>Early menarche, late menopause, no pregnancies or first pregnancy after 30, and post-menopausal hormone replacement therapy.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg></div>
+<h3>Lifestyle</h3>
+<p>Obesity (especially after menopause), regular alcohol consumption, and a sedentary lifestyle are all associated with increased risk.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg></div>
+<h3>Prior radiation</h3>
+<p>Previous chest-area radiation before age 30 (e.g., for childhood lymphoma) is a known risk factor.</p>
+</article>
 </div>
 </section>
-<section class="section">
-<div class="container container--narrow">
+<!-- ========== 6. HOW AARO TREATS — service-grid 4-up ========== -->
+<section class="block alt">
+<div class="section-head" data-reveal="">
 <span class="eyebrow">Treatment approach</span>
-<h2 class="mt-2 mb-3">How AARO treats breast cancer</h2>
-<div class="prose">
-<p>Modern breast cancer treatment is multidisciplinary by default. Most patients receive a combination of surgery, radiation therapy, and systemic therapy (chemotherapy, hormonal therapy, or targeted therapy), in a sequence tailored to their tumour biology and stage.</p>
-<p>AARO's role is the radiation component — but our oncologists are dual-trained in chemotherapy and radiotherapy, so we co-design the full treatment plan with your surgeon and medical oncologist. The radiation modalities most relevant for breast cancer are:</p>
-<h3>VMAT (Volumetric Modulated Arc Therapy)</h3>
-<p>The standard for whole-breast or chest-wall irradiation after surgery. VMAT delivers a precisely shaped radiation dose in a continuous arc around the patient — typically over 3–5 weeks of daily treatment.</p>
-<h3>Deep-Inspiration Breath-Hold (DIBH)</h3>
-<p>For left-sided breast cancers, the heart sits close to the treatment area. DIBH asks the patient to take a deep breath and hold it during each radiation pulse — this expands the chest, pushing the heart away from the treatment field and dramatically reducing the radiation dose to the heart. AARO routinely offers DIBH for all eligible left-sided cases.</p>
-<h3>Accelerated Partial-Breast Irradiation (APBI)</h3>
-<p>For carefully selected early-stage cases, the radiation can be delivered to just the area around the original tumour (rather than the whole breast), and over only 1–2 weeks instead of 3–5. AARO offers APBI for women who meet the criteria, shortening treatment without compromising outcomes.</p>
-<h3>SBRT for oligometastatic disease</h3>
-<p>If breast cancer has spread to a small number of distant sites (typically 1–5 lesions), SBRT can ablate each individual metastasis in 3–5 sessions. This approach can extend disease-free intervals significantly in carefully selected patients.</p>
+<h2 class="h-section">How AARO <em>treats breast cancer.</em></h2>
+<p>Modern breast cancer care is multidisciplinary by default — most patients receive surgery, radiation, and systemic therapy in some sequence. AARO's role is the radiation component, but our oncologists are dual-trained in chemotherapy, so we co-design the full plan with your surgeon and medical oncologist.</p>
+</div>
+<div class="service-grid" data-reveal="">
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"></path><path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"></path></svg></div>
+<h3>VMAT</h3>
+<p>Volumetric Modulated Arc Therapy — the standard for whole-breast or chest-wall irradiation after surgery. Continuous-arc delivery, conformal precision, typically 15–25 sessions.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"></path><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"></path><path d="M9.8 4.4A2 2 0 1 1 11 8H2"></path></svg></div>
+<h3>DIBH</h3>
+<p>Deep-Inspiration Breath-Hold for left-sided breast cancers — the patient holds a breath during each radiation pulse, expanding the lungs and pulling the heart away from the treatment field.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
+<h3>APBI</h3>
+<p>Accelerated Partial-Breast Irradiation — for carefully selected early-stage cases, radiation goes only to the area around the original tumour, over 1–2 weeks instead of 5–6.</p>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z"></path><path d="m9 12 2 2 4-4"></path></svg></div>
+<h3>SBRT for oligomets</h3>
+<p>If breast cancer has spread to a small number of distant sites (1–5 lesions), SBRT can ablate each metastasis in 3–5 sessions — extending disease-free intervals significantly.</p>
+</article>
+</div>
+</section>
+<!-- ========== PRECISION BEHIND EVERY TREATMENT — equipment showcase ========== -->
+<section class="block">
+<div class="section-head" data-reveal="">
+<span class="eyebrow">Precision behind every treatment</span>
+<h2 class="h-section">Hours of <em>planning,</em> for one careful treatment.</h2>
+<p>Every breast cancer plan at AARO goes through detailed contouring, dose simulation, and physics review before a single beam is delivered. Two senior radiation therapists check every plan independently. We do this so the radiation hits exactly the tissue that needs it — and avoids the heart, lungs and surrounding healthy tissue.</p>
+</div>
+<div class="precision-grid" data-reveal="">
+<article class="precision-card">
+<div class="img-wrap">
+<img alt="Two AARO radiation therapists at the planning console, reviewing a treatment plan together on a multi-monitor workstation." loading="lazy" src="../assets/images/staff/planning-console-staff-review.jpg"/>
+</div>
+<div class="precision-card__body">
+<h3>We plan every dose.</h3>
+<p>Our medical physicists and radiation therapists collaborate on each plan — contouring tumour and organs-at-risk, simulating dose distribution, and stress-testing for breathing motion before delivery.</p>
+</div>
+</article>
+<article class="precision-card">
+<div class="img-wrap">
+<img alt="A patient using a breath-hold spirometer device beneath the linear accelerator — the deep-inspiration breath-hold technique used to protect the heart during left-sided breast radiation." loading="lazy" src="../assets/images/treatment/patient-sbrt-breath-hold-csr.jpg"/>
+</div>
+<div class="precision-card__body">
+<h3>We protect what matters.</h3>
+<p>For left-sided breast cancers, we use Deep-Inspiration Breath-Hold (DIBH) — the patient takes a deep breath at each pulse, expanding the chest and pulling the heart away from the radiation field.</p>
+</div>
+</article>
+</div>
+</section>
+<!-- ========== WHAT TREATMENT IS LIKE — story-row ========== -->
+<section class="block alt">
+<div class="story-row story-row--reverse" data-reveal="">
+<div class="story-row__media">
+<div class="img-wrap">
+<img alt="A patient comfortably positioned beneath the Elekta linear accelerator with green laser positioning lights and the signature starry ceiling above." loading="lazy" src="../assets/images/treatment/patient-elekta-laser-starry.jpg"/>
+</div>
+</div>
+<div class="story-row__text">
+<span class="eyebrow">What treatment is like</span>
+<h2 class="h-section">Quiet, precise, <em>uneventful.</em></h2>
+<p>Each treatment session takes 15–30 minutes. You'll lie on the HexaPOD couch beneath the Elekta linear accelerator. Green positioning lasers align you to within a millimetre of the planned position — the same position used to plan your treatment days earlier.</p>
+<p>You won't feel the radiation as it's delivered. You won't see it. There's no anaesthesia, no recovery time, and no overnight stay. Most patients drive themselves home after the session and return to normal activities the same day.</p>
+<p>The starry-ceiling installation above the couch is purposeful — it gives you something calm to look at while the machine moves around you. Small thing. Patients tell us it matters.</p>
 </div>
 </div>
 </section>
-<section class="section section--warm">
-<div class="container">
-<div class="section-header">
-<span class="eyebrow">Specialists who treat breast cancer at AARO</span>
-<h2>Three sub-specialists, <em>one focus.</em></h2>
+<!-- ========== 7. SPECIALISTS — specialists-preview ========== -->
+<section class="block">
+<div class="specialists-preview" data-reveal="">
+<div class="img-wrap">
+<img alt="The four senior AARO specialists at the Centre for Stereotactic Radiosurgery." loading="lazy" src="../assets/images/doctors/four-doctors-linac-elekta.jpg"/>
 </div>
-<div class="grid grid-cols-3">
-<article class="card monogram-card">
-<div class="monogram">JT</div>
-<div class="card-body">
-<span class="card-tag card-tag--gold">Medical Director, CSR</span>
-<h3 class="card-title">Dr Jonathan Teh</h3>
-<p class="card-meta">Breast · Prostate · Gynaecological</p>
-<p class="card-excerpt">Dr Teh leads breast and gynaecological care at the Centre for Stereotactic Radiosurgery, with deep experience in DIBH, brachytherapy boost, and APBI for early-stage disease.</p>
-<a class="card-link" href="../our-specialists/dr-jonathan-teh.html">View profile</a>
+<div class="copy">
+<span class="eyebrow">Who treats breast cancer at AARO</span>
+<h2 class="h-section">Three sub-specialists, <em>one focus.</em></h2>
+<p>Three of our four specialists treat breast cancer — each with a different sub-specialty focus. You'll meet the consultant whose expertise best matches your case, and the same person stays with you through treatment.</p>
+<div class="name-list">
+<div class="nm">Dr Jonathan Teh<small>Lead · Breast, Prostate, Gynaecological</small></div>
+<div class="nm">Dr Michelle Tseng<small>Head &amp; Neck · Lung · Breast</small></div>
+<div class="nm">Dr Daniel Tan<small>SRS · SBRT · Brain · Spine · Breast</small></div>
 </div>
-</article>
-<article class="card monogram-card">
-<div class="monogram">MT</div>
-<div class="card-body">
-<span class="card-tag">Senior Consultant</span>
-<h3 class="card-title">Dr Michelle Tseng</h3>
-<p class="card-meta">Head &amp; Neck · Lung · Breast</p>
-<p class="card-excerpt">Dr Tseng's practice covers post-mastectomy chest-wall radiation, complex regional nodal cases, and the radiation-side-effect-management aspects of long-term breast cancer survivorship.</p>
-<a class="card-link" href="../our-specialists/dr-michelle-tseng.html">View profile</a>
-</div>
-</article>
-<article class="card monogram-card">
-<div class="monogram">DT</div>
-<div class="card-body">
-<span class="card-tag">Director · Senior Consultant</span>
-<h3 class="card-title">Dr Daniel Tan</h3>
-<p class="card-meta">SRS · SBRT · Brain · Spine · Breast</p>
-<p class="card-excerpt">Dr Tan handles oligometastatic breast cancer (limited spread to bone, brain, lung) using SBRT and SRS — ablative radiation that can extend disease-free intervals significantly.</p>
-<a class="card-link" href="../our-specialists/dr-daniel-tan.html">View profile</a>
-</div>
-</article>
+<a class="btn btn--secondary" href="../our-specialists/dr-daniel-tan.html">Meet Dr Daniel Tan<span class="arr">→</span></a>
 </div>
 </div>
 </section>
-<section class="section">
-<div class="container">
-<div class="cta-band">
+<!-- ========== 8. CTA BAND ========== -->
+<section class="block alt">
+<div class="cta-band cta-band--navy" data-reveal="">
 <div>
 <h3>Recently diagnosed? Or seeking a second opinion?</h3>
 <p>Book a 45–60 minute specialist consultation. We'll review your imaging and pathology, explain the radiation options that apply to your case, and answer your questions.</p>
 </div>
-<a class="btn" href="https://wa.me/6581023838?text=Hi%2C%20I%27d%20like%20to%20discuss%20breast%20cancer%20treatment">WhatsApp Us</a>
+<div class="cta-band-actions">
+<a class="btn btn--accent btn--lg" href="../index.html#book">Book a consultation<span class="arr">→</span></a>
+<a class="btn btn--ghost-light btn--lg" href="https://wa.me/6581023838" rel="noopener" target="_blank">WhatsApp us<span class="arr">→</span></a>
 </div>
 </div>
 </section>
@@ -328,7 +441,7 @@
 <div class="footer-tagline">Precision Oncology · Personalised Care</div>
 <div class="footer-contact">
           Asian Alliance Radiation &amp; Oncology<br/>
-          Novena Medical Centre, Singapore<br/>
+          Centre for Stereotactic Radiosurgery, Adam Road<br/>
 <a href="tel:+6581023838">+65 8102 3838</a>
 </div>
 <div aria-label="Social channels" class="footer-socials">
@@ -353,14 +466,23 @@
 <li><span aria-disabled="true" class="footer-disabled">Dr Jonathan Teh<span class="footer-tag">In development</span></span></li>
 <li><span aria-disabled="true" class="footer-disabled">Dr Michelle Tseng<span class="footer-tag">In development</span></span></li>
 </ul></div>
+
+<!-- @wp:dynamic_sidebar(footer-treatments) -->
+<div><h5>Treatments</h5><ul>
+<li><a href="../our-treatments/sbrt.html">SBRT</a></li>
+<li><span aria-disabled="true" class="footer-disabled">SRS / Radiosurgery<span class="footer-tag">In development</span></span></li>
+<li><span aria-disabled="true" class="footer-disabled">VMAT / IMRT<span class="footer-tag">In development</span></span></li>
+<li><span aria-disabled="true" class="footer-disabled">Brachytherapy<span class="footer-tag">In development</span></span></li>
+<li><span aria-disabled="true" class="footer-disabled">Chemotherapy<span class="footer-tag">In development</span></span></li>
+</ul></div>
 <!-- @wp:dynamic_sidebar(footer-3) -->
 <div><h5>Quick Links</h5><ul>
 <li><span aria-disabled="true" class="footer-disabled">Patient Stories<span class="footer-tag">In development</span></span></li>
 <li><span aria-disabled="true" class="footer-disabled">Articles<span class="footer-tag">In development</span></span></li>
 <li><a href="../index.html#book">Book Consultation</a></li>
 <li><span aria-disabled="true" class="footer-disabled">Financing<span class="footer-tag">In development</span></span></li>
-<li><span aria-disabled="true" class="footer-disabled">FAQs<span class="footer-tag">In development</span></span></li>
-<li><span aria-disabled="true" class="footer-disabled">Careers<span class="footer-tag">In development</span></span></li>
+<li><a href="../index.html#faq">FAQs</a></li>
+
 </ul></div>
 </div>
 <div class="footer-bottom">
@@ -375,6 +497,6 @@
 </div>
 </footer>
 <!-- @wp:wp_footer() -->
-<script src="../scripts.js?v=38"></script>
+<script src="../scripts.js?v=55"></script>
 </body>
 </html>

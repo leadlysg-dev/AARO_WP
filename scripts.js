@@ -182,3 +182,45 @@
   });
 })();
 
+
+// ============================================================
+// VIDEO POSTER THUMBNAIL FALLBACK
+// YouTube returns a 120×90 grey placeholder (HTTP 200) when a
+// specific thumbnail size doesn't exist for a video. onerror
+// never fires. So we detect placeholders by naturalWidth and
+// fall back through: hq720 → maxresdefault → sddefault → mqdefault.
+// ============================================================
+(function () {
+  var FALLBACK_CHAIN = ['maxresdefault', 'sddefault', 'mqdefault'];
+  function isPlaceholder(img) {
+    // YouTube's grey placeholder is 120×90. Real thumbs are >= 320 wide.
+    return img.naturalWidth > 0 && img.naturalWidth < 200;
+  }
+  function tryNext(img) {
+    var attempt = parseInt(img.dataset.fbStep || '0', 10);
+    if (attempt >= FALLBACK_CHAIN.length) return;
+    var btn = img.closest('.video-poster');
+    if (!btn) return;
+    var vid = btn.getAttribute('data-video-id');
+    if (!vid) return;
+    img.dataset.fbStep = String(attempt + 1);
+    img.src = 'https://i.ytimg.com/vi/' + vid + '/' + FALLBACK_CHAIN[attempt] + '.jpg';
+  }
+  function check(img) {
+    if (isPlaceholder(img)) tryNext(img);
+  }
+  document.querySelectorAll('.video-poster img').forEach(function (img) {
+    if (img.complete) {
+      check(img);
+    } else {
+      img.addEventListener('load', function () { check(img); });
+    }
+    // Also re-check after each fallback load
+    img.addEventListener('load', function () {
+      if (isPlaceholder(img) && parseInt(img.dataset.fbStep || '0', 10) < FALLBACK_CHAIN.length) {
+        tryNext(img);
+      }
+    });
+  });
+})();
+
