@@ -1743,3 +1743,67 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   }
 }
 
+
+/* ============================================================ */
+/* FAQ — 2-column layout with image on left + accordion on right */
+/* ============================================================ */
+.faq-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: start;
+}
+@media (min-width: 900px) {
+  .faq-row {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 72px;
+  }
+}
+
+.faq-media .img-wrap {
+  aspect-ratio: 4/5;
+  border-radius: var(--img-radius);
+  overflow: hidden;
+}
+.faq-caption {
+  margin-top: 18px;
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--ink-muted);
+  font-style: italic;
+  font-family: var(--font-display);
+  letter-spacing: 0.005em;
+  max-width: 360px;
+}
+
+/* Sticky image on desktop — keeps it in view as user scrolls FAQ */
+@media (min-width: 1024px) {
+  .faq-media {
+    position: sticky;
+    top: 110px;
+  }
+}
+
+.faq-content .eyebrow { display: inline-block; }
+.faq-content .h-section,
+.faq-content h2 { margin-top: 12px; margin-bottom: 16px; }
+.faq-content .faq-list { margin-top: 32px; }
+
+/* Mobile: image goes full-bleed (matches our other mobile patterns) */
+@media (max-width: 767px) {
+  .faq-media {
+    margin-left: calc(-1 * var(--section-pad-x));
+    margin-right: calc(-1 * var(--section-pad-x));
+    width: calc(100% + 2 * var(--section-pad-x));
+  }
+  .faq-media .img-wrap {
+    border-radius: 0;
+    border: none;
+  }
+  .faq-caption {
+    padding-left: var(--section-pad-x);
+    padding-right: var(--section-pad-x);
+    margin-top: 14px;
+  }
+}
+
