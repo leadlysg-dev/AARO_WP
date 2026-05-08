@@ -518,7 +518,7 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
 .site-footer a { color: rgba(255,255,255,0.72); text-decoration: none; }
 .site-footer a:hover { color: var(--inverse-ink); }
 .footer-grid { display: grid; grid-template-columns: 1fr; gap: 32px; margin-bottom: 48px; max-width: var(--container); margin-left: auto; margin-right: auto; }
-@media (min-width: 768px) { .footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr; } }
+@media (min-width: 768px) { .footer-grid { grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr; } }
 .footer-brand-col .footer-logo { font-family: var(--font-display); font-size: 28px; font-weight: var(--display-weight); color: var(--inverse-ink); letter-spacing: 0.06em; margin-bottom: 8px; }
 .footer-tagline { font-family: var(--font-mono); font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 24px; }
 .footer-contact { font-size: 13px; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 24px; }
@@ -1463,5 +1463,117 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   line-height: 1.65;
   color: var(--ink-muted);
   margin: 0;
+}
+
+
+/* ============================================================ */
+/* MOBILE OPTIMISATION                                          */
+/* Fixes for tablet (≤1023px) + mobile (≤767px) UX              */
+/* ============================================================ */
+
+@media (max-width: 767px) {
+  /* Prevent iOS Safari zoom-on-focus by ensuring 16px+ on form inputs */
+  input,
+  textarea,
+  select,
+  .form-input,
+  .form-textarea,
+  .book-form .form-input,
+  .book-form .form-textarea {
+    font-size: 16px;
+  }
+
+  /* CTA band: tighter padding, the buttons were already full-width */
+  .cta-band { padding: 32px 24px; }
+  .cta-band--navy { padding: 32px 24px; }
+  .cta-band h3 { font-size: 22px; line-height: 1.25; }
+  .cta-band p { font-size: 14.5px; }
+
+  /* Book form wrap: tighter padding so the form has more breathing room */
+  .book-form-wrap { padding: 24px; }
+
+  /* Precision card body: less padding so titles + copy use space efficiently */
+  .precision-card__body { padding: 22px; }
+  .precision-card__body h3 { font-size: 19px; }
+
+  /* Doctor creds: tighter vertical rhythm */
+  .doctor-creds {
+    padding: 16px 0;
+    margin: 18px 0 24px;
+    gap: 6px;
+  }
+  .doctor-creds .pill { font-size: 11px; padding: 4px 10px; }
+
+  /* Cancer stats: tighter vertical rhythm */
+  .cancer-stats { padding: 18px 0; margin: 20px 0 24px; }
+  .cancer-stats .stat .stat-num { font-size: 24px; }
+
+  /* Hero CTAs: stack full-width on mobile */
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .hero-ctas .btn { width: 100%; }
+
+  /* Book direct CTAs: stack full-width */
+  .book-direct { flex-direction: column; }
+  .book-direct .btn { width: 100%; }
+
+  /* Trust bar — items should breathe more on mobile */
+  .trust-bar { padding: 24px var(--section-pad-x); gap: 24px; }
+  .trust-bar .num { font-size: 26px; }
+
+  /* Section heads: tighten heading sizes slightly */
+  .section-head h2,
+  .section-head .h-section { font-size: 28px; line-height: 1.2; }
+  .section-head p { font-size: 14.5px; }
+
+  /* Story-row gaps: tighter when stacked vertically */
+  .story-row { gap: 28px; }
+  .story-row__text h2,
+  .story-row__text .h-section { font-size: 28px; line-height: 1.2; }
+  .story-row__text h1 { font-size: 36px; line-height: 1.1; }
+  .story-row__text .lead { font-size: 16px; }
+
+  /* Specialists preview: tighter on mobile */
+  .specialists-preview { gap: 28px; }
+
+  /* Locations grid: tighter */
+  .locations-grid { gap: 28px; }
+
+  /* Book grid: tighter */
+  .book-grid { gap: 36px; }
+  .book-intro h2 { font-size: 28px; }
+
+  /* FAQ: slightly smaller question text */
+  .faq-q { font-size: 14.5px; padding: 16px 0; }
+  .faq-q::after { font-size: 20px; }
+  .faq-a { font-size: 14px; }
+
+  /* Header: tighter */
+  .site-header .container,
+  .header-inner { padding-top: 12px; padding-bottom: 12px; }
+
+  /* Bio grid: tighter */
+  .bio-grid .bio-item h4 { font-size: 11px; }
+  .bio-grid .bio-item p { font-size: 13.5px; }
+
+  /* Service cards (and 3-up): tighten when stacked */
+  .service-grid .service-card,
+  .service-grid--3up .service-card { padding: 22px; }
+  .service-card h3 { font-size: 17px; }
+
+  /* Care strip: when stacked, image takes less vertical room */
+  .care-step .img-wrap { aspect-ratio: 16/10; max-height: 200px; }
+  .care-step h4 { font-size: 17px; }
+
+  /* Story-row image on mobile: don't take too much height
+     4:5 portrait creates a very tall image when stacked above text — switch to 4:3 landscape */
+  .story-row__media .img-wrap { aspect-ratio: 4/3; }
+}
+
+/* Tablet (≥768px and ≤1023px) — make sure we use space well */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Book grid still single-col on tablet, that's fine */
+  /* Precision grid stays 2-up on tablet (already set) */
+  /* Footer grid: too cramped at 5-col on tablet — drop to 2-up */
+  .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
