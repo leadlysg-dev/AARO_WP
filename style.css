@@ -2681,3 +2681,78 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   }
 }
 
+/* ============================================================ */
+/* FLOATING WHATSAPP BUTTON — mobile-prominent, desktop-subtle  */
+/* Always-accessible quick-action; opens WhatsApp with the      */
+/* page-specific prefilled message via JS in scripts.js         */
+/* ============================================================ */
+.wa-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #FFFFFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 90;
+  box-shadow: 0 8px 24px -6px rgba(37, 211, 102, 0.45),
+              0 4px 12px rgba(0, 0, 0, 0.10);
+  text-decoration: none;
+  transition: transform 0.25s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease;
+}
+.wa-float:hover,
+.wa-float:focus-visible {
+  transform: scale(1.06);
+  box-shadow: 0 12px 32px -6px rgba(37, 211, 102, 0.60),
+              0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.wa-float svg {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+}
+/* Subtle pulse halo to draw attention on first paint */
+.wa-float-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.45);
+  animation: wa-pulse 2.6s cubic-bezier(.2,.6,.2,1) infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+@keyframes wa-pulse {
+  0%   { transform: scale(1);   opacity: 0.55; }
+  70%  { transform: scale(1.45); opacity: 0;    }
+  100% { transform: scale(1.45); opacity: 0;    }
+}
+
+/* Hide pulse for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .wa-float-pulse { display: none; }
+  .wa-float { transition: none; }
+}
+
+/* Desktop: smaller and slightly more reserved */
+@media (min-width: 1024px) {
+  .wa-float {
+    right: 24px;
+    bottom: 24px;
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* Don't overlap above the booking form / footer CTAs on small screens */
+@media (max-width: 600px) {
+  .wa-float {
+    right: 14px;
+    bottom: 14px;
+  }
+}
+

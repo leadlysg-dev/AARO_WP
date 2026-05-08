@@ -267,3 +267,31 @@
   }
 })();
 
+/* ============================================================ */
+/* WhatsApp link pre-fill — adds prefilled message to all wa.me */
+/* links based on body's data-wa-message attribute             */
+/* ============================================================ */
+(function () {
+  function prefillWhatsAppLinks() {
+    var msg = document.body.getAttribute('data-wa-message') || 'cancer treatment';
+    var fullText = 'Hi, I would like to enquire about ' + msg + '.';
+    var links = document.querySelectorAll('a[href*="wa.me/"]');
+    links.forEach(function (link) {
+      try {
+        var url = new URL(link.href);
+        url.searchParams.set('text', fullText);
+        link.href = url.toString();
+      } catch (e) {
+        // If URL parsing fails, fall back to manual append
+        var base = link.href.split('?')[0];
+        link.href = base + '?text=' + encodeURIComponent(fullText);
+      }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', prefillWhatsAppLinks);
+  } else {
+    prefillWhatsAppLinks();
+  }
+})();
+
