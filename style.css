@@ -1245,3 +1245,126 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   user-select: none;
 }
 
+
+/* ============================================================ */
+/* DOCTOR & CANCER PAGE PATTERNS                                */
+/* Re-uses home page vocabulary with a few new modifiers         */
+/* ============================================================ */
+
+/* story-row--reverse: image left, text right (mirror of default) */
+@media (min-width: 900px) {
+  .story-row--reverse {
+    grid-template-columns: 1fr 1.1fr;
+  }
+  .story-row--reverse .story-row__media { order: 1; }
+  .story-row--reverse .story-row__text  { order: 2; }
+}
+
+/* doctor-creds: pill row inside the doctor hero */
+.doctor-creds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 28px;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.doctor-creds .pill { margin: 0; }
+
+/* cancer-stats: 3-up stat block in cancer hero */
+.cancer-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 24px 0 32px;
+  padding: 24px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.cancer-stats .stat .stat-num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: var(--display-weight);
+  font-size: 28px;
+  color: var(--ink);
+  line-height: 1.05;
+  margin-bottom: 4px;
+  font-variant-numeric: tabular-nums;
+}
+.cancer-stats .stat .stat-lbl {
+  display: block;
+  font-size: 11.5px;
+  color: var(--ink-muted);
+  font-weight: 500;
+  line-height: 1.35;
+}
+@media (max-width: 600px) {
+  .cancer-stats { grid-template-columns: 1fr; gap: 14px; }
+}
+
+/* service-grid--3up: 3-column variant of service-grid */
+.service-grid--3up {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 1023px) {
+  .service-grid--3up { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .service-grid--3up { grid-template-columns: 1fr; }
+}
+
+/* bio-grid: 2-col text grid for doctor's detailed background */
+.bio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 56px;
+}
+.bio-grid .bio-item h4 {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+.bio-grid .bio-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ink-muted);
+  margin: 0;
+}
+@media (max-width: 767px) {
+  .bio-grid { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* care-step-icon: when care-step uses an icon instead of an image */
+.care-step-icon {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background: var(--accent-soft);
+  border-radius: var(--r-md);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+.care-step-icon svg {
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.25;
+}
+
+/* cta-band-actions: button group inside cta-band */
+.cta-band-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .cta-band-actions .btn { width: 100%; }
+}
+
