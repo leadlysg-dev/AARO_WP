@@ -1621,3 +1621,125 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   }
 }
 
+
+/* ============================================================ */
+/* VIDEO POSTER — lazy-load YouTube embed pattern               */
+/* Branded poster: thumbnail + dark gradient + watch tag + play  */
+/* ============================================================ */
+.video-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: #0B2240;
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+}
+
+/* Thumbnail image */
+.video-poster img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s var(--ease), filter 0.4s var(--ease);
+}
+.video-poster:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
+
+/* Dark gradient overlay — subtle, just for depth + play button contrast */
+.video-poster .poster-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(11, 34, 64, 0) 0%,
+    rgba(11, 34, 64, 0) 50%,
+    rgba(11, 34, 64, 0.55) 100%);
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease);
+}
+.video-poster:hover .poster-gradient { opacity: 0.7; }
+
+/* "Watch story" label — top-right pill */
+.video-poster .poster-watch {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(11, 34, 64, 0.8);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 6px 10px;
+  border-radius: 100px;
+  pointer-events: none;
+  letter-spacing: 0.16em;
+}
+
+/* Play button — centered, large, branded */
+.video-poster .poster-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255,255,255,0.1);
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+}
+.video-poster .poster-play svg {
+  width: 30px;
+  height: 30px;
+  color: var(--ink);
+  margin-left: 3px;  /* visual centering — triangle tip pulls it right */
+}
+.video-poster:hover .poster-play {
+  transform: translate(-50%, -50%) scale(1.08);
+  background: var(--accent);
+}
+.video-poster:hover .poster-play svg {
+  color: #fff;
+}
+
+/* Focus ring for keyboard nav */
+.video-poster:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .video-poster .poster-play {
+    width: 64px;
+    height: 64px;
+  }
+  .video-poster .poster-play svg {
+    width: 26px;
+    height: 26px;
+  }
+  .video-poster .poster-watch {
+    top: 10px;
+    right: 10px;
+    font-size: 9px;
+    padding: 5px 9px;
+  }
+}
+
