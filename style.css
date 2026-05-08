@@ -1111,3 +1111,99 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   line-height: 1.5;
 }
 
+
+/* ============================================================ */
+/* NAV DISABLED — top-level nav links locked with "In development" */
+/* Same gold pill treatment as dropdown-disabled                  */
+/* ============================================================ */
+.primary-nav .nav-disabled {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  font-weight: 500;
+  position: relative;
+  padding: 8px 0;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  cursor: not-allowed;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.65;
+}
+.primary-nav .nav-disabled::after { content: none !important; }
+.primary-nav .nav-disabled .nav-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-soft);
+  padding: 2px 6px;
+  border-radius: 100px;
+  line-height: 1.2;
+}
+
+.mobile-nav .nav-disabled {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+  font-size: 16px;
+  color: var(--ink-soft);
+  font-weight: 500;
+  cursor: not-allowed;
+  user-select: none;
+}
+.mobile-nav .nav-disabled .nav-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-soft);
+  padding: 2px 6px;
+  border-radius: 100px;
+  line-height: 1.2;
+}
+
+/* Promo strip — disabled inline link becomes plain accent text */
+.promo-link-disabled {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  color: var(--accent);
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Story card — disabled "Read full story" text-link */
+.text-link-disabled {
+  margin-top: auto;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  cursor: not-allowed;
+  font-family: var(--font-body);
+}
+.text-link-disabled .nav-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: var(--gold-soft);
+  padding: 2px 6px;
+  border-radius: 100px;
+  line-height: 1.2;
+}
+
