@@ -1577,3 +1577,47 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
+
+/* ============================================================ */
+/* MOBILE FULL-BLEED IMAGES                                     */
+/* On mobile, hero-style images break out of section padding    */
+/* to go edge-to-edge for a more impactful full-width feel.     */
+/* ============================================================ */
+@media (max-width: 767px) {
+  /* Hero-style images that sit alongside (or above) body text */
+  .story-row__media,
+  .specialists-preview > .img-wrap,
+  .care-step .img-wrap,
+  .location-flagship .img-wrap {
+    margin-left: calc(-1 * var(--section-pad-x));
+    margin-right: calc(-1 * var(--section-pad-x));
+    width: calc(100% + 2 * var(--section-pad-x));
+    border-radius: 0;
+    border: none;
+  }
+  /* Reset any inner img-wrap rounding/border so the full-bleed looks clean */
+  .story-row__media .img-wrap {
+    border-radius: 0;
+    border: none;
+    width: 100%;
+  }
+  /* Care-step image takes more height now that it's full-bleed; relax constraints */
+  .care-step .img-wrap {
+    aspect-ratio: 16/10;
+    max-height: none;
+  }
+  /* Location flagship card: round only the body bottom corners since image is now edge-to-edge */
+  .location-flagship {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    margin-left: calc(-1 * var(--section-pad-x));
+    margin-right: calc(-1 * var(--section-pad-x));
+    width: calc(100% + 2 * var(--section-pad-x));
+  }
+  .location-flagship__body {
+    padding-left: var(--section-pad-x);
+    padding-right: var(--section-pad-x);
+  }
+}
+
