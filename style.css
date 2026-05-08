@@ -821,3 +821,116 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   margin-top: 4px;
 }
 
+
+/* ============================================================ */
+/* CENTRED CONTENT — every .block centers content at --container */
+/* This makes content cap at 1320px and sit centered on wide     */
+/* viewports rather than stretching edge-to-edge.                */
+/* ============================================================ */
+.block > * {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Background and decorative children should still span full width.
+   In practice, .block direct children are always content wrappers
+   (.section-head, .service-grid, .care-strip, .specialists-preview,
+   .story-row, .story-grid, .locations-grid, .facility-row, etc), so
+   the rule above safely centers all of them. */
+
+/* Trust bar — grid itself centers at container width */
+.trust-bar {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Need to wrap trust-bar in a full-width band so the surface
+   background stretches edge-to-edge while content stays centered.
+   Easiest: give .trust-bar a .container-style max-width directly. */
+
+/* Promo strip — already has .container child but reinforce */
+.promo-strip > .container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+/* Hero (column-stack version) — center its content too */
+.hero > * {
+  max-width: var(--container);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ============================================================ */
+/* VIDEO STORY CARDS — YouTube embeds in patient story slots    */
+/* ============================================================ */
+.story-card--video {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+  text-decoration: none;
+}
+.story-card--video:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* video wrapper enforces 16:9 aspect ratio (native YouTube) */
+.video-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  overflow: hidden;
+}
+.video-wrap iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* card body matches non-video story-card */
+.story-card--video .body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.story-card--video .body h3 {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+.story-card--video .body p {
+  font-size: 13px;
+  color: var(--ink-muted);
+  margin-bottom: 12px;
+}
+.story-card--video .body .text-link {
+  margin-top: auto;
+  font-size: 12.5px;
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  transition: color 0.18s var(--ease);
+}
+.story-card--video .body .text-link .arr-link {
+  display: inline-block;
+  transition: transform 0.22s var(--ease);
+}
+.story-card--video .body .text-link:hover { color: var(--ink); }
+.story-card--video .body .text-link:hover .arr-link { transform: translateX(4px); }
+
