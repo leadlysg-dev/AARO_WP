@@ -721,107 +721,40 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
 
 
 /* ============================================================ */
-/* LOCATIONS — flagship card + partner list (2-column layout)   */
-/* Reusable for any page that wants to show clinics              */
 /* ============================================================ */
-.locations-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 32px;
+/* LOCATIONS — side-by-side flagship + partner cards grid       */
+/* Desktop ≥1024: flagship LEFT, partner cards RIGHT in 2-col   */
+/* Mobile: stacked vertically                                    */
+/* ============================================================ */
+@media (min-width: 1024px) {
+}
+
+/* Flagship card — image-on-top + body below.
+   In side-by-side mode, fills its column with stretched image. */
+@media (min-width: 1024px) {
+}
+@media (min-width: 768px) {
+}
+
+/* Partner clinic cards grid */
+@media (min-width: 600px) {
 }
 @media (min-width: 1024px) {
-  .locations-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-  }
+  /* In side-by-side mode, keep 2 cols within the right column */
+}
+
+/* Mobile full-bleed flagship */
+@media (max-width: 767px) {
+}
+
+/* ============================================================ */
+@media (min-width: 1024px) {
 }
 
 /* FLAGSHIP — image, name, address, 2 CTAs */
-.location-flagship {
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  display: flex;
-  flex-direction: column;
-}
-.location-flagship .img-wrap {
-  aspect-ratio: 4/3;
-  border: none;
-  border-radius: 0;
-}
-.location-flagship__body {
-  padding: 28px 28px 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.location-flagship__body h3 {
-  font-size: 22px;
-  margin: 0;
-  line-height: 1.2;
-  color: var(--ink);
-}
-.location-flagship__body address {
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.65;
-  color: var(--ink-muted);
-  margin: 0;
-}
-.location-flagship .location-ctas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 8px;
-}
-.location-flagship .card-tag {
-  margin-bottom: 0;
-  padding: 4px 10px;
-  background: var(--gold-soft);
-  color: var(--gold);
-  border-radius: var(--r-sm);
-  display: inline-block;
-  align-self: flex-start;
-}
 
 /* PARTNER LIST */
-.location-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px 32px;
-  align-content: start;
-}
 @media (min-width: 600px) {
-  .location-list { grid-template-columns: 1fr 1fr; }
-}
-.location-item {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 0;
-  border: none;
-}
-.location-item h4 {
-  font-size: 18px;
-  margin: 0;
-  line-height: 1.25;
-  color: var(--ink);
-  font-family: var(--font-display);
-  font-weight: 400;
-}
-.location-item address {
-  font-style: normal;
-  font-size: 13.5px;
-  line-height: 1.6;
-  color: var(--ink-muted);
-  margin: 0;
-}
-.location-item .text-link {
-  font-size: 12.5px;
-  margin-top: 4px;
 }
 
 
@@ -1529,7 +1462,6 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   .specialists-preview { gap: 28px; }
 
   /* Locations grid: tighter */
-  .locations-grid { gap: 28px; }
 
   /* Book grid: tighter */
   .book-grid { gap: 36px; }
@@ -1600,18 +1532,6 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
     max-height: none;
   }
   /* Location flagship card: round only the body bottom corners since image is now edge-to-edge */
-  .location-flagship {
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    margin-left: calc(-1 * var(--section-pad-x));
-    margin-right: calc(-1 * var(--section-pad-x));
-    width: calc(100% + 2 * var(--section-pad-x));
-  }
-  .location-flagship__body {
-    padding-left: var(--section-pad-x);
-    padding-right: var(--section-pad-x);
-  }
 }
 
 
@@ -2342,160 +2262,25 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
 /* ============================================================ */
 /* LOCATIONS — flagship + grid of mini cards                    */
 /* ============================================================ */
-.locations-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
 @media (min-width: 1024px) {
-  .locations-grid { gap: 40px; }
 }
 
 /* Flagship CSR card: full width, image-on-top layout */
-.location-flagship {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
+@media (min-width: 768px) {
 }
 @media (min-width: 768px) {
-  .location-flagship {
-    grid-template-columns: 1.1fr 1fr;
-  }
-}
-.location-flagship .img-wrap {
-  aspect-ratio: 16/10;
 }
 @media (min-width: 768px) {
-  .location-flagship .img-wrap {
-    aspect-ratio: auto;
-    height: 100%;
-    min-height: 320px;
-  }
-}
-.location-flagship .img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-.location-flagship__body {
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  justify-content: center;
-}
-@media (min-width: 768px) {
-  .location-flagship__body { padding: 44px; }
-}
-.location-flagship__body h3 {
-  font-family: var(--font-display);
-  font-size: clamp(24px, 3vw, 32px);
-  line-height: 1.15;
-  margin: 4px 0 0;
-  color: var(--ink);
-}
-.location-flagship__body address {
-  font-style: normal;
-  font-size: 15px;
-  line-height: 1.55;
-  color: var(--ink-muted);
-}
-.location-flagship-note {
-  font-size: 14.5px;
-  line-height: 1.6;
-  color: var(--ink-muted);
-  margin: 8px 0 0;
 }
 
 /* Grid of partner clinic mini cards */
-.location-cards-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
 @media (min-width: 600px) {
-  .location-cards-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
 }
 @media (min-width: 1024px) {
-  .location-cards-grid { grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
 }
-
-.location-card {
-  background: var(--bg);
-  border: 1px solid var(--line);
-  border-radius: var(--r-md, 12px);
-  padding: 24px 22px 22px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  transition: transform 0.3s var(--ease, ease), box-shadow 0.3s var(--ease, ease), border-color 0.3s ease;
-}
-.location-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 28px -12px rgba(11, 34, 64, 0.12);
-  border-color: rgba(11, 34, 64, 0.16);
-}
-.location-card__head {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.location-card__tag {
-  font-family: var(--font-mono);
-  font-size: 9.5px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  font-weight: 500;
-  align-self: flex-start;
-}
-.location-card h4 {
-  font-family: var(--font-display);
-  font-size: 18px;
-  line-height: 1.2;
-  margin: 0;
-  color: var(--ink);
-  font-weight: var(--display-weight, 400);
-}
-.location-card address {
-  font-style: normal;
-  font-size: 13.5px;
-  line-height: 1.55;
-  color: var(--ink-muted);
-  flex-grow: 1;
-}
-.location-card .text-link {
-  color: var(--accent);
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  align-self: flex-start;
-  margin-top: 2px;
-  transition: gap 0.2s ease;
-}
-.location-card .text-link:hover { gap: 8px; }
-.location-card .text-link .arr-link { display: inline-block; }
 
 /* Mobile full-bleed flagship */
 @media (max-width: 767px) {
-  .location-flagship {
-    margin-left: calc(-1 * var(--section-pad-x));
-    margin-right: calc(-1 * var(--section-pad-x));
-    width: calc(100% + 2 * var(--section-pad-x));
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-  }
-  .location-flagship__body { padding: 28px var(--section-pad-x); }
 }
 
 /* ============================================================ */
@@ -2553,5 +2338,171 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   background: #fff;
   color: var(--ink);
   border-color: #fff;
+}
+
+/* ============================================================ */
+/* LOCATIONS — flagship + partner cards (clean, side-by-side)   */
+/* Desktop ≥1024: flagship LEFT, cards-grid RIGHT (2-col)       */
+/* Mobile: stacked vertically                                    */
+/* ============================================================ */
+@media (min-width: 1024px) {
+}
+
+/* Flagship card — image on top, body below */
+@media (min-width: 1024px) {
+}
+@media (min-width: 768px) {
+}
+
+/* Partner clinic cards grid — 2-col on right side */
+@media (min-width: 600px) {
+}
+@media (min-width: 1024px) {
+}
+
+/* Mobile full-bleed flagship */
+@media (max-width: 767px) {
+}
+
+/* ============================================================ */
+/* LOCATIONS — flagship + partner cards (clean, side-by-side)   */
+/* Desktop ≥1024: flagship LEFT, cards-grid RIGHT (2-col)       */
+/* Mobile: stacked vertically                                    */
+/* ============================================================ */
+.locations-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 1024px) {
+  .locations-grid {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 36px;
+    align-items: stretch;
+  }
+}
+
+/* Flagship card — image on top, body below */
+.location-flagship {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.location-flagship .img-wrap {
+  aspect-ratio: 16/10;
+}
+@media (min-width: 1024px) {
+  .location-flagship .img-wrap {
+    aspect-ratio: auto;
+    min-height: 280px;
+  }
+}
+.location-flagship .img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.location-flagship__body {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+@media (min-width: 768px) {
+  .location-flagship__body { padding: 36px 36px 32px; }
+}
+.location-flagship__body h3 {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.4vw, 28px);
+  line-height: 1.15;
+  margin: 4px 0 0;
+  color: var(--ink);
+}
+.location-flagship__body address {
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+.location-flagship-note {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 8px 0 0;
+}
+
+/* Partner clinic cards grid */
+.location-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  align-content: start;
+}
+@media (min-width: 600px) {
+  .location-cards-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+}
+@media (min-width: 1024px) {
+  .location-cards-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+}
+
+.location-card {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md, 12px);
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.location-card:hover {
+  border-color: rgba(11, 34, 64, 0.16);
+  box-shadow: 0 6px 16px -8px rgba(11, 34, 64, 0.08);
+}
+.location-card__head {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.location-card__tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  font-weight: 500;
+  align-self: flex-start;
+}
+.location-card h4 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--ink);
+  font-weight: var(--display-weight, 400);
+}
+.location-card address {
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+/* Mobile full-bleed flagship */
+@media (max-width: 767px) {
+  .location-flagship {
+    margin-left: calc(-1 * var(--section-pad-x));
+    margin-right: calc(-1 * var(--section-pad-x));
+    width: calc(100% + 2 * var(--section-pad-x));
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .location-flagship__body { padding: 24px var(--section-pad-x) 28px; }
 }
 
