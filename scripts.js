@@ -155,3 +155,30 @@
   if (yr) yr.textContent = new Date().getFullYear();
 
 })();
+
+// ============================================================
+// VIDEO POSTER LAZY-LOAD — click poster → swap in real iframe
+// ============================================================
+(function () {
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.video-poster');
+    if (!btn) return;
+    e.preventDefault();
+    var vid = btn.getAttribute('data-video-id');
+    if (!vid) return;
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube.com/embed/' + vid + '?autoplay=1&rel=0&modestbranding=1';
+    iframe.title = btn.getAttribute('aria-label') || 'Patient story video';
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+    iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.style.position = 'absolute';
+    iframe.style.inset = '0';
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = '0';
+    btn.parentNode.replaceChild(iframe, btn);
+  });
+})();
+

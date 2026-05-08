@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=35" rel="stylesheet"/>
+<link href="style.css?v=37" rel="stylesheet"/>
 <!-- @wp:wp_head() -->
 </head>
 <body class="page-home">
@@ -84,7 +84,7 @@
 <li><a data-nav-link="articles.html" href="articles.html">Articles</a></li>
 </ul>
 </nav>
-<a class="header-cta" href="contact.html">Book Consultation</a>
+<a class="header-cta" href="index.html#book">Book Consultation</a>
 <button aria-expanded="false" aria-label="Open menu" class="nav-toggle" data-nav-toggle="">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
 </button>
@@ -147,7 +147,7 @@
 <li><a href="patient-stories.html">Patient Stories</a></li>
 <li><a href="articles.html">Articles</a></li>
 </ul>
-<a class="header-cta" href="contact.html">Book Consultation</a>
+<a class="header-cta" href="index.html#book">Book Consultation</a>
 </div>
 <!-- @wp:get_header_end -->
 <main id="main" role="main">
@@ -163,7 +163,7 @@
 <h1 class="ink-em">Precision oncology.<br/><em>Personalised care.</em></h1>
 <p class="lead">AARO is Singapore's pioneering specialist radiation oncology practice. For over a decade, our team — founded by oncologists from the National Cancer Centre Singapore — has treated complex cancers with technology and judgement that justifies the journey.</p>
 <div class="hero-ctas">
-<a class="btn btn--accent btn--lg" href="contact.html">Speak to a specialist<span class="arr">→</span></a>
+<a class="btn btn--accent btn--lg" href="index.html#book">Speak to a specialist<span class="arr">→</span></a>
 <a class="btn btn--ghost-light btn--lg" href="https://wa.me/6581023838">WhatsApp us<span class="arr">→</span></a>
 </div>
 </div>
@@ -338,7 +338,12 @@
 
 <article class="story-card story-card--video">
 <div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/h5m15Lkrn8A?rel=0" title="Oscar Lim: Love Conquers — Sarcoma with Lung Mets" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+<button type="button" class="video-poster" data-video-id="h5m15Lkrn8A" aria-label="Play video: Oscar Lim: Love Conquers — Sarcoma with Lung Mets">
+<img src="https://i.ytimg.com/vi/h5m15Lkrn8A/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/h5m15Lkrn8A/hqdefault.jpg'" alt="Oscar Lim: Love Conquers — Sarcoma with Lung Mets" loading="lazy">
+<span class="play-button" aria-hidden="true">
+<svg viewBox="0 0 68 48" width="68" height="48"><path class="play-bg" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#fff" fill-opacity="0.92"/><path d="M 45,24 27,14 27,34" fill="#0B2240"/></svg>
+</span>
+</button>
 </div>
 <div class="body">
 <span class="tag">Sarcoma · Lung mets</span>
@@ -350,7 +355,12 @@
 
 <article class="story-card story-card--video">
 <div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/O8ItxOl_o3A?rel=0" title="Pak Tjugito: Non-Surgical Prostate Cancer with SBRT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+<button type="button" class="video-poster" data-video-id="O8ItxOl_o3A" aria-label="Play video: Pak Tjugito: Non-Surgical Prostate Cancer with SBRT">
+<img src="https://i.ytimg.com/vi/O8ItxOl_o3A/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/O8ItxOl_o3A/hqdefault.jpg'" alt="Pak Tjugito: Non-Surgical Prostate Cancer with SBRT" loading="lazy">
+<span class="play-button" aria-hidden="true">
+<svg viewBox="0 0 68 48" width="68" height="48"><path class="play-bg" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#fff" fill-opacity="0.92"/><path d="M 45,24 27,14 27,34" fill="#0B2240"/></svg>
+</span>
+</button>
 </div>
 <div class="body">
 <span class="tag">Prostate · SBRT</span>
@@ -362,7 +372,12 @@
 
 <article class="story-card story-card--video">
 <div class="video-wrap">
-<iframe src="https://www.youtube.com/embed/5zYpJUb-bcI?rel=0" title="Helen Yow: Fight Against Goliath — Papillary Squamous Cell Carcinoma" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+<button type="button" class="video-poster" data-video-id="5zYpJUb-bcI" aria-label="Play video: Helen Yow: Fight Against Goliath — Papillary Squamous Cell Carcinoma">
+<img src="https://i.ytimg.com/vi/5zYpJUb-bcI/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/5zYpJUb-bcI/hqdefault.jpg'" alt="Helen Yow: Fight Against Goliath — Papillary Squamous Cell Carcinoma" loading="lazy">
+<span class="play-button" aria-hidden="true">
+<svg viewBox="0 0 68 48" width="68" height="48"><path class="play-bg" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z" fill="#fff" fill-opacity="0.92"/><path d="M 45,24 27,14 27,34" fill="#0B2240"/></svg>
+</span>
+</button>
 </div>
 <div class="body">
 <span class="tag">Head &amp; neck · Rare cancer</span>
@@ -455,6 +470,62 @@ Singapore 307506
 
 </div>
 </section>
+<section class="block" id="book">
+<div class="book-grid" data-reveal="">
+
+<div class="book-intro">
+<span class="eyebrow">Book a consultation</span>
+<h2 class="h-section">Speak to a <em>specialist,</em> today.</h2>
+<p>The fastest way to reach us is WhatsApp — most patients hear back within the same working day, often within the hour.</p>
+
+<div class="book-direct">
+<a class="btn btn--accent btn--lg" href="https://wa.me/6581023838" target="_blank" rel="noopener"><span class="arr">→</span> WhatsApp us</a>
+<a class="btn btn--secondary btn--lg" href="tel:+6581023838">Call +65 8102 3838</a>
+</div>
+
+<div class="book-steps">
+<div class="book-step"><span class="step-num">01</span><div><h4>Reach out</h4><p>WhatsApp, call, or fill in the form. Tell us briefly: your name, your situation, your preferred clinic.</p></div></div>
+<div class="book-step"><span class="step-num">02</span><div><h4>We get back to you</h4><p>A care coordinator replies within the same working day, confirms the right specialist and slot.</p></div></div>
+<div class="book-step"><span class="step-num">03</span><div><h4>Come in</h4><p>Bring your existing reports, imaging and medications. Your consultation runs 45–60 minutes.</p></div></div>
+</div>
+</div>
+
+<div class="book-form-wrap">
+<form action="#" class="book-form" method="post" novalidate="">
+<div class="form-row">
+<label class="form-label" for="book-name">Your name</label>
+<input class="form-input" id="book-name" name="name" required="" type="text"/>
+</div>
+<div class="form-row">
+<label class="form-label" for="book-email">Email</label>
+<input class="form-input" id="book-email" name="email" required="" type="email"/>
+</div>
+<div class="form-row">
+<label class="form-label" for="book-phone">Phone (WhatsApp preferred)</label>
+<input class="form-input" id="book-phone" name="phone" type="tel"/>
+</div>
+<div class="form-row">
+<label class="form-label" for="book-reason">What can we help with?</label>
+<select class="form-input" id="book-reason" name="reason">
+<option>New consultation</option>
+<option>Second opinion</option>
+<option>Follow-up appointment</option>
+<option>Insurance / financing query</option>
+<option>Clinician referral</option>
+<option>Other</option>
+</select>
+</div>
+<div class="form-row">
+<label class="form-label" for="book-message">A brief description of your situation</label>
+<textarea class="form-textarea" id="book-message" name="message" rows="4"></textarea>
+</div>
+<button class="btn btn--primary btn--lg" type="submit">Send enquiry <span class="arr">→</span></button>
+<p class="form-disclaimer">A care coordinator will review and reply within one working day.</p>
+</form>
+</div>
+
+</div>
+</section>
 </main>
 <!-- @wp:get_footer() -->
 <footer class="site-footer" role="contentinfo">
@@ -494,7 +565,7 @@ Singapore 307506
 <div><h5>Quick Links</h5><ul>
 <li><a href="patient-stories.html">Patient Stories</a></li>
 <li><a href="articles.html">Articles</a></li>
-<li><a href="contact.html">Book Consultation</a></li>
+<li><a href="index.html#book">Book Consultation</a></li>
 <li><a href="financing.html">Financing</a></li>
 <li><a href="faqs.html">FAQs</a></li>
 <li><a href="careers.html">Careers</a></li>
@@ -512,6 +583,6 @@ Singapore 307506
 </div>
 </footer>
 <!-- @wp:wp_footer() -->
-<script src="scripts.js?v=35"></script>
+<script src="scripts.js?v=37"></script>
 </body>
 </html>
