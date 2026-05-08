@@ -1817,6 +1817,8 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   .service-grid--stack-mobile {
     display: block;
     position: relative;
+    /* Establish a new stacking context so children z-indices are scoped here */
+    isolation: isolate;
   }
 
   .service-grid--stack-mobile .service-card {
@@ -1824,7 +1826,12 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
     position: sticky;
     margin: 0 0 14px;
     padding: 28px 26px 26px;
-    background: var(--bg);
+
+    /* CRITICAL: explicit opaque background — fixes mobile-Safari sticky
+       rendering where translucent cards let the next card's content show through. */
+    background-color: #FFFFFF;
+    background-image: none;
+
     border: 1px solid var(--line);
     border-radius: var(--r-lg);
     box-shadow: 0 -10px 30px -8px rgba(11, 34, 64, 0.10),
@@ -1833,24 +1840,28 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
     display: flex;
     flex-direction: column;
     gap: 12px;
-    /* Smooth transition feel as cards become sticky */
+
+    /* GPU-composite for clean sticky rendering on mobile Safari */
+    transform: translateZ(0);
     will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 
-  /* Staircase offsets — each card sticks 6px lower than the one before,
-     creating a deck-of-cards peek-out effect at the top edge */
-  .service-grid--stack-mobile .service-card:nth-child(1)  { top: 84px; }
-  .service-grid--stack-mobile .service-card:nth-child(2)  { top: 90px; }
-  .service-grid--stack-mobile .service-card:nth-child(3)  { top: 96px; }
-  .service-grid--stack-mobile .service-card:nth-child(4)  { top: 102px; }
-  .service-grid--stack-mobile .service-card:nth-child(5)  { top: 108px; }
-  .service-grid--stack-mobile .service-card:nth-child(6)  { top: 114px; }
-  .service-grid--stack-mobile .service-card:nth-child(7)  { top: 120px; }
-  .service-grid--stack-mobile .service-card:nth-child(8)  { top: 126px; }
-  .service-grid--stack-mobile .service-card:nth-child(9)  { top: 132px; }
-  .service-grid--stack-mobile .service-card:nth-child(10) { top: 138px; }
-  .service-grid--stack-mobile .service-card:nth-child(11) { top: 144px; }
-  .service-grid--stack-mobile .service-card:nth-child(12) { top: 150px; }
+  /* Z-index ordering: each card sits ABOVE the previous one. Without explicit
+     z-index, some browsers don't reliably paint sticky siblings in DOM order. */
+  .service-grid--stack-mobile .service-card:nth-child(1)  { top: 84px;  z-index: 1; }
+  .service-grid--stack-mobile .service-card:nth-child(2)  { top: 90px;  z-index: 2; }
+  .service-grid--stack-mobile .service-card:nth-child(3)  { top: 96px;  z-index: 3; }
+  .service-grid--stack-mobile .service-card:nth-child(4)  { top: 102px; z-index: 4; }
+  .service-grid--stack-mobile .service-card:nth-child(5)  { top: 108px; z-index: 5; }
+  .service-grid--stack-mobile .service-card:nth-child(6)  { top: 114px; z-index: 6; }
+  .service-grid--stack-mobile .service-card:nth-child(7)  { top: 120px; z-index: 7; }
+  .service-grid--stack-mobile .service-card:nth-child(8)  { top: 126px; z-index: 8; }
+  .service-grid--stack-mobile .service-card:nth-child(9)  { top: 132px; z-index: 9; }
+  .service-grid--stack-mobile .service-card:nth-child(10) { top: 138px; z-index: 10; }
+  .service-grid--stack-mobile .service-card:nth-child(11) { top: 144px; z-index: 11; }
+  .service-grid--stack-mobile .service-card:nth-child(12) { top: 150px; z-index: 12; }
 
   /* Bigger, rounder icon — iconic, surface-toned circle */
   .service-grid--stack-mobile .service-card .ic {
@@ -1891,7 +1902,6 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
 
   /* ============ ACTIVE card (the one that links somewhere) ============ */
   .service-grid--stack-mobile .service-card:not(.service-card--locked) {
-    /* Subtle teal accent on the top edge to flag "this is live" */
     border-top: 3px solid var(--accent);
   }
   .service-grid--stack-mobile .service-card:not(.service-card--locked) .ic {
@@ -1911,20 +1921,13 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
     gap: 6px;
     margin-top: 2px;
   }
-  .service-grid--stack-mobile .service-card:not(.service-card--locked) > a .arr-link {
-    transition: transform 0.2s var(--ease, ease);
-  }
-  .service-grid--stack-mobile .service-card:not(.service-card--locked) > a:hover .arr-link {
-    transform: translateX(4px);
-  }
 
   /* ============ LOCKED card ============ */
   .service-grid--stack-mobile .service-card--locked {
-    /* Still substantial — just no accent border, and a gold "In development" pill */
     border-top: 3px solid transparent;
   }
   .service-grid--stack-mobile .service-card--locked h3 {
-    color: var(--ink);  /* still readable, not muted */
+    color: var(--ink);
   }
   .service-grid--stack-mobile .service-card--locked .card-link-disabled {
     align-self: flex-start;
@@ -2067,5 +2070,181 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   .service-grid--stack-mobile .service-card--locked:hover::before {
     width: 0;
   }
+}
+
+
+/* ============================================================ */
+/* LEGAL PAGES — Privacy Policy, PDPA, Terms, Sitemap          */
+/* Clean prose layout, generous typography, max-width readable */
+/* ============================================================ */
+.legal-wrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal-header {
+  margin-bottom: 56px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--line);
+}
+.legal-header h1 {
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 12px 0 16px;
+}
+.legal-header .lead {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  max-width: 640px;
+  margin-bottom: 18px;
+}
+.legal-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+.legal-content h2 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 48px 0 16px;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+.legal-content h3 {
+  font-family: var(--font-display);
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 32px 0 12px;
+  color: var(--ink);
+}
+.legal-content p {
+  font-size: 15.5px;
+  line-height: 1.7;
+  margin: 0 0 16px;
+  color: var(--ink);
+}
+.legal-content ul,
+.legal-content ol {
+  margin: 0 0 18px;
+  padding-left: 24px;
+}
+.legal-content li {
+  font-size: 15.5px;
+  line-height: 1.65;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.legal-content a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+.legal-content a:hover {
+  text-decoration-thickness: 2px;
+}
+.legal-content strong {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.legal-contact {
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  padding: 20px 24px;
+  margin: 24px 0;
+  font-size: 14.5px;
+  line-height: 1.7;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .legal-header { margin-bottom: 40px; padding-bottom: 24px; }
+  .legal-content h2 { font-size: 21px; margin: 36px 0 12px; }
+  .legal-content p,
+  .legal-content li { font-size: 15px; }
+}
+
+/* ============================================================ */
+/* SITEMAP — grouped grid layout                                */
+/* ============================================================ */
+.sitemap-content { max-width: none; }
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+@media (min-width: 700px) {
+  .sitemap-grid { grid-template-columns: 1fr 1fr; gap: 56px 48px; }
+}
+@media (min-width: 1024px) {
+  .sitemap-grid { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+.sitemap-section h2 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.sitemap-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sitemap-section li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.sitemap-section a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.sitemap-section a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.sitemap-section .locked {
+  color: var(--ink-muted);
+}
+.sitemap-section .locked-tag {
+  display: inline-block;
+  margin-left: 6px;
+  background: rgba(193, 154, 91, 0.10);
+  color: var(--gold, #C19A5B);
+  padding: 2px 8px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+  vertical-align: middle;
+}
+.sitemap-section em {
+  color: var(--accent);
+  font-style: italic;
+  font-size: 12.5px;
+  margin-left: 4px;
 }
 
