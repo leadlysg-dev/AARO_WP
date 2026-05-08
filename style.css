@@ -2506,3 +2506,103 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   .location-flagship__body { padding: 24px var(--section-pad-x) 28px; }
 }
 
+/* ============================================================ */
+/* STORY-ROW MEDIA — landscape modifier                         */
+/* For group/team photos that need landscape aspect on mobile,  */
+/* overriding the doctor-page default 3:4 portrait crop         */
+/* ============================================================ */
+.story-row__media--landscape .img-wrap {
+  aspect-ratio: 4/3;
+}
+@media (max-width: 767px) {
+  .single-doctor .story-row__media--landscape .img-wrap {
+    aspect-ratio: 4/3 !important;
+  }
+  .single-doctor .story-row__media--landscape img {
+    object-position: center center !important;
+  }
+}
+
+/* ============================================================ */
+/* PAGE-NAME HERO TREATMENT                                     */
+/* For cancer + treatment pages: lead with the cancer/treatment */
+/* name as H1 (not the poetic line), so user knows in 1 second  */
+/* what page they're on. Tagline becomes the subhead.           */
+/* ============================================================ */
+.eyebrow--strong {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 18px;
+}
+.eyebrow--strong::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 12px;
+  height: 1.5px;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+
+/* H1 as page name — large, anchored, with optional icon */
+.hero-h1--page-name {
+  font-family: var(--font-display);
+  font-size: clamp(48px, 7vw, 84px);
+  line-height: 1.02;
+  margin: 0 0 18px;
+  color: var(--ink);
+  font-weight: var(--display-weight, 400);
+  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.hero-h1-icon {
+  width: clamp(40px, 5vw, 56px);
+  height: clamp(40px, 5vw, 56px);
+  color: var(--accent);
+  flex-shrink: 0;
+  background: rgba(15, 118, 110, 0.08);
+  border-radius: 50%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .hero-h1-icon {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+  }
+}
+
+/* Tagline — the poetic supporting line under H1 */
+.hero-tagline {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.6vw, 32px);
+  line-height: 1.25;
+  margin: 0 0 20px;
+  color: var(--ink);
+  font-weight: var(--display-weight, 400);
+  letter-spacing: -0.01em;
+  max-width: 36ch;
+}
+.hero-tagline em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+/* Tighten lead under tagline so it doesn't feel disconnected */
+.hero-h1--page-name + .hero-tagline + .lead,
+.hero-tagline + .lead {
+  margin-top: 12px;
+}
+
