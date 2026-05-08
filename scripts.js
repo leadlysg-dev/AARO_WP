@@ -224,3 +224,46 @@
   });
 })();
 
+
+// ============================================================
+// BOOKING FORM TOPIC PRE-FILL
+// 1. On any page: if <body data-topic="X">, append ?topic=X
+//    to every link that points to #book — so users land on the
+//    home form with their topic already selected.
+// 2. On home: read ?topic=X from URL and pre-select the dropdown
+//    in the booking form.
+// ============================================================
+(function () {
+  // ---- 1. Decorate #book links with topic param ----
+  var topic = document.body && document.body.dataset && document.body.dataset.topic;
+  if (topic) {
+    document.querySelectorAll('a[href*="#book"]').forEach(function (a) {
+      var href = a.getAttribute('href');
+      if (!href || href.indexOf('topic=') !== -1) return;
+      // Split href into base + hash
+      var hashIdx = href.indexOf('#book');
+      if (hashIdx === -1) return;
+      var base = href.substring(0, hashIdx);
+      // If base already has '?', append with '&'; otherwise start query string
+      var sep = base.indexOf('?') !== -1 ? '&' : '?';
+      var newHref = base + sep + 'topic=' + encodeURIComponent(topic) + '#book';
+      a.setAttribute('href', newHref);
+    });
+  }
+
+  // ---- 2. Pre-select dropdown from ?topic= URL param ----
+  var params = new URLSearchParams(window.location.search);
+  var urlTopic = params.get('topic');
+  if (!urlTopic) return;
+  var select = document.querySelector('select[name="topic"]');
+  if (!select) return;
+  var opt = select.querySelector('option[value="' + urlTopic.replace(/"/g, '\\"') + '"]');
+  if (opt) {
+    select.value = urlTopic;
+    // Visual cue — highlight the field briefly so the user notices it's pre-filled
+    select.style.transition = 'box-shadow 0.4s ease';
+    select.style.boxShadow = '0 0 0 3px rgba(15, 118, 110, 0.18)';
+    setTimeout(function () { select.style.boxShadow = ''; }, 1800);
+  }
+})();
+

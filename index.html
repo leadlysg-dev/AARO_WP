@@ -13,7 +13,7 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="style.css?v=59" rel="stylesheet"/>
+<link href="style.css?v=60" rel="stylesheet"/>
 <!-- @wp:wp_head() -->
 </head>
 <body class="page-home">
@@ -538,12 +538,8 @@ Singapore 307506
 <input class="form-input" id="book-name" name="name" required="" type="text"/>
 </div>
 <div class="form-row">
-<label class="form-label" for="book-email">Email</label>
-<input class="form-input" id="book-email" name="email" required="" type="email"/>
-</div>
-<div class="form-row">
 <label class="form-label" for="book-phone">Phone (WhatsApp preferred)</label>
-<input class="form-input" id="book-phone" name="phone" type="tel"/>
+<input class="form-input" id="book-phone" name="phone" required="" type="tel"/>
 </div>
 <div class="form-row">
 <label class="form-label" for="book-reason">What can we help with?</label>
@@ -557,8 +553,32 @@ Singapore 307506
 </select>
 </div>
 <div class="form-row">
-<label class="form-label" for="book-message">A brief description of your situation</label>
-<textarea class="form-textarea" id="book-message" name="message" rows="4"></textarea>
+<label class="form-label" for="book-topic">Topic of enquiry</label>
+<select class="form-input" id="book-topic" name="topic" required="">
+<option value="">Choose a topic…</option>
+<optgroup label="Cancer">
+<option value="breast">Breast cancer</option>
+<option value="prostate">Prostate cancer</option>
+<option value="lung">Lung cancer</option>
+<option value="brain">Brain cancer</option>
+<option value="liver">Liver cancer</option>
+<option value="spine">Spine cancer</option>
+<option value="colorectal">Colorectal cancer</option>
+<option value="head-and-neck">Head &amp; neck cancer</option>
+<option value="gastrointestinal">Gastrointestinal cancer</option>
+<option value="genitourinary">Genitourinary cancer</option>
+<option value="gynaecological">Gynaecological cancer</option>
+<option value="lymph-lymphoma">Secondary lymph node &amp; lymphomas</option>
+</optgroup>
+<optgroup label="Treatment">
+<option value="sbrt">SBRT</option>
+<option value="srs">SRS / Radiosurgery</option>
+<option value="vmat-imrt">VMAT / IMRT</option>
+<option value="brachytherapy">Brachytherapy</option>
+<option value="chemotherapy">Chemotherapy</option>
+</optgroup>
+<option value="general">General enquiry / Other</option>
+</select>
 </div>
 <button class="btn btn--primary btn--lg" type="submit">Send enquiry <span class="arr">→</span></button>
 <p class="form-disclaimer">A care coordinator will review and reply within one working day.</p>
@@ -632,6 +652,6 @@ Singapore 307506
 </div>
 </footer>
 <!-- @wp:wp_footer() -->
-<script src="scripts.js?v=59"></script>
+<script src="scripts.js?v=60"></script>
 </body>
 </html>
