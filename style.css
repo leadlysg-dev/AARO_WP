@@ -3015,3 +3015,7 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
 .social-icon svg { width: 24px; height: 24px; }
 .social-icon--fb { background: #1877F2; color: #fff; }
 .social-icon--ig { background: #E1306C; color: #fff; }
+
+/* Visiting consultant (featured, no profile page) */
+.card-tag--soft { background: var(--surface); color: var(--ink); opacity: 0.85; }
+.card-visiting-note { font-size: 13px; color: var(--ink); opacity: 0.55; font-family: var(--font-body); font-style: italic; }
