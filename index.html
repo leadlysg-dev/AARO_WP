@@ -152,7 +152,17 @@
 <!-- @wp:get_header_end -->
 <main id="main" role="main">
 <!-- @wp:the_content() -->
-<section aria-label="Hero" class="hero hero--full">
+
+<!-- ============================================================
+     1) HERO  —  static hero image + seasonal slider
+     Slide 1 = the default/static brand hero.
+     Slides 2–3 = seasonal campaign examples (swap these in WP).
+     ============================================================ -->
+<section aria-label="Hero" class="hero hero--full hero--slider" data-hero-slider="">
+<div class="hero-slides">
+
+<!-- Slide 1 · Static / default -->
+<div class="hero-slide is-active" data-hero-slide="">
 <div class="hero-bg">
 <img alt="The full AARO clinical team — specialists, therapists, nurses and care coordinators in batik-trim scrubs." src="assets/images/staff/team-full-group-portrait.jpg?v=3"/>
 <div class="hero-overlay"></div>
@@ -161,14 +171,90 @@
 <div class="hero-content" data-reveal="">
 <span class="eyebrow hero-eyebrow">Singapore · Specialist radiation oncology</span>
 <h1 class="ink-em">Precision oncology.<br/><em>Personalised care.</em></h1>
-<p class="lead">AARO is a Singapore-based specialist radiation oncology practice. Established as an independent group of oncologists with sub-specialty training, we care for patients across a wide range of cancers — with focused clinical attention, the right technology, and the time each person deserves.</p>
+<p class="lead">AARO is a Singapore-based specialist radiation oncology practice — an independent group of sub-specialised oncologists caring for patients across a wide range of cancers, with the right technology and the time each person deserves.</p>
 <div class="hero-ctas">
 <a class="btn btn--accent btn--lg" href="index.html#book">Speak to a specialist<span class="arr">→</span></a>
 <a class="btn btn--ghost-light btn--lg" href="https://wa.me/6581023838">WhatsApp us<span class="arr">→</span></a>
 </div>
 </div>
 </div>
+</div>
+
+<!-- Slide 2 · Seasonal example -->
+<div class="hero-slide" data-hero-slide="">
+<div class="hero-bg">
+<img alt="The four senior AARO oncologists in front of the Elekta linear accelerator." loading="lazy" src="assets/images/doctors/home-hero-four-doctors-linac.jpg"/>
+<div class="hero-overlay"></div>
+</div>
+<div class="container">
+<div class="hero-content">
+<span class="hero-season-badge">Seasonal feature</span>
+<span class="eyebrow hero-eyebrow">Breast Cancer Awareness Month</span>
+<h1 class="ink-em">Early detection.<br/><em>Better outcomes.</em></h1>
+<p class="lead">Hypofractionated regimens, partial-breast irradiation and survivorship pathways — led by a sub-specialist who stays with you from first consult onwards.</p>
+<div class="hero-ctas">
+<a class="btn btn--accent btn--lg" href="cancers-we-treat/breast-cancer.html">Our breast cancer approach<span class="arr">→</span></a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Slide 3 · Seasonal example -->
+<div class="hero-slide" data-hero-slide="">
+<div class="hero-bg">
+<img alt="The Centre for Stereotactic Radiosurgery treatment room with the Elekta linear accelerator." loading="lazy" src="assets/images/treatment/csr-elekta-treatment-room.jpg"/>
+<div class="hero-overlay"></div>
+</div>
+<div class="container">
+<div class="hero-content">
+<span class="hero-season-badge">Seasonal feature</span>
+<span class="eyebrow hero-eyebrow">Considering your options?</span>
+<h1 class="ink-em">A second opinion<br/><em>worth seeking.</em></h1>
+<p class="lead">An honest, independent assessment of your diagnosis and treatment options — explained in plain language, with time for your questions.</p>
+<div class="hero-ctas">
+<a class="btn btn--accent btn--lg" href="second-opinion.html">Request a second opinion<span class="arr">→</span></a>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- /.hero-slides -->
+
+<!-- Slider controls -->
+<button class="hero-arrow hero-arrow--prev" type="button" aria-label="Previous slide" data-hero-prev="">‹</button>
+<button class="hero-arrow hero-arrow--next" type="button" aria-label="Next slide" data-hero-next="">›</button>
+<div class="hero-dots" role="tablist" aria-label="Hero slides">
+<button class="hero-dot is-active" type="button" aria-label="Go to slide 1" data-hero-dot=""></button>
+<button class="hero-dot" type="button" aria-label="Go to slide 2" data-hero-dot=""></button>
+<button class="hero-dot" type="button" aria-label="Go to slide 3" data-hero-dot=""></button>
+</div>
 </section>
+
+<!-- ============================================================
+     2) ANNOUNCEMENT / NEWS CRAWLER
+     A scrolling ticker of latest articles & media appearances.
+     In WordPress this pulls the latest posts; examples shown here.
+     ============================================================ -->
+<div class="news-bar" aria-label="Latest news and announcements">
+<div class="container news-bar__inner">
+<span class="news-bar__label">Latest</span>
+<div class="news-bar__viewport">
+<div class="news-bar__track">
+<a class="news-item" href="articles.html"><span class="news-item__tag">Media</span> Dr Daniel Tan on stereotactic radiosurgery for brain metastases</a>
+<a class="news-item" href="articles.html"><span class="news-item__tag">Update</span> Non-surgical prostate cancer treatment — now in 5 SBRT sessions</a>
+<a class="news-item" href="articles.html"><span class="news-item__tag">News</span> AARO expands consultations across five partner hospitals</a>
+<a class="news-item" href="patient-stories.html"><span class="news-item__tag">Story</span> Helen's fight against a rare head &amp; neck cancer</a>
+<!-- duplicate set for a seamless loop -->
+<a class="news-item" href="articles.html" aria-hidden="true"><span class="news-item__tag">Media</span> Dr Daniel Tan on stereotactic radiosurgery for brain metastases</a>
+<a class="news-item" href="articles.html" aria-hidden="true"><span class="news-item__tag">Update</span> Non-surgical prostate cancer treatment — now in 5 SBRT sessions</a>
+<a class="news-item" href="articles.html" aria-hidden="true"><span class="news-item__tag">News</span> AARO expands consultations across five partner hospitals</a>
+<a class="news-item" href="patient-stories.html" aria-hidden="true"><span class="news-item__tag">Story</span> Helen's fight against a rare head &amp; neck cancer</a>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Supporting bands (insurance + key stats) -->
 <div class="promo-strip">
 <div class="container">
     Covered by Medisave, MediShield Life and all major Integrated Shield Plans. <strong>Cashless billing available</strong> — <span class="promo-link-disabled">see how we make treatment affordable.</span>
@@ -180,222 +266,219 @@
 <div class="trust-item"><span class="num" data-suffix="+" data-target="12">12+</span><span class="lbl">Cancer types treated</span></div>
 <div class="trust-item"><span class="num">NCCS</span><span class="lbl">Trained founding team</span></div>
 </div>
+
+<!-- ============================================================
+     3) WHY AARO  —  3 cards, each linking to an EXISTING page
+     ============================================================ -->
 <section class="block">
-<div class="story-row" data-reveal="" id="our-story">
-<div class="story-row__text">
-<span class="eyebrow">Our story</span>
-<h2 class="h-section">An <em>independent</em> radiation oncology practice.</h2>
-<p>AARO was founded by a group of oncologists with deep sub-specialty backgrounds in radiation therapy. We came together around one idea: that patients deserve a sub-specialist for their specific cancer — someone who has spent their career with that disease — paired with the time and continuity that good care requires.</p>
-<p>Today we practise from the <strong>Centre for Stereotactic Radiosurgery</strong> on Adam Road, a facility built specifically for the precise delivery of radiation therapy. Several members of our founding team helped establish stereotactic radiation services in Singapore during their earlier hospital careers — experience that continues to inform how we care for patients today.</p>
-<p>We are an independent specialist practice. Each of our oncologists has their own sub-specialty focus. Decisions about your care are made between your oncologist and you — without a hospital group or corporate layer in between.</p>
+<div class="section-head" data-reveal="">
+<span class="eyebrow">Why AARO</span>
+<h2 class="h-section">Independent. Sub-specialised. <em>Patient-led.</em></h2>
+<p>Three reasons patients and referring doctors choose us — each one links through to where you can read more.</p>
 </div>
-<div class="story-row__media">
-<div class="img-wrap">
-<img alt="The Centre for Stereotactic Radiosurgery treatment room — Elekta linear accelerator with HexaPOD couch beneath the signature starry ceiling." loading="lazy" src="assets/images/treatment/csr-elekta-treatment-room.jpg"/>
-</div>
-</div>
+<div class="service-grid service-grid--stack-mobile why-grid" data-reveal="">
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg></div>
+<h3>Precision Technology</h3>
+<p>SBRT, SRS, VMAT/IMRT and brachytherapy delivered on a modern linear accelerator with sub-millimetre accuracy.</p>
+<a href="our-treatments/index.html">Explore treatments<span class="arr-link"> →</span></a>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></div>
+<h3>Sub-Specialist Expertise</h3>
+<p>Each oncologist sub-specialises in specific cancers. You see the same consultant from first consultation onwards.</p>
+<a href="our-specialists/index.html">Meet our specialists<span class="arr-link"> →</span></a>
+</article>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
+<h3>Second Opinions Welcome</h3>
+<p>An honest, independent assessment of your diagnosis and options — in plain language, with time for your questions.</p>
+<a href="second-opinion.html">Request a second opinion<span class="arr-link"> →</span></a>
+</article>
 </div>
 </section>
+
+<!-- ============================================================
+     4) DOCTORS  —  card-based directory → individual profiles
+     ============================================================ -->
 <section class="block alt">
 <div class="section-head" data-reveal="">
-<span class="eyebrow">What we treat</span>
-<h2 class="h-section">Twelve cancer types we care for.</h2>
-<p>Each area is treated by a specialist with focused clinical experience in that disease. Your radiation oncologist will be the same person from first consultation onwards.</p>
+<span class="eyebrow">Our specialists</span>
+<h2 class="h-section">Meet the team who'll <em>lead your care.</em></h2>
+<p>You'll meet the consultant who leads your care from your first consultation — the same person, every visit.</p>
+</div>
+<div class="doctor-grid" data-reveal="">
+<article class="card doctor-card">
+<div class="img-wrap"><img alt="Portrait of Dr Daniel Tan, Director and Senior Consultant Radiation Oncologist at AARO." loading="lazy" src="assets/images/doctors/dr-daniel-tan-portrait.jpg"/></div>
+<div class="card-body">
+<span class="card-tag card-tag--gold">Director</span>
+<h3 class="card-title">Dr Daniel Tan</h3>
+<p class="card-meta">SRS · SBRT · Brain · Spine · Prostate</p>
+<a class="card-link" href="our-specialists/dr-daniel-tan.html">View profile</a>
+</div>
+</article>
+<article class="card doctor-card">
+<div class="img-wrap"><img alt="Portrait of Dr Jonathan Teh, Medical Director of the Centre for Stereotactic Radiosurgery." loading="lazy" src="assets/images/doctors/dr-jonathan-teh-portrait.jpg"/></div>
+<div class="card-body">
+<span class="card-tag">Medical Director, CSR</span>
+<h3 class="card-title">Dr Jonathan Teh</h3>
+<p class="card-meta">Breast · Prostate · Gynaecological</p>
+<a class="card-link" href="our-specialists/dr-jonathan-teh.html">View profile</a>
+</div>
+</article>
+<article class="card doctor-card">
+<div class="img-wrap"><img alt="Portrait of Dr David Tan, Senior Consultant Radiation Oncologist at AARO." loading="lazy" src="assets/images/doctors/dr-david-tan-portrait.jpg"/></div>
+<div class="card-body">
+<span class="card-tag">Senior Consultant</span>
+<h3 class="card-title">Dr David Tan</h3>
+<p class="card-meta">Prostate SBRT · Genitourinary</p>
+<a class="card-link" href="our-specialists/dr-david-tan.html">View profile</a>
+</div>
+</article>
+<article class="card doctor-card">
+<div class="img-wrap"><img alt="Portrait of Dr Michelle Tseng, Senior Consultant Radiation Oncologist at AARO." loading="lazy" src="assets/images/doctors/dr-michelle-tseng-portrait.jpg"/></div>
+<div class="card-body">
+<span class="card-tag">Senior Consultant</span>
+<h3 class="card-title">Dr Michelle Tseng</h3>
+<p class="card-meta">Head &amp; Neck · Lung · Breast</p>
+<a class="card-link" href="our-specialists/dr-michelle-tseng.html">View profile</a>
+</div>
+</article>
+</div>
+<div class="section-cta" data-reveal="">
+<a class="btn btn--secondary btn--lg" href="our-specialists/index.html">View all specialists<span class="arr">→</span></a>
+</div>
+</section>
+
+<!-- ============================================================
+     5) TREATMENTS  —  specialty treatments → Treatments overview
+     ============================================================ -->
+<section class="block">
+<div class="section-head" data-reveal="">
+<span class="eyebrow">What we offer</span>
+<h2 class="h-section">Specialty <em>treatments.</em></h2>
+<p>Advanced radiation therapy matched to your diagnosis. Explore the full range on our treatments overview.</p>
 </div>
 <div class="service-grid service-grid--stack-mobile" data-reveal="">
 <article class="service-card">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.75 9.226a8 8 0 1 0-11.5 0"></path><path d="m9 14 3-2 3 2-3 8z"></path><path d="M12 2v3"></path></svg></div>
-<h3>Breast</h3>
-<p>Hypofractionated regimens, partial breast irradiation, and survivorship pathways.</p>
-<a href="cancers-we-treat/breast-cancer.html">Read approach<span class="arr-link"> →</span></a>
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></div>
+<h3>SBRT</h3>
+<p>Stereotactic body radiation therapy — high-precision treatment in just 3–5 sessions.</p>
+<a href="our-treatments/sbrt.html">How it works<span class="arr-link"> →</span></a>
 </article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="1"></circle></svg></div>
-<h3>Prostate &amp; GU</h3>
-<p>SBRT-delivered prostate radiotherapy in five sessions, brachytherapy where indicated.</p>
-<span class="card-link-disabled">In development</span>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a10 10 0 1 0 10 10"></path><path d="M12 12 2.5 9.5"></path><circle cx="12" cy="12" r="2"></circle></svg></div>
+<h3>SRS / Radiosurgery</h3>
+<p>Stereotactic radiosurgery for brain and spine lesions — often a single session.</p>
+<a href="our-treatments/srs-radiosurgery.html">How it works<span class="arr-link"> →</span></a>
 </article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"></path><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"></path><path d="M9.8 4.4A2 2 0 1 1 11 8H2"></path></svg></div>
-<h3>Lung &amp; thoracic</h3>
-<p>SBRT for early-stage NSCLC, stereotactic radiosurgery for oligometastatic disease.</p>
-<span class="card-link-disabled">In development</span>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12a9 9 0 1 0 9-9"></path><path d="M3 12h6"></path><path d="M12 3v6"></path></svg></div>
+<h3>VMAT / IMRT</h3>
+<p>Intensity-modulated arc therapy that shapes the dose around healthy tissue.</p>
+<a href="our-treatments/vmat-imrt.html">How it works<span class="arr-link"> →</span></a>
 </article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"></path><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"></path><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"></path></svg></div>
-<h3>Brain</h3>
-<p>SRS and SBRT for primary brain tumours, brain metastases, and skull-base lesions.</p>
-<span class="card-link-disabled">In development</span>
+<article class="service-card">
+<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20"></path><path d="M5 8l7-6 7 6"></path><path d="M5 16l7 6 7-6"></path></svg></div>
+<h3>Brachytherapy</h3>
+<p>Internal radiation placed precisely within or beside the tumour, where indicated.</p>
+<a href="our-treatments/brachytherapy.html">How it works<span class="arr-link"> →</span></a>
 </article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg></div>
-<h3>Liver</h3>
-<p>SBRT for unresectable HCC and oligometastatic liver disease, in MDT settings.</p>
-<span class="card-link-disabled">In development</span>
-</article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2v20"></path><path d="M8 5h8"></path><path d="M8 9h8"></path><path d="M8 13h8"></path><path d="M8 17h8"></path><path d="M8 21h8"></path></svg></div>
-<h3>Spine</h3>
-<p>Single-fraction SBRT for spinal metastases, with cord-sparing planning.</p>
-<span class="card-link-disabled">In development</span>
-</article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
-<h3>Colorectal</h3>
-<p>Neoadjuvant short-course or long-course CRT, organ-preservation pathways.</p>
-<span class="card-link-disabled">In development</span>
-</article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></div>
-<h3>Head &amp; neck</h3>
-<p>IMRT and VMAT planning that protects swallow function and salivary glands.</p>
-<span class="card-link-disabled">In development</span>
-</article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 21h10"></path><path d="M12 21a9 9 0 0 0 9-9H3a9 9 0 0 0 9 9Z"></path><path d="M11.38 12a2.4 2.4 0 0 1-.4-4.77 2.4 2.4 0 0 1 3.2-2.77 2.4 2.4 0 0 1 3.47-.63 2.4 2.4 0 0 1 3.37 3.37 2.4 2.4 0 0 1-1.1 3.7 2.51 2.51 0 0 1 .03 1.1"></path></svg></div>
-<h3>Gastrointestinal</h3>
-<p>Esophageal, gastric, pancreatic, biliary — combined-modality where indicated.</p>
-<span class="card-link-disabled">In development</span>
-</article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v20"></path></svg></div>
-<h3>Genitourinary</h3>
-<p>Bladder, kidney and testicular tumours — multidisciplinary planning.</p>
-<span class="card-link-disabled">In development</span>
-</article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="3"></circle><path d="M12 16.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 1 1 12 7.5a4.5 4.5 0 1 1 4.5 4.5 4.5 4.5 0 1 1-4.5 4.5"></path></svg></div>
-<h3>Gynaecological</h3>
-<p>External-beam plus brachytherapy boost for cervical and endometrial cancers.</p>
-<span class="card-link-disabled">In development</span>
-</article>
-<article class="service-card service-card--locked">
-<div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="1"></circle><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z"></path><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z"></path></svg></div>
-<h3>Lymphoma</h3>
-<p>Involved-site radiation therapy for nodal lymphomas, ISRT planning.</p>
-<span class="card-link-disabled">In development</span>
-</article>
+</div>
+<div class="section-cta" data-reveal="">
+<a class="btn btn--secondary btn--lg" href="our-treatments/index.html">View all treatments<span class="arr">→</span></a>
 </div>
 </section>
-<section class="block">
-<div class="section-head" data-reveal="">
-<span class="eyebrow">How care unfolds</span>
-<h2 class="h-section">From first consult to <em>continued support.</em></h2>
-</div>
-<div class="care-strip" data-reveal="">
-<div class="care-step">
-<div class="img-wrap"><img alt="A care coordinator preparing a patient before treatment." loading="lazy" src="assets/images/staff/care-coordinator-pre-treatment.jpg"/></div>
-<span class="step-num">Step 01</span>
-<h4>Preparation</h4>
-<p>Hands-on guidance from your radiation therapist before every session.</p>
-</div>
-<div class="care-step">
-<div class="img-wrap"><img alt="Two AARO radiation therapists at the planning console reviewing CT scans for treatment plan optimisation." loading="lazy" src="assets/images/staff/planning-console-staff-review.jpg"/></div>
-<span class="step-num">Step 02</span>
-<h4>Planning</h4>
-<p>Each plan built from your imaging, reviewed by the consultant team.</p>
-</div>
-<div class="care-step">
-<div class="img-wrap"><img alt="A patient on the SBRT couch using a breath-hold spirometer at the Centre for Stereotactic Radiosurgery." loading="lazy" src="assets/images/treatment/patient-sbrt-delivery-1x1.jpg"/></div>
-<span class="step-num">Step 03</span>
-<h4>Delivery</h4>
-<p>Sub-millimetre precision with breath-hold protocols where it matters.</p>
-</div>
-<div class="care-step">
-<div class="img-wrap"><img alt="An AARO care coordinator with a patient in the clinic garden — a quiet moment between sessions." loading="lazy" src="assets/images/staff/care-through-every-step.jpg"/></div>
-<span class="step-num">Step 04</span>
-<h4>Through every step</h4>
-<p>A dedicated care team stays with you from first call to follow-up.</p>
-</div>
-</div>
-</section>
+
+<!-- ============================================================
+     6) CANCER TYPES  —  accordion layout (reduces clutter)
+     Uses the existing .accordion-row behaviour in scripts.js.
+     ============================================================ -->
 <section class="block alt">
-<div class="specialists-preview" data-reveal="">
-<div class="img-wrap">
-<img alt="Dr Daniel Tan, Dr Jonathan Teh, Dr Michelle Tseng and Dr David Tan in front of the Elekta linear accelerator at CSR." loading="lazy" src="assets/images/doctors/four-doctors-linac-elekta.jpg"/>
-</div>
-<div class="copy">
-<span class="eyebrow">Our specialists</span>
-<h2 class="h-section">Sub-specialists. <em>One standard.</em></h2>
-<p>Our specialists each have their own sub-specialty focus, with significant experience in Singapore's leading cancer centres. You'll meet the consultant who will lead your care from your first consultation onwards — the same person, every visit.</p>
-<div class="name-list">
-<div class="nm">Dr Daniel Tan<small>Brain · Spine · SRS/SBRT</small></div>
-<div class="nm">Dr Jonathan Teh<small>Breast · Prostate · Gynaecological</small></div>
-<div class="nm">Dr David Tan<small>Prostate SBRT · Genitourinary</small></div>
-<div class="nm">Dr Michelle Tseng<small>Head &amp; Neck · Lung · Breast</small></div>
-</div>
-<a class="btn-secondary" href="our-specialists/dr-daniel-tan.html">Meet our director<span class="arr">→</span></a>
-</div>
-</div>
-</section>
-<section class="block">
 <div class="section-head" data-reveal="">
-<span class="eyebrow">Patient stories</span>
-<h2 class="h-section">Stories from the <em>people we've cared for.</em></h2>
-<p>Every story shared here is a patient's own — in their words, with their permission.</p>
+<span class="eyebrow">What we treat</span>
+<h2 class="h-section">Cancer types we <em>care for.</em></h2>
+<p>Twelve areas, each treated by a specialist with focused experience in that disease. Tap a row to learn more.</p>
 </div>
-<div class="story-grid story-grid--videos" data-reveal="">
-<article class="story-card story-card--video">
-<div class="video-wrap">
-<button aria-label="Play video: Oscar Lim: Love Conquers — Sarcoma with Lung Mets" class="video-poster" data-video-id="h5m15Lkrn8A" type="button">
-<img alt="Oscar Lim: Love Conquers — Sarcoma with Lung Mets" loading="lazy" src="https://i.ytimg.com/vi/h5m15Lkrn8A/hq720.jpg"/>
-<span class="poster-gradient" aria-hidden="true"></span>
-<span class="poster-watch" aria-hidden="true">Watch story</span>
-<span class="poster-play" aria-hidden="true">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-</span>
-</button>
+<div class="cancer-accordion" data-reveal="">
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Breast</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>Hypofractionated regimens, partial-breast irradiation and survivorship pathways. <a href="cancers-we-treat/breast-cancer.html">Read our approach →</a></p></div>
 </div>
-<div class="body">
-<span class="tag">Sarcoma · Lung mets</span>
-<h3>"Love conquers."</h3>
-<p>Oscar Lim, 21 — Stage 4 sarcoma with lung metastases, treated by <span class="tbc">Dr Daniel Tan</span></p>
-<span class="text-link-disabled">Full story page <span class="nav-tag">In development</span></span>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Prostate &amp; Genitourinary</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>SBRT-delivered prostate radiotherapy in five sessions, brachytherapy where indicated. <a href="cancers-we-treat/prostate-cancer.html">Read our approach →</a></p></div>
 </div>
-</article>
-<article class="story-card story-card--video">
-<div class="video-wrap">
-<button aria-label="Play video: Pak Tjugito: Non-Surgical Prostate Cancer with SBRT" class="video-poster" data-video-id="O8ItxOl_o3A" type="button">
-<img alt="Pak Tjugito: Non-Surgical Prostate Cancer with SBRT" loading="lazy" src="https://i.ytimg.com/vi/O8ItxOl_o3A/hq720.jpg"/>
-<span class="poster-gradient" aria-hidden="true"></span>
-<span class="poster-watch" aria-hidden="true">Watch story</span>
-<span class="poster-play" aria-hidden="true">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-</span>
-</button>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Lung &amp; Thoracic</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>SBRT for early-stage NSCLC, stereotactic radiosurgery for oligometastatic disease. <a href="cancers-we-treat/lung-cancer.html">Read our approach →</a></p></div>
 </div>
-<div class="body">
-<span class="tag">Prostate · SBRT</span>
-<h3>"Non-surgical, non-invasive — and I went home the same day."</h3>
-<p>Pak Tjugito Naslim — Stage 2 prostate cancer, treated by <span class="tbc">Dr David Tan</span></p>
-<span class="text-link-disabled">Full story page <span class="nav-tag">In development</span></span>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Brain</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>SRS and SBRT for primary brain tumours, brain metastases and skull-base lesions. <a href="cancers-we-treat/brain-cancer.html">Read our approach →</a></p></div>
 </div>
-</article>
-<article class="story-card story-card--video">
-<div class="video-wrap">
-<button aria-label="Play video: Helen Yow: Fight Against Goliath — Papillary Squamous Cell Carcinoma" class="video-poster" data-video-id="5zYpJUb-bcI" type="button">
-<img alt="Helen Yow: Fight Against Goliath — Papillary Squamous Cell Carcinoma" loading="lazy" src="https://i.ytimg.com/vi/5zYpJUb-bcI/hq720.jpg"/>
-<span class="poster-gradient" aria-hidden="true"></span>
-<span class="poster-watch" aria-hidden="true">Watch story</span>
-<span class="poster-play" aria-hidden="true">
-<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-</span>
-</button>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Spine</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>Spine stereotactic radiosurgery for primary and metastatic spinal tumours. <a href="cancers-we-treat/spine-cancer.html">Read our approach →</a></p></div>
 </div>
-<div class="body">
-<span class="tag">Head &amp; neck · Rare cancer</span>
-<h3>"A fight against Goliath."</h3>
-<p>Helen Yow — Papillary squamous cell carcinoma, treated by <span class="tbc">Dr Daniel Tan</span></p>
-<span class="text-link-disabled">Full story page <span class="nav-tag">In development</span></span>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Liver</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>SBRT for hepatocellular carcinoma and liver metastases, with motion management. <a href="cancers-we-treat/liver-cancer.html">Read our approach →</a></p></div>
 </div>
-</article>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Colorectal</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>Neoadjuvant and definitive radiotherapy, combined-modality where indicated. <a href="cancers-we-treat/colorectal-cancer.html">Read our approach →</a></p></div>
+</div>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Gastrointestinal</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>Esophageal, gastric, pancreatic and biliary — combined-modality where indicated. <a href="cancers-we-treat/gastrointestinal-cancer.html">Read our approach →</a></p></div>
+</div>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Genitourinary</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>Bladder, kidney and testicular tumours — multidisciplinary planning. <a href="cancers-we-treat/genitourinary-cancer.html">Read our approach →</a></p></div>
+</div>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Gynaecological</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>External-beam plus brachytherapy boost for cervical and endometrial cancers. <a href="cancers-we-treat/gynaecological-cancer.html">Read our approach →</a></p></div>
+</div>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Head &amp; Neck</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>IMRT and VMAT planning that protects swallow function and salivary glands. <a href="cancers-we-treat/head-and-neck-cancer.html">Read our approach →</a></p></div>
+</div>
+
+<div class="accordion-row">
+<div class="accordion-head"><span class="accordion-title">Secondary Lymph Node &amp; Lymphomas</span><span class="accordion-icon" aria-hidden="true"></span></div>
+<div class="accordion-body"><p>Involved-site radiation therapy for nodal lymphomas, ISRT planning. <a href="cancers-we-treat/secondary-lymph-node-and-lymphomas.html">Read our approach →</a></p></div>
+</div>
+
+</div>
+<div class="section-cta" data-reveal="">
+<a class="btn btn--secondary btn--lg" href="cancers-we-treat/index.html">View all cancers we treat<span class="arr">→</span></a>
 </div>
 </section>
-<section class="block alt">
+
+<!-- ============================================================
+     7) LOCATIONS  —  static info + static map (no location pages)
+     ============================================================ -->
+<section class="block">
 <div class="section-head" data-reveal="">
 <span class="eyebrow">Where to find us</span>
 <h2 class="h-section">Our <em>locations.</em></h2>
 <p>Treatment delivery happens at our flagship Centre for Stereotactic Radiosurgery on Adam Road. Consultations are also available at five partner hospitals across Singapore.</p>
+</div>
+<div class="map-embed" data-reveal="">
+<iframe title="Map showing AARO Centre for Stereotactic Radiosurgery, 19 Adam Road, Singapore" src="https://www.google.com/maps?q=Crawfurd+Hospital+19+Adam+Road+Singapore&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
 <div class="locations-grid" data-reveal="">
 <article class="location-flagship">
@@ -478,7 +561,99 @@ Singapore 307506
 </div>
 </div>
 </section>
-<section class="block" id="faq">
+
+<!-- ============================================================
+     8) PATIENT STORIES  —  existing content (kept as-is)
+     ============================================================ -->
+<section class="block alt">
+<div class="section-head" data-reveal="">
+<span class="eyebrow">Patient stories</span>
+<h2 class="h-section">Stories from the <em>people we've cared for.</em></h2>
+<p>Every story shared here is a patient's own — in their words, with their permission.</p>
+</div>
+<div class="story-grid story-grid--videos" data-reveal="">
+<article class="story-card story-card--video">
+<div class="video-wrap">
+<button aria-label="Play video: Oscar Lim: Love Conquers — Sarcoma with Lung Mets" class="video-poster" data-video-id="h5m15Lkrn8A" type="button">
+<img alt="Oscar Lim: Love Conquers — Sarcoma with Lung Mets" loading="lazy" src="https://i.ytimg.com/vi/h5m15Lkrn8A/hq720.jpg"/>
+<span class="poster-gradient" aria-hidden="true"></span>
+<span class="poster-watch" aria-hidden="true">Watch story</span>
+<span class="poster-play" aria-hidden="true">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+</span>
+</button>
+</div>
+<div class="body">
+<span class="tag">Sarcoma · Lung mets</span>
+<h3>"Love conquers."</h3>
+<p>Oscar Lim, 21 — Stage 4 sarcoma with lung metastases, treated by <span class="tbc">Dr Daniel Tan</span></p>
+<span class="text-link-disabled">Full story page <span class="nav-tag">In development</span></span>
+</div>
+</article>
+<article class="story-card story-card--video">
+<div class="video-wrap">
+<button aria-label="Play video: Pak Tjugito: Non-Surgical Prostate Cancer with SBRT" class="video-poster" data-video-id="O8ItxOl_o3A" type="button">
+<img alt="Pak Tjugito: Non-Surgical Prostate Cancer with SBRT" loading="lazy" src="https://i.ytimg.com/vi/O8ItxOl_o3A/hq720.jpg"/>
+<span class="poster-gradient" aria-hidden="true"></span>
+<span class="poster-watch" aria-hidden="true">Watch story</span>
+<span class="poster-play" aria-hidden="true">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+</span>
+</button>
+</div>
+<div class="body">
+<span class="tag">Prostate · SBRT</span>
+<h3>"Non-surgical, non-invasive — and I went home the same day."</h3>
+<p>Pak Tjugito Naslim — Stage 2 prostate cancer, treated by <span class="tbc">Dr David Tan</span></p>
+<span class="text-link-disabled">Full story page <span class="nav-tag">In development</span></span>
+</div>
+</article>
+<article class="story-card story-card--video">
+<div class="video-wrap">
+<button aria-label="Play video: Helen Yow: Fight Against Goliath — Papillary Squamous Cell Carcinoma" class="video-poster" data-video-id="5zYpJUb-bcI" type="button">
+<img alt="Helen Yow: Fight Against Goliath — Papillary Squamous Cell Carcinoma" loading="lazy" src="https://i.ytimg.com/vi/5zYpJUb-bcI/hq720.jpg"/>
+<span class="poster-gradient" aria-hidden="true"></span>
+<span class="poster-watch" aria-hidden="true">Watch story</span>
+<span class="poster-play" aria-hidden="true">
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+</span>
+</button>
+</div>
+<div class="body">
+<span class="tag">Head &amp; neck · Rare cancer</span>
+<h3>"A fight against Goliath."</h3>
+<p>Helen Yow — Papillary squamous cell carcinoma, treated by <span class="tbc">Dr Daniel Tan</span></p>
+<span class="text-link-disabled">Full story page <span class="nav-tag">In development</span></span>
+</div>
+</article>
+</div>
+</section>
+
+<!-- ============================================================
+     9) FACEBOOK WIDGET  —  feed via WordPress plugin
+     Placeholder block; in WP this renders the FB Page plugin embed.
+     ============================================================ -->
+<section class="block">
+<div class="section-head" data-reveal="">
+<span class="eyebrow">Stay connected</span>
+<h2 class="h-section">From our <em>Facebook.</em></h2>
+<p>Follow AARO for clinic updates, patient education and community events.</p>
+</div>
+<div class="fb-widget" data-reveal="">
+<!-- @wp:facebook_page_plugin() — replace this block with the Facebook feed/Page plugin output -->
+<div class="fb-widget__placeholder">
+<svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14 9h3V6h-3a4 4 0 0 0-4 4v2H7v3h3v7h3v-7h2.55l.45-3H13v-2a1 1 0 0 1 1-1z" fill="currentColor"/></svg>
+<span class="fb-widget__title">Facebook feed</span>
+<span class="fb-widget__note">Renders here via the WordPress Facebook Page plugin</span>
+<a class="btn btn--secondary" href="https://www.facebook.com/" rel="noopener" target="_blank">Visit our Facebook<span class="arr">→</span></a>
+</div>
+</div>
+</section>
+
+<!-- ============================================================
+     FAQ  (retained — header CTA & footer link to #faq)
+     ============================================================ -->
+<section class="block alt" id="faq">
 <div class="faq-row" data-reveal="">
 <div class="faq-media">
 <div class="img-wrap">
@@ -531,7 +706,11 @@ Singapore 307506
 </div>
 </div>
 </section>
-<section class="block alt" id="book">
+
+<!-- ============================================================
+     BOOK  (retained — header CTA & hero CTAs link to #book)
+     ============================================================ -->
+<section class="block" id="book">
 <div class="book-grid" data-reveal="">
 <div class="book-intro">
 <span class="eyebrow">Book a consultation</span>

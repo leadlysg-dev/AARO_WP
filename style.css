@@ -2812,3 +2812,175 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
   border-radius: var(--r-lg, 12px);
 }
 
+
+/* =====================================================================
+   HOMEPAGE v2 — agreed structure additions
+   (seasonal hero slider, news crawler, why/doctor grids, cancer
+   accordion, locations map, Facebook widget, section CTAs)
+   ===================================================================== */
+
+/* ---- Shared: centered CTA under a section ---- */
+.section-cta { text-align: center; margin-top: 40px; }
+
+/* ---- 1) HERO seasonal slider ---- */
+.hero--slider .hero-slides { position: absolute; inset: 0; z-index: 0; }
+.hero--slider .hero-slide {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.9s ease;
+  pointer-events: none;
+}
+.hero--slider .hero-slide.is-active { opacity: 1; visibility: visible; pointer-events: auto; }
+.hero--slider .hero-slide .container { padding-bottom: 110px; }
+
+.hero-season-badge {
+  display: inline-block; margin-bottom: 16px;
+  padding: 5px 12px; border-radius: 999px;
+  background: var(--gold); color: #fff;
+  font-family: var(--font-body); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase;
+}
+
+/* arrows */
+.hero-arrow {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 4; width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.45); background: rgba(11,34,64,0.35);
+  color: #fff; font-size: 26px; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s ease, border-color 0.2s ease;
+  backdrop-filter: blur(2px);
+}
+.hero-arrow:hover { background: var(--accent); border-color: var(--accent); }
+.hero-arrow--prev { left: 20px; }
+.hero-arrow--next { right: 20px; }
+
+/* dots */
+.hero-dots {
+  position: absolute; bottom: 34px; left: 0; right: 0; z-index: 4;
+  display: flex; gap: 10px; justify-content: center;
+}
+.hero-dot {
+  width: 11px; height: 11px; border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.8); background: transparent;
+  padding: 0; transition: background 0.2s ease, transform 0.2s ease;
+}
+.hero-dot.is-active { background: #fff; transform: scale(1.15); }
+
+@media (max-width: 767px) {
+  .hero-arrow { display: none; }
+  .hero--slider .hero-slide .container { padding-bottom: 76px; }
+  .hero-dots { bottom: 22px; }
+}
+
+/* ---- 2) NEWS / ANNOUNCEMENT CRAWLER ---- */
+.news-bar { background: var(--inverse-bg); color: var(--inverse-ink); overflow: hidden; }
+.news-bar__inner { display: flex; align-items: center; gap: 18px; }
+.news-bar__label {
+  flex: 0 0 auto; font-family: var(--font-body); font-size: 12px;
+  font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+  color: #fff; background: var(--accent); padding: 6px 12px; border-radius: 4px;
+}
+.news-bar__viewport { position: relative; flex: 1 1 auto; overflow: hidden; height: 52px; }
+.news-bar__track {
+  display: flex; align-items: center; gap: 48px; height: 100%;
+  white-space: nowrap; width: max-content;
+  animation: news-scroll 38s linear infinite;
+}
+.news-bar__viewport:hover .news-bar__track { animation-play-state: paused; }
+.news-item {
+  color: rgba(255,255,255,0.92); font-size: 14.5px; font-weight: 400;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+  transition: color 0.18s ease;
+}
+.news-item:hover { color: #6FE0BF; }
+.news-item__tag {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;
+  color: var(--inverse-bg); background: #6FE0BF; padding: 2px 8px; border-radius: 3px;
+}
+@keyframes news-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .news-bar__track { animation: none; }
+}
+
+/* ---- 3) WHY AARO grid (reuses .service-card; ensures 3-up) ---- */
+.why-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1023px) { .why-grid { grid-template-columns: 1fr; } }
+
+/* ---- 4) DOCTOR directory grid ---- */
+.doctor-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+}
+.doctor-grid .doctor-card {
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+  overflow: hidden; display: flex; flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.doctor-grid .doctor-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.doctor-grid .doctor-card .img-wrap { aspect-ratio: 4 / 5; overflow: hidden; }
+.doctor-grid .doctor-card .img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.doctor-grid .card-body { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 6px; }
+.doctor-grid .card-title { margin: 2px 0 0; }
+.doctor-grid .card-meta { color: var(--accent); font-size: 13px; font-family: var(--font-body); }
+.doctor-grid .card-link { margin-top: 8px; font-weight: 600; color: var(--ink); text-decoration: none; }
+.doctor-grid .card-link:hover { color: var(--accent); }
+@media (max-width: 1023px) { .doctor-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px)  { .doctor-grid { grid-template-columns: 1fr; } }
+
+/* ---- 6) CANCER TYPES accordion ---- */
+.cancer-accordion {
+  max-width: 820px; margin: 0 auto;
+  border-top: 1px solid var(--line);
+}
+.cancer-accordion .accordion-row { cursor: pointer; }
+.cancer-accordion .accordion-head {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 4px; gap: 16px;
+}
+.cancer-accordion .accordion-title {
+  font-family: var(--font-display); font-size: 22px; color: var(--ink); font-weight: 500;
+  transition: color 0.18s ease;
+}
+.cancer-accordion .accordion-row:hover .accordion-title { color: var(--accent); }
+.cancer-accordion .accordion-icon {
+  position: relative; flex: 0 0 auto; width: 18px; height: 18px;
+}
+.cancer-accordion .accordion-icon::before,
+.cancer-accordion .accordion-icon::after {
+  content: ""; position: absolute; background: var(--accent);
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+}
+.cancer-accordion .accordion-icon::before { width: 14px; height: 2px; }
+.cancer-accordion .accordion-icon::after  { width: 2px; height: 14px; transition: transform 0.25s ease; }
+.cancer-accordion .accordion-row.is-open .accordion-icon::after { transform: translate(-50%, -50%) scaleY(0); }
+.cancer-accordion .accordion-body {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+.cancer-accordion .accordion-row.is-open .accordion-body { max-height: 220px; padding: 0 4px 22px; }
+.cancer-accordion .accordion-body p { color: var(--ink); opacity: 0.85; font-size: 15px; margin: 0; }
+.cancer-accordion .accordion-body a { color: var(--accent); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.cancer-accordion .accordion-body a:hover { text-decoration: underline; }
+
+/* ---- 7) LOCATIONS static map ---- */
+.map-embed {
+  width: 100%; aspect-ratio: 21 / 9; border-radius: 10px; overflow: hidden;
+  border: 1px solid var(--line); margin-bottom: 40px; box-shadow: var(--shadow-sm);
+}
+.map-embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+@media (max-width: 767px) { .map-embed { aspect-ratio: 4 / 3; } }
+
+/* ---- 9) FACEBOOK widget placeholder ---- */
+.fb-widget { max-width: 720px; margin: 0 auto; }
+.fb-widget__placeholder {
+  border: 2px dashed var(--line); border-radius: 12px; background: var(--surface);
+  padding: 48px 24px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+}
+.fb-widget__placeholder svg { width: 44px; height: 44px; color: #1877F2; }
+.fb-widget__title { font-family: var(--font-display); font-size: 24px; color: var(--ink); }
+.fb-widget__note { font-size: 14px; color: var(--ink); opacity: 0.6; margin-bottom: 8px; }
