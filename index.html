@@ -89,7 +89,7 @@
 <li><a href="articles.html">Articles</a></li>
 </ul>
 </nav>
-<a class="header-cta" href="contact.html">Contact Us</a>
+<a class="header-cta" href="index.html#contact">Contact Us</a>
 <button aria-expanded="false" aria-label="Open menu" class="nav-toggle" data-nav-toggle="">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
 </button>
@@ -157,7 +157,7 @@
 <li><a href="our-clinics/index.html">Our Location</a></li>
 <li><a href="articles.html">Articles</a></li>
 </ul>
-<a class="header-cta" href="contact.html">Contact Us</a>
+<a class="header-cta" href="index.html#contact">Contact Us</a>
 </div>
 <!-- @wp:get_header_end -->
 <main id="main" role="main">
@@ -181,7 +181,7 @@
 <h1 class="ink-em">Precision oncology.<br/><em>Personalised care.</em></h1>
 <p class="lead">AARO is a Singapore-based specialist radiation oncology practice — an independent group of sub-specialised oncologists caring for patients across a wide range of cancers.</p>
 <div class="hero-ctas">
-<a class="btn btn--accent btn--lg" href="contact.html">Enquire today<span class="arr">→</span></a>
+<a class="btn btn--accent btn--lg" href="#contact">Enquire today<span class="arr">→</span></a>
 <a class="btn btn--ghost-light btn--lg" href="https://wa.me/6581023838" rel="noopener" target="_blank">WhatsApp us<span class="arr">→</span></a>
 </div>
 </div>
@@ -201,7 +201,7 @@
 <h1 class="ink-em">Early detection.<br/><em>Better outcomes.</em></h1>
 <p class="lead">Hypofractionated regimens, partial-breast irradiation and survivorship pathways — led by a sub-specialist who stays with you from first consult onwards.</p>
 <div class="hero-ctas">
-<a class="btn btn--accent btn--lg" href="contact.html">Enquire today<span class="arr">→</span></a>
+<a class="btn btn--accent btn--lg" href="#contact">Enquire today<span class="arr">→</span></a>
 </div>
 </div>
 </div>
@@ -267,7 +267,7 @@
 <div class="ic"><svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></div>
 <h3>Second Opinions Welcome</h3>
 <p>An honest, independent assessment of your diagnosis and options — in plain language, with time for your questions.</p>
-<a href="contact.html">Request a second opinion<span class="arr-link"> →</span></a>
+<a href="#contact">Request a second opinion<span class="arr-link"> →</span></a>
 </article>
 </div>
 </section>
@@ -536,6 +536,45 @@ Singapore 307506
 </div>
 </div>
 </section>
+<!-- ============================================================
+     CONTACT  —  homepage section; all "Contact Us" buttons land here
+     ============================================================ -->
+<section class="block alt" id="contact">
+<div class="section-head" data-reveal="">
+<span class="eyebrow">Contact us</span>
+<h2 class="h-section">Speak to a <em>specialist.</em></h2>
+<p>The fastest way to reach us is WhatsApp or phone — we aim to reply the same working day. Or send a message below and a care coordinator will get back to you.</p>
+</div>
+<div class="contact-grid" data-reveal="">
+<div class="contact-direct">
+<div class="contact-direct__btns">
+<a class="btn btn--accent btn--lg" href="https://wa.me/6581023838" rel="noopener" target="_blank">WhatsApp us<span class="arr">→</span></a>
+<a class="btn btn--secondary btn--lg" href="tel:+6581023838">Call +65 8102 3838</a>
+</div>
+<ul class="contact-points">
+<li><strong>Centre for Stereotactic Radiosurgery</strong><br/>19 Adam Road, Crawfurd Hospital B1, Singapore 289891</li>
+<li>Consultations also at Mount Alvernia, Mount Elizabeth, Gleneagles, Farrer Park &amp; Novena</li>
+<li>Mon–Fri 9am–5:30pm · Sat 9am–1pm</li>
+</ul>
+</div>
+<form class="contact-form" action="#" method="post" novalidate="">
+<div class="form-row">
+<label class="form-label" for="c-name">Your name</label>
+<input class="form-input" id="c-name" name="name" required="" type="text"/>
+</div>
+<div class="form-row">
+<label class="form-label" for="c-contact">Phone or email</label>
+<input class="form-input" id="c-contact" name="contact" required="" type="text"/>
+</div>
+<div class="form-row">
+<label class="form-label" for="c-msg">How can we help?</label>
+<textarea class="form-input" id="c-msg" name="message" rows="4"></textarea>
+</div>
+<button class="btn btn--primary btn--lg" type="submit">Send enquiry <span class="arr">→</span></button>
+<p class="form-disclaimer">A care coordinator will review and reply within one working day.</p>
+</form>
+</div>
+</section>
 </main>
 <!-- @wp:get_footer() -->
 <footer class="site-footer" role="contentinfo">
@@ -579,11 +618,12 @@ Singapore 307506
 <li><a href="patient-stories.html">Patient Stories</a></li>
 <li><a href="our-clinics/index.html">Locations</a></li>
 <li><a href="articles.html">Articles</a></li>
+<li><a href="media.html">Media</a></li>
 </ul></div>
 <!-- @wp:dynamic_sidebar(footer-4) -->
 <div><h5>Get in Touch</h5><ul>
 <li><a href="financing.html">Insurance &amp; Financing</a></li>
-<li><a href="contact.html">Contact Us</a></li>
+<li><a href="index.html#contact">Contact Us</a></li>
 </ul></div>
 </div>
 <div class="footer-bottom">

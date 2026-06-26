@@ -3023,3 +3023,12 @@ a.btn-cta:hover, .btn-cta:hover, .btn--accent:hover { background: var(--ink); bo
 /* Disabled cancer tile (in development — not navigable) */
 .cancer-tile--soft { opacity: 0.55; cursor: default; pointer-events: none; position: relative; }
 .tile-dev-badge { display: inline-block; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--gold); background: rgba(184,136,42,0.12); padding: 2px 8px; border-radius: 3px; }
+
+/* Homepage contact section */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; max-width: 980px; margin: 0 auto; }
+.contact-direct__btns { display: flex; flex-direction: column; gap: 12px; max-width: 320px; }
+.contact-points { list-style: none; padding: 0; margin: 24px 0 0; display: flex; flex-direction: column; gap: 14px; }
+.contact-points li { font-size: 14.5px; color: var(--ink); opacity: 0.8; line-height: 1.5; }
+.contact-form { display: flex; flex-direction: column; gap: 16px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 28px; box-shadow: var(--shadow-sm); }
+.contact-form textarea.form-input { resize: vertical; min-height: 96px; font-family: var(--font-body); }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 28px; } .contact-direct__btns { max-width: none; } }
